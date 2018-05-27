@@ -5,7 +5,7 @@
   
 
 
-<html class="theme-next pisces use-motion" lang="">
+<html class="theme-next pisces use-motion" lang="zh-Hans">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -83,7 +83,7 @@
 <meta property="og:title" content="Terrorshadow">
 <meta property="og:url" content="http://yoursite.com/index.html">
 <meta property="og:site_name" content="Terrorshadow">
-<meta property="og:locale" content="default">
+<meta property="og:locale" content="zh-Hans">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Terrorshadow">
 
@@ -101,7 +101,7 @@
     motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
     duoshuo: {
       userId: '0',
-      author: 'Author'
+      author: '博主'
     },
     algolia: {
       applicationID: '',
@@ -133,7 +133,7 @@
 
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="default">
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
 
   
   
@@ -182,7 +182,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
             
-            Home
+            首页
           </a>
         </li>
       
@@ -192,7 +192,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
             
-            Archives
+            归档
           </a>
         </li>
       
@@ -202,7 +202,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
             
-            Categories
+            分类
           </a>
         </li>
       
@@ -212,7 +212,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
             
-            Tags
+            标签
           </a>
         </li>
       
@@ -222,7 +222,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
             
-            About
+            关于
           </a>
         </li>
       
@@ -232,7 +232,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
             
-            Search
+            搜索
           </a>
         </li>
       
@@ -255,6 +255,1085 @@
           <div id="content" class="content">
             
   <section id="posts" class="posts-expand">
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/24/CCF 201403-2/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Mark Zhang">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Terrorshadow">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/05/24/CCF 201403-2/" itemprop="url">CCF 201403-2</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-24T12:41:43+08:00">
+                2018-05-24
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="窗口"><a href="#窗口" class="headerlink" title="窗口"></a>窗口</h2><h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p>　　在某图形操作系统中,有 N 个窗口,每个窗口都是一个两边与坐标轴分别平行的矩形区域。窗口的边界上的点也属于该窗口。窗口之间有层次的区别,在多于一个窗口重叠的区域里,只会显示位于顶层的窗口里的内容。<br>　　当你点击屏幕上一个点的时候,你就选择了处于被点击位置的最顶层窗口,并且这个窗口就会被移到所有窗口的最顶层,而剩余的窗口的层次顺序不变。如果你点击的位置不属于任何窗口,则系统会忽略你这次点击。<br>　　现在我们希望你写一个程序模拟点击窗口的过程。</p>
+<h2 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式"></a>输入格式</h2><p>　　输入的第一行有两个正整数,即 N 和 M。(1 ≤ N ≤ 10,1 ≤ M ≤ 10)<br>　　接下来 N 行按照从最下层到最顶层的顺序给出 N 个窗口的位置。 每行包含四个非负整数 x1, y1, x2, y2,表示该窗口的一对顶点坐标分别为 (x1, y1) 和 (x2, y2)。保证 x1 &lt; x2,y1 2。<br>　　接下来 M 行每行包含两个非负整数 x, y,表示一次鼠标点击的坐标。<br>　　题目中涉及到的所有点和矩形的顶点的 x, y 坐标分别不超过 2559 和　　1439。</p>
+<h2 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式"></a>输出格式</h2><p>　　输出包括 M 行,每一行表示一次鼠标点击的结果。如果该次鼠标点击选择了一个窗口,则输出这个窗口的编号(窗口按照输入中的顺序从 1 编号到 N);如果没有,则输出”IGNORED”(不含双引号)。</p>
+<h2 id="样例输入"><a href="#样例输入" class="headerlink" title="样例输入"></a>样例输入</h2><p>3 4<br>0 0 4 4<br>1 1 5 5<br>2 2 6 6<br>1 1<br>0 0<br>4 4<br>0 5</p>
+<h2 id="样例输出"><a href="#样例输出" class="headerlink" title="样例输出"></a>样例输出</h2><p>2<br>1<br>1<br>IGNORED</p>
+<h2 id="样例说明"><a href="#样例说明" class="headerlink" title="样例说明"></a>样例说明</h2><p>　　第一次点击的位置同时属于第 1 和第 2 个窗口,但是由于第 2 个窗口在上面,它被选择并且被置于顶层。<br>　　第二次点击的位置只属于第 1 个窗口,因此该次点击选择了此窗口并将其置于顶层。现在的三个窗口的层次关系与初始状态恰好相反了。<br>　　第三次点击的位置同时属于三个窗口的范围,但是由于现在第 1 个窗口处于顶层,它被选择。</p>
+<h2 id="最后点击的-0-5-不属于任何窗口。"><a href="#最后点击的-0-5-不属于任何窗口。" class="headerlink" title="　　最后点击的 (0, 5) 不属于任何窗口。"></a>　　最后点击的 (0, 5) 不属于任何窗口。</h2><p>提交上去90分的代码，暂时不想改了，现在也蛮晚的。<br>`import java.util.Scanner;<br>/**</p>
+<ul>
+<li>201403-2</li>
+<li>*/<br>class window{<br> int x1,y1,x2,y2;<br> int level;<br> int next;<br> int beyond;<br>}<br>class point{<br> int x,y;<br>}<br>public class ccf005 {<br>public static void main(String args[]){<br> Scanner s=new Scanner(System.in);<br> window[] wins=new window[10];<br> point[] p=new point[10];<br> int n=s.nextInt();<br> int m=s.nextInt();<br> int head=n-1;<br> for(int i=0;i&lt;n;i++) {<pre><code>wins[i]=new window();
+wins[i].x1=s.nextInt();
+wins[i].y1=s.nextInt();
+wins[i].x2=s.nextInt();
+wins[i].y2=s.nextInt();
+wins[i].next=i-1;//next=-1时invilid
+wins[i].beyond=i+1;//beyond=+n时invilid
+</code></pre> }<br> for(int i=0;i&lt;m;i++) {<pre><code>p[i]=new point();
+p[i].x=s.nextInt();
+p[i].y=s.nextInt();
+</code></pre> }<br>  for(int i=0;i&lt;m;i++) {<pre><code>int j=head;
+</code></pre>//         for(;wins[j].next&gt;-1;j=wins[j].next) {<pre><code>for(;;j=wins[j].next) {
+    if(j==-1)  {System.out.println(&quot;IGNORED&quot;);
+    break;}
+    if(p[i].x&gt;=wins[j].x1&amp;&amp;p[i].x&lt;=wins[j].x2&amp;&amp;p[i].y&gt;=wins[j].y1&amp;&amp;p[i].y&lt;=wins[j].y2)
+    {
+        if(wins[j].next==-1) {//最后一个页面
+            System.out.println(j+1);
+            wins[wins[j].beyond].next=-1;
+            wins[head].beyond=j;
+            wins[j].next=head;
+            wins[j].beyond=n;
+            head=j;
+            break;         
+        }else if(wins[j].beyond==n) {//第一个页面
+            System.out.println(j+1);
+            break;
+        }else {
+            System.out.println(j+1);
+            wins[wins[j].beyond].next=wins[j].next;
+            wins[wins[j].next].beyond=wins[j].beyond;
+            wins[j].beyond=n;
+            wins[j].next=head;
+            wins[head].beyond=j;
+            head=j;
+            break;
+        }
+    }    
+}
+</code></pre>//         if(wins[j].next==-1) {<br>//             System.out.println(“IGNORED”);<br>//         }<br>  }<br>}<br>}<br>`<h2 id="初次总结吧，这类问题真的要好好考虑边界值的问题。"><a href="#初次总结吧，这类问题真的要好好考虑边界值的问题。" class="headerlink" title="初次总结吧，这类问题真的要好好考虑边界值的问题。"></a>初次总结吧，这类问题真的要好好考虑边界值的问题。</h2>在算法中模拟了双向链表的使用，然而结果并不能如我所愿，只有90分，认真思考过后没有发现那里出现问题。于是准备使用已经封装好的数组。</li>
+</ul>
+<p>`import java.awt.List;<br>import java.util.ArrayList;<br>import java.util.Scanner;<br>/**</p>
+<ul>
+<li>201403-2</li>
+<li>*/<br>class window{<br> int x1,y1,x2,y2;<br> int id;<br> public boolean inside(int x,int y) {<pre><code>if(x&gt;=this.x1&amp;&amp;x&lt;=this.x2&amp;&amp;y&gt;=this.y1&amp;&amp;y&lt;=this.y2) {
+    return true;
+}else {
+    return false;
+}
+</code></pre> }<br>}<br>public class ccf005 {<br>public static void main(String args[]){<br> Scanner s=new Scanner(System.in);<br> ArrayList<window> w=new ArrayList<window>();<br> int n=s.nextInt();<br> int m=s.nextInt();<br> int[] result=new int[10];<br> for(int i=0;i&lt;n;i++) {<pre><code>window wins=new window();
+wins.x1=s.nextInt();
+wins.y1=s.nextInt();
+wins.x2=s.nextInt();
+wins.y2=s.nextInt();
+wins.id=i+1;
+w.add(wins);
+</code></pre> }<br> for(int i=0;i&lt;m;i++) {<pre><code>int x=s.nextInt();
+int y=s.nextInt();
+for(int j=w.size()-1;j&gt;=0;j--) {
+    if(w.get(j).inside(x, y)) {
+        result[i]=w.get(j).id;
+        w.add(w.get(j));
+        w.remove(j);
+        break;
+    }
+}
+</code></pre> }<br> for(int i=0;i&lt;m;i++) {<pre><code>if(result[i]==0)
+    System.out.println(&quot;IGNORED&quot;);
+else System.out.println(result[i]);
+</code></pre> }<br>  }<br>}`<br>这份代码看起来效率是不如之前的代码好，但是相对来说结果正确，而且思路清晰，同样在评测的时候也是100分。</window></window></li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/24/CCF 201403-1/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Mark Zhang">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Terrorshadow">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/05/24/CCF 201403-1/" itemprop="url">CCF 201403-1</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-24T12:41:43+08:00">
+                2018-05-24
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="相反的数"><a href="#相反的数" class="headerlink" title="相反的数"></a>相反的数</h2><h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p>　　有 N 个非零且各不相同的整数。请你编一个程序求出它们中有多少对相反数(a 和 -a 为一对相反数)。</p>
+<h2 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式"></a>输入格式</h2><p>　　第一行包含一个正整数 N。(1 ≤ N ≤ 500)。<br>　　第二行为 N 个用单个空格隔开的非零整数,每个数的绝对值不超过1000,保证这些整数各不相同。<br>输出格式<br>　　只输出一个整数,即这 N 个数中包含多少对相反数。</p>
+<h2 id="样例输入"><a href="#样例输入" class="headerlink" title="样例输入"></a>样例输入</h2><p>5<br>1 2 3 -1 -2</p>
+<h2 id="样例输出"><a href="#样例输出" class="headerlink" title="样例输出"></a>样例输出</h2><p>2<br><code>import java.util.Scanner;
+public class ccf002 {
+public static void main(String args[]){
+    Scanner scan=new Scanner(System.in);
+    int n=scan.nextInt();
+    int[] a=new int[500];
+    int x=0;
+    for(int i=0;i&lt;n;i++){
+        a[i]=scan.nextInt();
+    }  
+    for(int i=0;i&lt;n;i++){
+        for(int j=0;j&lt;n;j++){
+            if(i!=j&amp;&amp;i&gt;j){
+                if(a[j]==-a[i])x++;
+            }
+        }
+    }
+    System.out.println(x);
+}
+}</code></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/24/POJ 1002/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Mark Zhang">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Terrorshadow">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/05/24/POJ 1002/" itemprop="url">POJ 1002</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-24T12:41:43+08:00">
+                2018-05-24
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="poj-1002题"><a href="#poj-1002题" class="headerlink" title="poj 1002题"></a><a href="http://poj.org/problem?id=1002" target="_blank" rel="noopener">poj 1002题</a></h2><h3 id="OUTPUT："><a href="#OUTPUT：" class="headerlink" title="OUTPUT："></a>OUTPUT：</h3><p>输入值为: TEL number<br>输出值为: TEL tel.frequence</p>
+<p>`#include<iostream></iostream></p>
+<p>#include&lt;stdlib.h&gt;</p>
+<p>#include<cstring><br>using namespace std;<br>int main(){<br>    int num;<br>    string str=”ITSEASY”;<br>    string st;<br>    int n=0;<br>    int i=0;<br>    int j=0;<br>    for(i=0,j=0;i&lt;str.length();i++){<br>    if(str[i]==’-‘){}<br>    else if(str[i]&gt;=’A’&amp;&amp;str[i]&lt;=’Z’){<br>        if(str[i]&lt;=’P’){<br>        st+=(str[i]-‘A’)/3+2+’0’;<br>        j++;}<br>        else if(str[i]&gt;=’P’){<br>        st+=(str[i]-‘A’-1)/3+2+’0’;<br>        j++;<br>        }<br>    }else if(str[i]&gt;=’0’&amp;&amp;str[i]&lt;=’9’){<br>        st+=str[i];<br>        j++;<br>    }<br>    }<br>    cout&lt;&lt;st&lt;&lt;endl;<br>}<code>完成了基本的读取，剩下的很容易。当然这里题目给挖了个坑，我也是深陷不能自拔，数据中没有Q这个映射关系
+下面写一个正确答案，但是答案提示是Time Limit Exceeded</code>#include<iostream></iostream></cstring></p>
+<p>#include<string></string></p>
+<p>#define MAX 100000<br>using namespace std;<br>int main(){<br>    int num;<br>    string str;<br>    string st;<br>    int n=0;<br>    int i=0;<br>    int j=0;<br>    int k=0;<br>    int m=0;<br>    cin&gt;&gt;n;<br>    string s[MAX];<br>    string t[MAX],q[MAX];<br>    int freq[MAX];<br>    while(k&lt;n){<br>    cin&gt;&gt;str;<br>    for(i=0,j=0;i&lt;str.length();i++){<br>        if(j==3) {<br>        st+=’-‘;<br>        j++;}<br>    if(str[i]==’-‘){<br>    }else if(str[i]&gt;=’A’&amp;&amp;str[i]&lt;=’Z’){<br>            if(str[i]&lt;=’P’){<br>            st+=(str[i]-‘A’)/3+2+’0’;<br>            j++;<br>            }else if(str[i]&gt;=’P’){<br>            st+=(str[i]-‘A’-1)/3+2+’0’;<br>            j++;<br>            }<br>    }else if(str[i]&gt;=’0’&amp;&amp;str[i]&lt;=’9’){<br>        st+=str[i];<br>        j++;<br>    }<br>    }<br>    s[k]=st;<br>    str.clear();<br>    st.clear();<br>    k++;<br>    }<br>    t[0]=s[0];<br>    k=1;<br>    freq[0]=1;<br>    for(i=1;i&lt;n;i++){<br>        for(j=0;j&lt;k+1;j++){<br>            if(s[i]==t[j]){<br>                freq[j]+=1;<br>                break;<br>            }else if(j==k){<br>                k++;<br>                t[k]=s[i];<br>                freq[k]=1;<br>                m++;<br>                break;<br>            }<br>        }<br>    }<br>int z=0;<br>    for(j=0;j&lt;=k;j++){<br>        if(freq[j]&gt;=2){<br>        q[z]=t[j];<br>        q[z]+=’ ‘;<br>        q[z]+=(freq[j]+’0’);<br>        z++;<br>        }<br>    }<br>for(i=0;i&lt;z;i++){<br>    for(j=0;j&lt;z-i;j++){<br>        if(q[j]&gt;q[j+1]){<br>            string temp=q[j];<br>            q[j]=q[j+1];<br>            q[j+1]=temp;<br>        }<br>    }<br>}<br>for(j=0;j&lt;=z;j++){<br>    cout&lt;&lt;q[j]&lt;&lt;endl;<br>}<br>}<code>这段答案始于我忘记题设中有排序这个问题，加上排序之后导致程序冗长而且超出时间限制.</code>#include<iostream></iostream></p>
+<p>#include<string></string></p>
+<p>#define MAX 100000<br>using namespace std;<br>void Qsort(string a[],int low,int high){<br>    if(low&gt;=high){<br>        return;<br>    }<br>    int first=low;<br>    int last=high;<br>    string key=a[first];<br>    while(first&lt;last){<br>        while(first&lt;last&amp;&amp;a[last]&gt;key){<br>            –last;<br>        }<br>        a[first]=a[last];<br>        while(first&lt;last&amp;&amp;a[first]&lt;=key){<br>            ++first;<br>        }<br>        a[last]=a[first];<br>    }<br>    a[first]=key;<br>    Qsort(a,low,first-1);<br>    Qsort(a,first+1,high);<br>}<br>int main(){<br>    int num;<br>    string str;<br>    string st;<br>    int n=0;<br>    int i=0;<br>    int j=0;<br>    int k=0;<br>    int m=0;<br>    cin&gt;&gt;n;<br>    string s[MAX];<br>    string t[MAX],q[MAX];<br>    int freq[MAX];<br>    while(k&lt;n){<br>    cin&gt;&gt;str;<br>    for(i=0,j=0;i&lt;str.length();i++){<br>        if(j==3) {<br>        st+=’-‘;<br>        j++;}<br>    if(str[i]==’-‘){<br>    }else if(str[i]&gt;=’A’&amp;&amp;str[i]&lt;=’Z’){<br>            if(str[i]&lt;=’P’){<br>            st+=(str[i]-‘A’)/3+2+’0’;<br>            j++;<br>            }else if(str[i]&gt;=’P’){<br>            st+=(str[i]-‘A’-1)/3+2+’0’;<br>            j++;<br>            }<br>    }else if(str[i]&gt;=’0’&amp;&amp;str[i]&lt;=’9’){<br>        st+=str[i];<br>        j++;<br>    }<br>    }<br>    s[k]=st;<br>    str.clear();<br>    st.clear();<br>    k++;<br>    }<br>    t[0]=s[0];<br>    k=1;<br>    freq[0]=1;<br>    for(i=1;i&lt;n;i++){<br>        for(j=0;j&lt;k+1;j++){<br>            if(s[i]==t[j]){<br>                freq[j]+=1;<br>                break;<br>            }else if(j==k){<br>                k++;<br>                t[k]=s[i];<br>                freq[k]=1;<br>                m++;<br>                break;<br>            }<br>        }<br>    }<br>int z=0;<br>    for(j=0;j&lt;=k;j++){<br>        if(freq[j]&gt;=2){<br>        q[z]=t[j];<br>        q[z]+=’ ‘;<br>        q[z]+=(freq[j]+’0’);<br>        z++;<br>        }<br>    }<br>Qsort(q,0,z);<br>for(j=0;j&lt;=z;j++){<br>    cout&lt;&lt;q[j]&lt;&lt;endl;<br>}<br>}`<br>用快速排序对程序进行缩减，然而并不能解决之前的问题。<br>关于这个问题我想不继续去续写了，关于本题有几点内容需要反思和思考：<br>1.C++的操作不熟练，在本机编译成功而提交上去之后编译失败因为自己对C版本认识欠缺。<br>2.审题问题，关于题中Q，以及本身缺失排序导致结果错误。<br>3.全程使用字符串操作，不可避免的使数据量上升之后导致超时。<br>4.多余变量设置复杂。<br>在参考了网上诸多答案之后，以及向各位大神请教，对代码的改进方案有些许认识：<br>1.使用整形变量进行操作，可以提高运算效率。<br>2.使用一个新建的函数完成A-Y的映射关系。<br>3.将整个算法设计思路明确之后进行计算。。<br>现阶段还不是很成熟，慢慢去练吧。</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/24/JavaLearningPath/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Mark Zhang">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Terrorshadow">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/05/24/JavaLearningPath/" itemprop="url">Java learning</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-24T12:41:43+08:00">
+                2018-05-24
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="Java-learning-path"><a href="#Java-learning-path" class="headerlink" title="Java learning path"></a>Java learning path</h2><h2 id="Java"><a href="#Java" class="headerlink" title="Java"></a>Java</h2><p><img src="http://upload-images.jianshu.io/upload_images/8593035-851ad9bdb6f7128e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="#da"></p>
+<h3 id="java基础"><a href="#java基础" class="headerlink" title="java基础"></a><em>java基础</em></h3><ul>
+<li>关键字</li>
+<li>标识符</li>
+<li>常量（变量）<a href="https://www.cnblogs.com/dolphin0520/p/3780005.html" target="_blank" rel="noopener">装箱&amp;拆箱</a></li>
+<li>运算符</li>
+<li>数组</li>
+<li>方法（包括方法定义、重载、参数和返回值）</li>
+<li>Java三大特性（封装、继承、多态）</li>
+<li>反射（反射原理网上文档很多，不截取了）</li>
+</ul>
+<hr>
+<h2 id="Jvm"><a href="#Jvm" class="headerlink" title="Jvm"></a><em>Jvm</em></h2><ul>
+<li><a href="http://www.cnblogs.com/lishun1005/p/6019678.html" target="_blank" rel="noopener">Java 详解 JVM 工作原理和流程</a></li>
+<li><a href="http://blog.csdn.net/witsmakemen/article/details/28600127/" target="_blank" rel="noopener">java中JVM的原理</a></li>
+<li><a href="http://blog.csdn.net/wisgood/article/details/25343845" target="_blank" rel="noopener">JVM监控工具</a></li>
+</ul>
+<hr>
+<h2 id="集合"><a href="#集合" class="headerlink" title="集合"></a><em>集合</em></h2><ul>
+<li><a href="https://github.com/pzxwhc/MineKnowContainer/issues/75" target="_blank" rel="noopener">Collection和Map系列</a></li>
+<li><a href="https://github.com/pzxwhc/MineKnowContainer/issues/18" target="_blank" rel="noopener">Java集合</a></li>
+<li><a href="https://github.com/pzxwhc/MineKnowContainer/issues/19" target="_blank" rel="noopener">HashMap</a></li>
+</ul>
+<hr>
+<h2 id="IO"><a href="#IO" class="headerlink" title="IO"></a>IO</h2><ul>
+<li><p><a href="https://github.com/pzxwhc/MineKnowContainer/issues/22" target="_blank" rel="noopener">JavaIO:操作系统的IO处理过程以及五种网络IO模型</a>(这篇文章我没怎么看懂，先罗列上来)</p>
+</li>
+<li><p><a href="https://github.com/pzxwhc/MineKnowContainer/issues/23" target="_blank" rel="noopener">java常见IO流</a></p>
+</li>
+<li><p><a href="http://blog.csdn.net/anxpp/article/details/51512200" target="_blank" rel="noopener">AIO、BIO、NIO</a></p>
+<p>​</p>
+</li>
+</ul>
+<hr>
+<h2 id="线程"><a href="#线程" class="headerlink" title="线程"></a><strong>线程</strong></h2><ul>
+<li><a href="https://github.com/pzxwhc/MineKnowContainer/issues/6" target="_blank" rel="noopener">Java多线程</a></li>
+<li><a href="https://www.cnblogs.com/luxiaoxun/p/3870265.html" target="_blank" rel="noopener">Java多线程编程实例</a></li>
+<li><p>JUC</p>
+</li>
+<li><p>并发包</p>
+</li>
+</ul>
+<hr>
+<h2 id="框架"><a href="#框架" class="headerlink" title="框架"></a>框架</h2><h4 id="Spring"><a href="#Spring" class="headerlink" title="Spring"></a>Spring</h4><ul>
+<li><a href="https://github.com/pzxwhc/MineKnowContainer/issues/28" target="_blank" rel="noopener">AOP</a>(核心)</li>
+<li><a href="https://github.com/pzxwhc/MineKnowContainer/issues/30" target="_blank" rel="noopener">依赖注入(DI)与控制反转(IOC)</a>(核心)</li>
+<li><a href="https://github.com/pzxwhc/MineKnowContainer/issues/29" target="_blank" rel="noopener">异常统一处理的三种方式与Rest接口异常的处理</a></li>
+</ul>
+<h4 id="SpringMVC"><a href="#SpringMVC" class="headerlink" title="SpringMVC"></a>SpringMVC</h4><ul>
+<li><a href="https://github.com/pzxwhc/MineKnowContainer/issues/32" target="_blank" rel="noopener">Servlet体系结构与ServletContext,ServlectConfig</a></li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/24/URL/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Mark Zhang">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Terrorshadow">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/05/24/URL/" itemprop="url">URL</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-24T12:41:43+08:00">
+                2018-05-24
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="URL"><a href="#URL" class="headerlink" title="URL"></a>URL</h2><p>URL<br>1、URL(Uniform Resource Locator)统一资源定位符，表示Internet上某一资源的地址，协议名：资源名称</p>
+<h2 id="TCP"><a href="#TCP" class="headerlink" title="TCP"></a>TCP</h2><p><strong>1、TCP协议是面向连接的、可靠的、有序的、以字节流的方式发送数据，通过三次握手方式建立连接，形成传输数据的通道，在连接中进行大量数据的传输，效率会稍低</strong></p>
+<p><strong>2、Java中基于TCP协议实现网络通信的类</strong><br>​        客户端的Socket类<br>​        服务器端的ServerSocket类<br><img src="http://images2015.cnblogs.com/blog/740688/201509/740688-20150907234728090-211300057.jpg" alt="Socket通信模型"><br> <strong>3、Socket通信的步骤</strong><br>​             ① 创建ServerSocket和Socket<br>​            ② 打开连接到Socket的输入/输出流<br>​            ③ 按照协议对Socket进行读/写操作<br>​            ④ 关闭输入输出流、关闭Socket<br>   <strong>4、服务器端：</strong><br>​           ① 创建ServerSocket对象，绑定监听端口<br>​           ② 通过accept()方法监听客户端请求<br>​           ③ 连接建立后，通过输入流读取客户端发送的请求信息<br>​           ④ 通过输出流向客户端发送乡音信息<br>​           ⑤ 关闭相关资源<br><strong>5、客户端：</strong><br>​    ① 创建Socket对象，指明需要连接的服务器的地址和端口号<br>​    ② 连接建立后，通过输出流想服务器端发送请求信息<br>​    ③ 通过输入流获取服务器响应的信息<br>​    ④ 关闭响应资源<br><strong>6、应用多线程实现服务器与多客户端之间的通信</strong><br>​    ①服务器端创建ServerSocket，循环调用accept()等待客户端连接<br>​    ② 客户端创建一个socket并请求和服务器端连接<br>​    ③ 服务器端接受苦读段请求，创建socket与该客户建立专线连接<br>​    ④ 建立连接的两个socket在一个单独的线程上对话<br>​    ⑤ 服务器端继续等待新的连接</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/24/java对象数组空指针异常/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Mark Zhang">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Terrorshadow">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/05/24/java对象数组空指针异常/" itemprop="url">JAVA对象数组空指针异常</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-24T12:41:43+08:00">
+                2018-05-24
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="java-lang-NullPointerException"><a href="#java-lang-NullPointerException" class="headerlink" title="java.lang.NullPointerException"></a>java.lang.NullPointerException</h2><p>在写题过程中遇见问题，创建对象数组之后有空指针异常的错误。<br>引用某<a href="https://blog.csdn.net/boniucode/article/details/75271520" target="_blank" rel="noopener">博主</a>的语句</p>
+<p>再声明对象数组后 ，必须对每个数组成员进行实例化话 才能直接使用，否则报 空指针异常！</p>
+<h4 id="例如："><a href="#例如：" class="headerlink" title="例如："></a>例如：</h4><p><code>//创建一个学生类数组；
+Student  [] stu=new Student[5];
+//在使用数组成员时  必须进行实例化
+stu[i]=new Student();</code></p>
+<h5 id="否则报错"><a href="#否则报错" class="headerlink" title="否则报错"></a>否则报错</h5><p>`Exception in thread “main” java.lang.NullPointerException<br>    at Test.main(Test.java:10)</p>
+<h2 id=""><a href="#" class="headerlink" title="`"></a>`</h2><p>附加小彩蛋，如果某对象数组两个值前后分别指向一个实例化对象，并且在过程中这个对象值发生改变，这数组中两个成员的值还是这个实例化对象改变后的值。<br>例：<br><code>public class Test {
+    public static void main(String[] args) {
+        A[] as=new A[10];
+        A am=new A(5,2);
+        A ac=new A(4,3);
+        as[0]=am;
+        am.a=7;
+        am.b=8;
+        as[1]=am;
+//        as[2].a=73;
+//        as[2].a=671;/*这两句会报错异常*/
+        System.out.println(as[0].a+&quot;  &quot;+as[0].b);
+        System.out.println(as[1].a+&quot;  &quot;+as[1].b);
+    }
+}
+class A{
+    int a;
+    int b;
+    A(int a,int b){
+        this.a=a;
+        this.b=b;
+    }
+    A(){}
+}</code><br>输出结果：<br>7    8<br>7    8</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/24/POJ 1001/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Mark Zhang">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Terrorshadow">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/05/24/POJ 1001/" itemprop="url">POJ 1001</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-24T12:41:43+08:00">
+                2018-05-24
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="poj-1001题"><a href="#poj-1001题" class="headerlink" title="poj 1001题"></a><a href="http://poj.org/problem?id=1001" target="_blank" rel="noopener">poj 1001题</a></h2><h3 id="OUTPUT："><a href="#OUTPUT：" class="headerlink" title="OUTPUT："></a>OUTPUT：</h3><p>输入值为 R n<br>输出值为 R^n的具体数值</p>
+<hr>
+<p>这个题在网上看见了一个很神奇的<a href="http://blog.163.com/boatswain%40126/blog/static/1693964122010718105425483/" target="_blank" rel="noopener">java代码</a>，很清新，而且抱着试一试的心态通过了poj的text<br><code>import java.math.*;
+import java.util.*;
+public class Main{
+    public static void main(String[] args){
+        Scanner in=new Scanner(System.in);
+        while(in.hasNext()){
+            BigDecimal val=in.nextBigDecimal();
+            int n=in.nextInt();
+            BigDecimal ret=val.pow(n).stripTrailingZeros();
+            System.out.println( ret.toPlainString().replaceAll(&quot;^0&quot;, &quot;&quot;) );
+        }
+    }
+}</code><br>其中<code>toPlanString()</code>,返回不带指数字段的字符串，replaceAll(“^0”,””),。这篇文章的作者有很强编程能力，现在用C语言去完成这个高精度计算。</p>
+<p>`</p>
+<p>  #include<iostream></iostream></p>
+<p>  #include&lt;stdlib.h&gt;</p>
+<p>  #include<cstring></cstring></p>
+<p>  #define BUFSIZ 200<br>  using namespace std;<br>  char <em> bigmul(char </em>m,int lena,char <em>f,int lenb){  //乘法运算函数。<br>     int i,j,k,lensum,tmp_result,carry,num=’0’;<br>     lensum=lena+lenb;                               //确定结果数组的长度。<br>     for(i=0;i&lt;lena;i++){                            //将ASCII码转为对应的数字存储。<br>       m[i]=m[i]-num;<br>    }<br>    for(i=0;i&lt;lenb;i++){<br>       f[i]=f[i]-num;<br>    }<br>    char </em>result,final[BUFSIZ];<br>    result=(char<em>)calloc(lensum,1);<br>    for(i=0;i&lt;lenb;i++){<br>       //为被乘数作一趟乘法。<br>       for(j=0;j&lt;lena;j++){<br>          tmp_result=f[lenb-i-1]</em>m[lena-j-1];<br>          result[j+i]+=tmp_result;<br>       }<br>       for(k=0;k&lt;=j+i-1;k++){<br>       //每作一趟乘法整理一次结果数组。<br>          if(result[k]&gt;9){<br>             carry=result[k]/10;<br>             result[k]=result[k]%10;<br>             result[k+1] += carry;<br>          }<br>       }<br>    }<br>    j=0;<br>    if(result[lensum-1]!=0){                  //去除前导零将结果整理到final数组中。<br>       final[j]=result[lensum-1]+num;<br>       j++;<br>    }<br>    for(i=lensum-2;i&gt;=0;i–){<br>       final[j++]=result[i]+num;<br>    }<br>    result=final;                             //将指针指向final数组并返回该指针。<br>    return result;<br> }<br> int main(){                                                 //利用main测试方法，用puts打印结果。<br>    int lena,lenb;<br>    char *result,r[BUFSIZ];<br>    int n;<br>    while(cin&gt;&gt;r&gt;&gt;n){<br>    lena=strlen(r);<br>    lenb=strlen(r);<br>    result=r;<br>    for(int i=0;i&lt;n;i++){<br>    result=bigmul(result,lenb,r,lena);<br>    }<br>    puts(result);<br>}<br> }`</p>
+<p> 关于大数运算，某朋友给我提供了一个代码，不过在我阅读代码后没有发现有小数位的计算。<br><code>string strMultiply(string str1 , string str2)  
+{  
+    string strResult = &quot;&quot;;  
+    int len1 = str1.length();   
+    int len2 = str2.length();  
+    int num[500] = {0};  
+    int i = 0, j = 0;     
+    for(i = 0; i &lt; len1; i++)  
+    {  
+        for(j = 0; j &lt; len2; j++)  
+        {  
+            num[len1-1 - i + len2-1 - j] += (str1[i] - &#39;0&#39;)*(str2[j] - &#39;0&#39;);   
+        }  
+    }  
+    for(i = 0; i &lt; len1 + len2; i++)  
+    {  
+        num[i+1] += num[i] / 10;  
+        num[i] = num[i] % 10;  
+    }  
+    for(i = len1 + len2 - 1; i &gt;= 0 ; i--)  
+    {  
+        if(0 != num[i]) break;  
+    }  
+    for(j = i; j &gt;= 0; j--)  
+    {  
+        strResult += num[j] + &#39;0&#39;;  
+    }  
+    return strResult;  
+}</code></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
     
       
 
@@ -298,9 +1377,9 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Posted on</span>
+                <span class="post-meta-item-text">发表于</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-05-19T12:41:43+08:00">
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-19T12:41:43+08:00">
                 2018-05-19
               </time>
             
@@ -384,6 +1463,249 @@
 
 
     
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/19/关于eclipse报错code=13/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Mark Zhang">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Terrorshadow">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/05/19/关于eclipse报错code=13/" itemprop="url">eclipse error：code 13</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-19T12:41:43+08:00">
+                2018-05-19
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>##这个错误代码一般情况下是因为安装的jdk版本与系统位数不服。<br>因为我的电脑中有两个eclipse，所以在一次系统更新中，一个eclipse(neon)弹出code13，另一个eclipse(oxygen)弹出code1，两个摸不到头脑的原因，我查看了系统变量中java_home,发现java_home的路径的jdk消失了，仔细回想可能导致jdk自动消失的原因是jdk的一次更新，然后在运行界面输入</p>
+<h2 id="java-version，查询到jdk自动更新之后在电脑上变成32位，在网上查询资料，这种情况只能重新安装jdk。"><a href="#java-version，查询到jdk自动更新之后在电脑上变成32位，在网上查询资料，这种情况只能重新安装jdk。" class="headerlink" title="java -version，查询到jdk自动更新之后在电脑上变成32位，在网上查询资料，这种情况只能重新安装jdk。"></a><code>java -version</code>，查询到jdk自动更新之后在电脑上变成32位，在网上查询资料，这种情况只能重新安装jdk。</h2><p>###造成原因：大多情况因为jdk自己自动更新导致，如果是第一次出现eclipse弹出错误代码，可能是安装eclipse出现问题。</p>
+<p>###解决方案：将jdk重新下载，在系统变量中重新设置java_home。</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/19/声明/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Mark Zhang">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Terrorshadow">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/05/19/声明/" itemprop="url">声明</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-19T12:41:43+08:00">
+                2018-05-19
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>之前写的一些技术文章丢失，虽说语法不成熟而且很多意义上只有我自己可以看明白，因为比较讨厌从网站上直接暴力抄袭，或者因为自己的时间原因懒得去搭建图床和仔细编辑语言去写。不过，既然建了这个博客，还是慢慢去更吧。</p>
+<h2 id="声明"><a href="#声明" class="headerlink" title="声明"></a>声明</h2><p>在文章中的引用导致版权侵犯问题以及一些其他可能会出现的问题，请将意见信息发至 <a href="mailto:markzhang4438@gmail.com" target="_blank" rel="noopener">markzhang4438@gmail.com</a>，博主会马上处理问题</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
   </section>
 
   
@@ -430,8 +1752,8 @@
               
                 <a href="/archives">
               
-                  <span class="site-state-item-count">1</span>
-                  <span class="site-state-item-name">posts</span>
+                  <span class="site-state-item-count">10</span>
+                  <span class="site-state-item-name">日志</span>
                 </a>
               </div>
             
@@ -481,7 +1803,7 @@
 </div>
 
 
-  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
 
 
 
@@ -489,7 +1811,7 @@
 
 
 
-  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.4</div>
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.4</div>
 
 
 
