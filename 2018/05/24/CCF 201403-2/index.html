@@ -86,7 +86,7 @@
 <meta property="og:site_name" content="Terrorshadow">
 <meta property="og:description" content="窗口问题描述　　在某图形操作系统中,有 N 个窗口,每个窗口都是一个两边与坐标轴分别平行的矩形区域。窗口的边界上的点也属于该窗口。窗口之间有层次的区别,在多于一个窗口重叠的区域里,只会显示位于顶层的窗口里的内容。　　当你点击屏幕上一个点的时候,你就选择了处于被点击位置的最顶层窗口,并且这个窗口就会被移到所有窗口的最顶层,而剩余的窗口的层次顺序不变。如果你点击的位置不属于任何窗口,则系统会忽略你这次">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-05-27T23:16:06.615Z">
+<meta property="og:updated_time" content="2018-06-02T15:31:42.311Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CCF 201403-2">
 <meta name="twitter:description" content="窗口问题描述　　在某图形操作系统中,有 N 个窗口,每个窗口都是一个两边与坐标轴分别平行的矩形区域。窗口的边界上的点也属于该窗口。窗口之间有层次的区别,在多于一个窗口重叠的区域里,只会显示位于顶层的窗口里的内容。　　当你点击屏幕上一个点的时候,你就选择了处于被点击位置的最顶层窗口,并且这个窗口就会被移到所有窗口的最顶层,而剩余的窗口的层次顺序不变。如果你点击的位置不属于任何窗口,则系统会忽略你这次">
@@ -345,80 +345,10 @@
 <h2 id="样例输入"><a href="#样例输入" class="headerlink" title="样例输入"></a>样例输入</h2><p>3 4<br>0 0 4 4<br>1 1 5 5<br>2 2 6 6<br>1 1<br>0 0<br>4 4<br>0 5</p>
 <h2 id="样例输出"><a href="#样例输出" class="headerlink" title="样例输出"></a>样例输出</h2><p>2<br>1<br>1<br>IGNORED</p>
 <h2 id="样例说明"><a href="#样例说明" class="headerlink" title="样例说明"></a>样例说明</h2><p>　　第一次点击的位置同时属于第 1 和第 2 个窗口,但是由于第 2 个窗口在上面,它被选择并且被置于顶层。<br>　　第二次点击的位置只属于第 1 个窗口,因此该次点击选择了此窗口并将其置于顶层。现在的三个窗口的层次关系与初始状态恰好相反了。<br>　　第三次点击的位置同时属于三个窗口的范围,但是由于现在第 1 个窗口处于顶层,它被选择。</p>
-<h2 id="最后点击的-0-5-不属于任何窗口。"><a href="#最后点击的-0-5-不属于任何窗口。" class="headerlink" title="　　最后点击的 (0, 5) 不属于任何窗口。"></a>　　最后点击的 (0, 5) 不属于任何窗口。</h2><p>提交上去90分的代码，暂时不想改了，现在也蛮晚的。<br>`import java.util.Scanner;<br>/**</p>
-<ul>
-<li>201403-2</li>
-<li>*/<br>class window{<br> int x1,y1,x2,y2;<br> int level;<br> int next;<br> int beyond;<br>}<br>class point{<br> int x,y;<br>}<br>public class ccf005 {<br>public static void main(String args[]){<br> Scanner s=new Scanner(System.in);<br> window[] wins=new window[10];<br> point[] p=new point[10];<br> int n=s.nextInt();<br> int m=s.nextInt();<br> int head=n-1;<br> for(int i=0;i&lt;n;i++) {<pre><code>wins[i]=new window();
-wins[i].x1=s.nextInt();
-wins[i].y1=s.nextInt();
-wins[i].x2=s.nextInt();
-wins[i].y2=s.nextInt();
-wins[i].next=i-1;//next=-1时invilid
-wins[i].beyond=i+1;//beyond=+n时invilid
-</code></pre> }<br> for(int i=0;i&lt;m;i++) {<pre><code>p[i]=new point();
-p[i].x=s.nextInt();
-p[i].y=s.nextInt();
-</code></pre> }<br>  for(int i=0;i&lt;m;i++) {<pre><code>int j=head;
-</code></pre>//         for(;wins[j].next&gt;-1;j=wins[j].next) {<pre><code>for(;;j=wins[j].next) {
-    if(j==-1)  {System.out.println(&quot;IGNORED&quot;);
-    break;}
-    if(p[i].x&gt;=wins[j].x1&amp;&amp;p[i].x&lt;=wins[j].x2&amp;&amp;p[i].y&gt;=wins[j].y1&amp;&amp;p[i].y&lt;=wins[j].y2)
-    {
-        if(wins[j].next==-1) {//最后一个页面
-            System.out.println(j+1);
-            wins[wins[j].beyond].next=-1;
-            wins[head].beyond=j;
-            wins[j].next=head;
-            wins[j].beyond=n;
-            head=j;
-            break;         
-        }else if(wins[j].beyond==n) {//第一个页面
-            System.out.println(j+1);
-            break;
-        }else {
-            System.out.println(j+1);
-            wins[wins[j].beyond].next=wins[j].next;
-            wins[wins[j].next].beyond=wins[j].beyond;
-            wins[j].beyond=n;
-            wins[j].next=head;
-            wins[head].beyond=j;
-            head=j;
-            break;
-        }
-    }    
-}
-</code></pre>//         if(wins[j].next==-1) {<br>//             System.out.println(“IGNORED”);<br>//         }<br>  }<br>}<br>}<br>`<h2 id="初次总结吧，这类问题真的要好好考虑边界值的问题。"><a href="#初次总结吧，这类问题真的要好好考虑边界值的问题。" class="headerlink" title="初次总结吧，这类问题真的要好好考虑边界值的问题。"></a>初次总结吧，这类问题真的要好好考虑边界值的问题。</h2>在算法中模拟了双向链表的使用，然而结果并不能如我所愿，只有90分，认真思考过后没有发现那里出现问题。于是准备使用已经封装好的数组。</li>
-</ul>
-<p>`import java.awt.List;<br>import java.util.ArrayList;<br>import java.util.Scanner;<br>/**</p>
-<ul>
-<li>201403-2</li>
-<li>*/<br>class window{<br> int x1,y1,x2,y2;<br> int id;<br> public boolean inside(int x,int y) {<pre><code>if(x&gt;=this.x1&amp;&amp;x&lt;=this.x2&amp;&amp;y&gt;=this.y1&amp;&amp;y&lt;=this.y2) {
-    return true;
-}else {
-    return false;
-}
-</code></pre> }<br>}<br>public class ccf005 {<br>public static void main(String args[]){<br> Scanner s=new Scanner(System.in);<br> ArrayList<window> w=new ArrayList<window>();<br> int n=s.nextInt();<br> int m=s.nextInt();<br> int[] result=new int[10];<br> for(int i=0;i&lt;n;i++) {<pre><code>window wins=new window();
-wins.x1=s.nextInt();
-wins.y1=s.nextInt();
-wins.x2=s.nextInt();
-wins.y2=s.nextInt();
-wins.id=i+1;
-w.add(wins);
-</code></pre> }<br> for(int i=0;i&lt;m;i++) {<pre><code>int x=s.nextInt();
-int y=s.nextInt();
-for(int j=w.size()-1;j&gt;=0;j--) {
-    if(w.get(j).inside(x, y)) {
-        result[i]=w.get(j).id;
-        w.add(w.get(j));
-        w.remove(j);
-        break;
-    }
-}
-</code></pre> }<br> for(int i=0;i&lt;m;i++) {<pre><code>if(result[i]==0)
-    System.out.println(&quot;IGNORED&quot;);
-else System.out.println(result[i]);
-</code></pre> }<br>  }<br>}`<br>这份代码看起来效率是不如之前的代码好，但是相对来说结果正确，而且思路清晰，同样在评测的时候也是100分。</window></window></li>
-</ul>
+<h2 id="最后点击的-0-5-不属于任何窗口。"><a href="#最后点击的-0-5-不属于任何窗口。" class="headerlink" title="　　最后点击的 (0, 5) 不属于任何窗口。"></a>　　最后点击的 (0, 5) 不属于任何窗口。</h2><p>提交上去90分的代码，暂时不想改了，现在也蛮晚的。<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Scanner;</span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 201403-2</span></span><br><span class="line"><span class="comment"> * */</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">window</span></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> x1,y1,x2,y2;</span><br><span class="line">	<span class="keyword">int</span> level;</span><br><span class="line">	<span class="keyword">int</span> next;</span><br><span class="line">	<span class="keyword">int</span> beyond;	</span><br><span class="line">&#125;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">point</span></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> x,y;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ccf005</span> </span>&#123;</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String args[])</span></span>&#123;</span><br><span class="line">	Scanner s=<span class="keyword">new</span> Scanner(System.in);</span><br><span class="line">	window[] wins=<span class="keyword">new</span> window[<span class="number">10</span>];</span><br><span class="line">	point[] p=<span class="keyword">new</span> point[<span class="number">10</span>];</span><br><span class="line">	<span class="keyword">int</span> n=s.nextInt();</span><br><span class="line">	<span class="keyword">int</span> m=s.nextInt();</span><br><span class="line">	<span class="keyword">int</span> head=n-<span class="number">1</span>;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;n;i++) &#123;</span><br><span class="line">		wins[i]=<span class="keyword">new</span> window();</span><br><span class="line">		wins[i].x1=s.nextInt();</span><br><span class="line">		wins[i].y1=s.nextInt();</span><br><span class="line">		wins[i].x2=s.nextInt();</span><br><span class="line">		wins[i].y2=s.nextInt();</span><br><span class="line">		wins[i].next=i-<span class="number">1</span>;<span class="comment">//next=-1时invilid</span></span><br><span class="line">		wins[i].beyond=i+<span class="number">1</span>;<span class="comment">//beyond=+n时invilid</span></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;m;i++) &#123;</span><br><span class="line">		p[i]=<span class="keyword">new</span> point();</span><br><span class="line">		p[i].x=s.nextInt();</span><br><span class="line">		p[i].y=s.nextInt();</span><br><span class="line">	&#125;</span><br><span class="line">	 <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;m;i++) &#123;</span><br><span class="line">		 <span class="keyword">int</span> j=head;</span><br><span class="line"><span class="comment">//		 for(;wins[j].next&gt;-1;j=wins[j].next) &#123;</span></span><br><span class="line">		 <span class="keyword">for</span>(;;j=wins[j].next) &#123;</span><br><span class="line">			 <span class="keyword">if</span>(j==-<span class="number">1</span>)  &#123;System.out.println(<span class="string">"IGNORED"</span>);</span><br><span class="line">			 <span class="keyword">break</span>;&#125;</span><br><span class="line">			 <span class="keyword">if</span>(p[i].x&gt;=wins[j].x1&amp;&amp;p[i].x&lt;=wins[j].x2&amp;&amp;p[i].y&gt;=wins[j].y1&amp;&amp;p[i].y&lt;=wins[j].y2)</span><br><span class="line">			 &#123;</span><br><span class="line">				 <span class="keyword">if</span>(wins[j].next==-<span class="number">1</span>) &#123;<span class="comment">//最后一个页面</span></span><br><span class="line">					 System.out.println(j+<span class="number">1</span>);</span><br><span class="line">					 wins[wins[j].beyond].next=-<span class="number">1</span>;</span><br><span class="line">					 wins[head].beyond=j;</span><br><span class="line">					 wins[j].next=head;</span><br><span class="line">					 wins[j].beyond=n;</span><br><span class="line">					 head=j;</span><br><span class="line">					 <span class="keyword">break</span>;		 </span><br><span class="line">				 &#125;<span class="keyword">else</span> <span class="keyword">if</span>(wins[j].beyond==n) &#123;<span class="comment">//第一个页面</span></span><br><span class="line">					 System.out.println(j+<span class="number">1</span>);</span><br><span class="line">					 <span class="keyword">break</span>;</span><br><span class="line">				 &#125;<span class="keyword">else</span> &#123;</span><br><span class="line">					 System.out.println(j+<span class="number">1</span>);</span><br><span class="line">					 wins[wins[j].beyond].next=wins[j].next;</span><br><span class="line">					 wins[wins[j].next].beyond=wins[j].beyond;</span><br><span class="line">					 wins[j].beyond=n;</span><br><span class="line">					 wins[j].next=head;</span><br><span class="line">					 wins[head].beyond=j;</span><br><span class="line">					 head=j;</span><br><span class="line">					 <span class="keyword">break</span>;</span><br><span class="line">				 &#125;</span><br><span class="line">			 &#125;	</span><br><span class="line">		 &#125;</span><br><span class="line"><span class="comment">//		 if(wins[j].next==-1) &#123;</span></span><br><span class="line"><span class="comment">//			 System.out.println("IGNORED");</span></span><br><span class="line"><span class="comment">//		 &#125;</span></span><br><span class="line">	 &#125;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h2 id="初次总结吧，这类问题真的要好好考虑边界值的问题。"><a href="#初次总结吧，这类问题真的要好好考虑边界值的问题。" class="headerlink" title="初次总结吧，这类问题真的要好好考虑边界值的问题。"></a>初次总结吧，这类问题真的要好好考虑边界值的问题。</h2><p>在算法中模拟了双向链表的使用，然而结果并不能如我所愿，只有90分，认真思考过后没有发现那里出现问题。于是准备使用已经封装好的数组。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.awt.List;</span><br><span class="line"><span class="keyword">import</span> java.util.ArrayList;</span><br><span class="line"><span class="keyword">import</span> java.util.Scanner;</span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 201403-2</span></span><br><span class="line"><span class="comment"> * */</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">window</span></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> x1,y1,x2,y2;</span><br><span class="line">	<span class="keyword">int</span> id;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">inside</span><span class="params">(<span class="keyword">int</span> x,<span class="keyword">int</span> y)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">if</span>(x&gt;=<span class="keyword">this</span>.x1&amp;&amp;x&lt;=<span class="keyword">this</span>.x2&amp;&amp;y&gt;=<span class="keyword">this</span>.y1&amp;&amp;y&lt;=<span class="keyword">this</span>.y2) &#123;</span><br><span class="line">			<span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">		&#125;<span class="keyword">else</span> &#123;</span><br><span class="line">			<span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ccf005</span> </span>&#123;</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String args[])</span></span>&#123;</span><br><span class="line">	Scanner s=<span class="keyword">new</span> Scanner(System.in);</span><br><span class="line">	ArrayList&lt;window&gt; w=<span class="keyword">new</span> ArrayList&lt;window&gt;();</span><br><span class="line">	<span class="keyword">int</span> n=s.nextInt();</span><br><span class="line">	<span class="keyword">int</span> m=s.nextInt();</span><br><span class="line">	<span class="keyword">int</span>[] result=<span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">10</span>];</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;n;i++) &#123;</span><br><span class="line">		window wins=<span class="keyword">new</span> window();</span><br><span class="line">		wins.x1=s.nextInt();</span><br><span class="line">		wins.y1=s.nextInt();</span><br><span class="line">		wins.x2=s.nextInt();</span><br><span class="line">		wins.y2=s.nextInt();</span><br><span class="line">		wins.id=i+<span class="number">1</span>;</span><br><span class="line">		w.add(wins);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;m;i++) &#123;</span><br><span class="line">		<span class="keyword">int</span> x=s.nextInt();</span><br><span class="line">		<span class="keyword">int</span> y=s.nextInt();</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> j=w.size()-<span class="number">1</span>;j&gt;=<span class="number">0</span>;j--) &#123;</span><br><span class="line">			<span class="keyword">if</span>(w.get(j).inside(x, y)) &#123;</span><br><span class="line">				result[i]=w.get(j).id;</span><br><span class="line">				w.add(w.get(j));</span><br><span class="line">				w.remove(j);</span><br><span class="line">				<span class="keyword">break</span>;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;m;i++) &#123;</span><br><span class="line">		<span class="keyword">if</span>(result[i]==<span class="number">0</span>)</span><br><span class="line">			System.out.println(<span class="string">"IGNORED"</span>);</span><br><span class="line">		<span class="keyword">else</span> System.out.println(result[i]);</span><br><span class="line">	&#125;</span><br><span class="line">	 &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>这份代码看起来效率是不如之前的代码好，但是相对来说结果正确，而且思路清晰，同样在评测的时候也是100分。</p>
 
       
     </div>
@@ -452,6 +382,10 @@ else System.out.println(result[i]);
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/05/24/CCF 201403-3/" rel="prev" title="CCF 201403-3">
+                CCF 201403-3 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -528,7 +462,7 @@ else System.out.println(result[i]);
               
                 <a href="/archives">
               
-                  <span class="site-state-item-count">10</span>
+                  <span class="site-state-item-count">13</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>

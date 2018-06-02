@@ -79,17 +79,17 @@
 
 
 
-<meta name="description" content="相反的数问题描述　　有 N 个非零且各不相同的整数。请你编一个程序求出它们中有多少对相反数(a 和 -a 为一对相反数)。 输入格式　　第一行包含一个正整数 N。(1 ≤ N ≤ 500)。　　第二行为 N 个用单个空格隔开的非零整数,每个数的绝对值不超过1000,保证这些整数各不相同。输出格式　　只输出一个整数,即这 N 个数中包含多少对相反数。 样例输入51 2 3 -1 -2 样例输出2im">
+<meta name="description" content="相反的数问题描述　　有 N 个非零且各不相同的整数。请你编一个程序求出它们中有多少对相反数(a 和 -a 为一对相反数)。 输入格式　　第一行包含一个正整数 N。(1 ≤ N ≤ 500)。　　第二行为 N 个用单个空格隔开的非零整数,每个数的绝对值不超过1000,保证这些整数各不相同。输出格式　　只输出一个整数,即这 N 个数中包含多少对相反数。 样例输入51 2 3 -1 -2 样例输出212">
 <meta property="og:type" content="article">
 <meta property="og:title" content="CCF 201403-1">
 <meta property="og:url" content="http://yoursite.com/2018/05/24/CCF 201403-1/index.html">
 <meta property="og:site_name" content="Terrorshadow">
-<meta property="og:description" content="相反的数问题描述　　有 N 个非零且各不相同的整数。请你编一个程序求出它们中有多少对相反数(a 和 -a 为一对相反数)。 输入格式　　第一行包含一个正整数 N。(1 ≤ N ≤ 500)。　　第二行为 N 个用单个空格隔开的非零整数,每个数的绝对值不超过1000,保证这些整数各不相同。输出格式　　只输出一个整数,即这 N 个数中包含多少对相反数。 样例输入51 2 3 -1 -2 样例输出2im">
+<meta property="og:description" content="相反的数问题描述　　有 N 个非零且各不相同的整数。请你编一个程序求出它们中有多少对相反数(a 和 -a 为一对相反数)。 输入格式　　第一行包含一个正整数 N。(1 ≤ N ≤ 500)。　　第二行为 N 个用单个空格隔开的非零整数,每个数的绝对值不超过1000,保证这些整数各不相同。输出格式　　只输出一个整数,即这 N 个数中包含多少对相反数。 样例输入51 2 3 -1 -2 样例输出212">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-05-27T23:16:05.879Z">
+<meta property="og:updated_time" content="2018-06-02T15:31:16.159Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CCF 201403-1">
-<meta name="twitter:description" content="相反的数问题描述　　有 N 个非零且各不相同的整数。请你编一个程序求出它们中有多少对相反数(a 和 -a 为一对相反数)。 输入格式　　第一行包含一个正整数 N。(1 ≤ N ≤ 500)。　　第二行为 N 个用单个空格隔开的非零整数,每个数的绝对值不超过1000,保证这些整数各不相同。输出格式　　只输出一个整数,即这 N 个数中包含多少对相反数。 样例输入51 2 3 -1 -2 样例输出2im">
+<meta name="twitter:description" content="相反的数问题描述　　有 N 个非零且各不相同的整数。请你编一个程序求出它们中有多少对相反数(a 和 -a 为一对相反数)。 输入格式　　第一行包含一个正整数 N。(1 ≤ N ≤ 500)。　　第二行为 N 个用单个空格隔开的非零整数,每个数的绝对值不超过1000,保证这些整数各不相同。输出格式　　只输出一个整数,即这 N 个数中包含多少对相反数。 样例输入51 2 3 -1 -2 样例输出212">
 
 
 
@@ -342,26 +342,7 @@
         <h2 id="相反的数"><a href="#相反的数" class="headerlink" title="相反的数"></a>相反的数</h2><h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p>　　有 N 个非零且各不相同的整数。请你编一个程序求出它们中有多少对相反数(a 和 -a 为一对相反数)。</p>
 <h2 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式"></a>输入格式</h2><p>　　第一行包含一个正整数 N。(1 ≤ N ≤ 500)。<br>　　第二行为 N 个用单个空格隔开的非零整数,每个数的绝对值不超过1000,保证这些整数各不相同。<br>输出格式<br>　　只输出一个整数,即这 N 个数中包含多少对相反数。</p>
 <h2 id="样例输入"><a href="#样例输入" class="headerlink" title="样例输入"></a>样例输入</h2><p>5<br>1 2 3 -1 -2</p>
-<h2 id="样例输出"><a href="#样例输出" class="headerlink" title="样例输出"></a>样例输出</h2><p>2<br><code>import java.util.Scanner;
-public class ccf002 {
-public static void main(String args[]){
-    Scanner scan=new Scanner(System.in);
-    int n=scan.nextInt();
-    int[] a=new int[500];
-    int x=0;
-    for(int i=0;i&lt;n;i++){
-        a[i]=scan.nextInt();
-    }  
-    for(int i=0;i&lt;n;i++){
-        for(int j=0;j&lt;n;j++){
-            if(i!=j&amp;&amp;i&gt;j){
-                if(a[j]==-a[i])x++;
-            }
-        }
-    }
-    System.out.println(x);
-}
-}</code></p>
+<h2 id="样例输出"><a href="#样例输出" class="headerlink" title="样例输出"></a>样例输出</h2><p>2<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Scanner;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ccf002</span> </span>&#123;</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String args[])</span></span>&#123;</span><br><span class="line">	Scanner scan=<span class="keyword">new</span> Scanner(System.in);</span><br><span class="line">	<span class="keyword">int</span> n=scan.nextInt();</span><br><span class="line">	<span class="keyword">int</span>[] a=<span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">500</span>];</span><br><span class="line">	<span class="keyword">int</span> x=<span class="number">0</span>;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;n;i++)&#123;</span><br><span class="line">		a[i]=scan.nextInt();</span><br><span class="line">	&#125;  </span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;n;i++)&#123;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">0</span>;j&lt;n;j++)&#123;</span><br><span class="line">			<span class="keyword">if</span>(i!=j&amp;&amp;i&gt;j)&#123;</span><br><span class="line">				<span class="keyword">if</span>(a[j]==-a[i])x++;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	System.out.println(x);</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 
       
     </div>
@@ -475,7 +456,7 @@ public static void main(String args[]){
               
                 <a href="/archives">
               
-                  <span class="site-state-item-count">10</span>
+                  <span class="site-state-item-count">13</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
