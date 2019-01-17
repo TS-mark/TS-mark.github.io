@@ -79,19 +79,17 @@
 
 
 
-<meta name="description" content="URLURL1、URL(Uniform Resource Locator)统一资源定位符，表示Internet上某一资源的地址，协议名：资源名称 TCP1、TCP协议是面向连接的、可靠的、有序的、以字节流的方式发送数据，通过三次握手方式建立连接，形成传输数据的通道，在连接中进行大量数据的传输，效率会稍低 2、Java中基于TCP协议实现网络通信的类​        客户端的Socket类​">
+<meta name="description" content="java.lang.NullPointerException在写题过程中遇见问题，创建对象数组之后有空指针异常的错误。引用某博主的语句 再声明对象数组后 ，必须对每个数组成员进行实例化话 才能直接使用，否则报 空指针异常！ 例如：//创建一个学生类数组； Student  [] stu=new Student[5]; //在使用数组成员时  必须进行实例化 stu[i]=new Student()">
 <meta property="og:type" content="article">
-<meta property="og:title" content="URL">
-<meta property="og:url" content="http://yoursite.com/2018/05/24/URL/index.html">
+<meta property="og:title" content="JAVA对象数组空指针异常">
+<meta property="og:url" content="http://yoursite.com/2018/05/24/java：对象数组空指针异常/index.html">
 <meta property="og:site_name" content="Terrorshadow">
-<meta property="og:description" content="URLURL1、URL(Uniform Resource Locator)统一资源定位符，表示Internet上某一资源的地址，协议名：资源名称 TCP1、TCP协议是面向连接的、可靠的、有序的、以字节流的方式发送数据，通过三次握手方式建立连接，形成传输数据的通道，在连接中进行大量数据的传输，效率会稍低 2、Java中基于TCP协议实现网络通信的类​        客户端的Socket类​">
+<meta property="og:description" content="java.lang.NullPointerException在写题过程中遇见问题，创建对象数组之后有空指针异常的错误。引用某博主的语句 再声明对象数组后 ，必须对每个数组成员进行实例化话 才能直接使用，否则报 空指针异常！ 例如：//创建一个学生类数组； Student  [] stu=new Student[5]; //在使用数组成员时  必须进行实例化 stu[i]=new Student()">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://images2015.cnblogs.com/blog/740688/201509/740688-20150907234728090-211300057.jpg">
-<meta property="og:updated_time" content="2018-05-27T23:07:13.976Z">
+<meta property="og:updated_time" content="2018-05-27T23:13:15.439Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="URL">
-<meta name="twitter:description" content="URLURL1、URL(Uniform Resource Locator)统一资源定位符，表示Internet上某一资源的地址，协议名：资源名称 TCP1、TCP协议是面向连接的、可靠的、有序的、以字节流的方式发送数据，通过三次握手方式建立连接，形成传输数据的通道，在连接中进行大量数据的传输，效率会稍低 2、Java中基于TCP协议实现网络通信的类​        客户端的Socket类​">
-<meta name="twitter:image" content="http://images2015.cnblogs.com/blog/740688/201509/740688-20150907234728090-211300057.jpg">
+<meta name="twitter:title" content="JAVA对象数组空指针异常">
+<meta name="twitter:description" content="java.lang.NullPointerException在写题过程中遇见问题，创建对象数组之后有空指针异常的错误。引用某博主的语句 再声明对象数组后 ，必须对每个数组成员进行实例化话 才能直接使用，否则报 空指针异常！ 例如：//创建一个学生类数组； Student  [] stu=new Student[5]; //在使用数组成员时  必须进行实例化 stu[i]=new Student()">
 
 
 
@@ -121,13 +119,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/05/24/URL/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/05/24/java：对象数组空指针异常/"/>
 
 
 
 
 
-  <title>URL | Terrorshadow</title>
+  <title>JAVA对象数组空指针异常 | Terrorshadow</title>
   
 
 
@@ -274,7 +272,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/24/URL/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/24/java：对象数组空指针异常/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Mark Zhang">
@@ -291,7 +289,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">URL</h1>
+          <h1 class="post-title" itemprop="name headline">JAVA对象数组空指针异常</h1>
         
 
         <div class="post-meta">
@@ -341,9 +339,37 @@
       
 
       
-        <h2 id="URL"><a href="#URL" class="headerlink" title="URL"></a>URL</h2><p>URL<br>1、URL(Uniform Resource Locator)统一资源定位符，表示Internet上某一资源的地址，协议名：资源名称</p>
-<h2 id="TCP"><a href="#TCP" class="headerlink" title="TCP"></a>TCP</h2><p><strong>1、TCP协议是面向连接的、可靠的、有序的、以字节流的方式发送数据，通过三次握手方式建立连接，形成传输数据的通道，在连接中进行大量数据的传输，效率会稍低</strong></p>
-<p><strong>2、Java中基于TCP协议实现网络通信的类</strong><br>​        客户端的Socket类<br>​        服务器端的ServerSocket类<br><img src="http://images2015.cnblogs.com/blog/740688/201509/740688-20150907234728090-211300057.jpg" alt="Socket通信模型"><br> <strong>3、Socket通信的步骤</strong><br>​             ① 创建ServerSocket和Socket<br>​            ② 打开连接到Socket的输入/输出流<br>​            ③ 按照协议对Socket进行读/写操作<br>​            ④ 关闭输入输出流、关闭Socket<br>   <strong>4、服务器端：</strong><br>​           ① 创建ServerSocket对象，绑定监听端口<br>​           ② 通过accept()方法监听客户端请求<br>​           ③ 连接建立后，通过输入流读取客户端发送的请求信息<br>​           ④ 通过输出流向客户端发送乡音信息<br>​           ⑤ 关闭相关资源<br><strong>5、客户端：</strong><br>​    ① 创建Socket对象，指明需要连接的服务器的地址和端口号<br>​    ② 连接建立后，通过输出流想服务器端发送请求信息<br>​    ③ 通过输入流获取服务器响应的信息<br>​    ④ 关闭响应资源<br><strong>6、应用多线程实现服务器与多客户端之间的通信</strong><br>​    ①服务器端创建ServerSocket，循环调用accept()等待客户端连接<br>​    ② 客户端创建一个socket并请求和服务器端连接<br>​    ③ 服务器端接受苦读段请求，创建socket与该客户建立专线连接<br>​    ④ 建立连接的两个socket在一个单独的线程上对话<br>​    ⑤ 服务器端继续等待新的连接</p>
+        <h2 id="java-lang-NullPointerException"><a href="#java-lang-NullPointerException" class="headerlink" title="java.lang.NullPointerException"></a>java.lang.NullPointerException</h2><p>在写题过程中遇见问题，创建对象数组之后有空指针异常的错误。<br>引用某<a href="https://blog.csdn.net/boniucode/article/details/75271520" target="_blank" rel="noopener">博主</a>的语句</p>
+<p>再声明对象数组后 ，必须对每个数组成员进行实例化话 才能直接使用，否则报 空指针异常！</p>
+<h4 id="例如："><a href="#例如：" class="headerlink" title="例如："></a>例如：</h4><p><code>//创建一个学生类数组；
+Student  [] stu=new Student[5];
+//在使用数组成员时  必须进行实例化
+stu[i]=new Student();</code></p>
+<h5 id="否则报错"><a href="#否则报错" class="headerlink" title="否则报错"></a>否则报错</h5><p>`Exception in thread “main” java.lang.NullPointerException<br>    at Test.main(Test.java:10)</p>
+<h2 id=""><a href="#" class="headerlink" title="`"></a>`</h2><p>附加小彩蛋，如果某对象数组两个值前后分别指向一个实例化对象，并且在过程中这个对象值发生改变，这数组中两个成员的值还是这个实例化对象改变后的值。<br>例：<br><code>public class Test {
+    public static void main(String[] args) {
+        A[] as=new A[10];
+        A am=new A(5,2);
+        A ac=new A(4,3);
+        as[0]=am;
+        am.a=7;
+        am.b=8;
+        as[1]=am;
+//        as[2].a=73;
+//        as[2].a=671;/*这两句会报错异常*/
+        System.out.println(as[0].a+&quot;  &quot;+as[0].b);
+        System.out.println(as[1].a+&quot;  &quot;+as[1].b);
+    }
+}
+class A{
+    int a;
+    int b;
+    A(int a,int b){
+        this.a=a;
+        this.b=b;
+    }
+    A(){}
+}</code><br>输出结果：<br>7    8<br>7    8</p>
 
       
     </div>
@@ -368,8 +394,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/05/24/java对象数组空指针异常/" rel="next" title="JAVA对象数组空指针异常">
-                <i class="fa fa-chevron-left"></i> JAVA对象数组空指针异常
+              <a href="/2018/05/24/POJ 1002/" rel="next" title="POJ 1002">
+                <i class="fa fa-chevron-left"></i> POJ 1002
               </a>
             
           </div>
@@ -378,8 +404,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/05/24/JAVA oj注意点/" rel="prev" title="JAVA oj注意点">
-                JAVA oj注意点 <i class="fa fa-chevron-right"></i>
+              <a href="/2018/05/24/python：查看版本/" rel="prev" title="查看python版本">
+                查看python版本 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -457,7 +483,7 @@
               
                 <a href="/archives">
               
-                  <span class="site-state-item-count">13</span>
+                  <span class="site-state-item-count">19</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -494,7 +520,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#URL"><span class="nav-number">1.</span> <span class="nav-text">URL</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#TCP"><span class="nav-number">2.</span> <span class="nav-text">TCP</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#java-lang-NullPointerException"><span class="nav-number">1.</span> <span class="nav-text">java.lang.NullPointerException</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#例如："><span class="nav-number">1.0.1.</span> <span class="nav-text">例如：</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#否则报错"><span class="nav-number">1.0.1.1.</span> <span class="nav-text">否则报错</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#"><span class="nav-number">2.</span> <span class="nav-text">`</span></a></li></ol></div>
             
 
           </div>
@@ -514,7 +540,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>

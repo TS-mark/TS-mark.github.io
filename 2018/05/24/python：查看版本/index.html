@@ -79,17 +79,17 @@
 
 
 
-<meta name="description" content="JAVA OJ中的常用算法总结（慢慢更）参考博客：Java在ACM算法竞赛编程中的易错点[集合排序]（https://blog.csdn.net/hu_shengyang/article/details/6249309) 知识点总结###声明一下这里的问题并不是很全  有关System.nanoTime()函数的使用，该函数用来返回最准确的可用系统计时器的当前值，以毫微秒为单位。 123long">
+<meta name="description" content="如何查看python版本####直接在命令行输入1python 另，可输入1python.exe -m pip install -upgrade pip 进行python版本更新">
 <meta property="og:type" content="article">
-<meta property="og:title" content="JAVA oj注意点">
-<meta property="og:url" content="http://yoursite.com/2018/05/24/JAVA oj注意点/index.html">
+<meta property="og:title" content="查看python版本">
+<meta property="og:url" content="http://yoursite.com/2018/05/24/python：查看版本/index.html">
 <meta property="og:site_name" content="Terrorshadow">
-<meta property="og:description" content="JAVA OJ中的常用算法总结（慢慢更）参考博客：Java在ACM算法竞赛编程中的易错点[集合排序]（https://blog.csdn.net/hu_shengyang/article/details/6249309) 知识点总结###声明一下这里的问题并不是很全  有关System.nanoTime()函数的使用，该函数用来返回最准确的可用系统计时器的当前值，以毫微秒为单位。 123long">
+<meta property="og:description" content="如何查看python版本####直接在命令行输入1python 另，可输入1python.exe -m pip install -upgrade pip 进行python版本更新">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-06-02T15:45:32.087Z">
+<meta property="og:updated_time" content="2018-06-19T03:41:39.010Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="JAVA oj注意点">
-<meta name="twitter:description" content="JAVA OJ中的常用算法总结（慢慢更）参考博客：Java在ACM算法竞赛编程中的易错点[集合排序]（https://blog.csdn.net/hu_shengyang/article/details/6249309) 知识点总结###声明一下这里的问题并不是很全  有关System.nanoTime()函数的使用，该函数用来返回最准确的可用系统计时器的当前值，以毫微秒为单位。 123long">
+<meta name="twitter:title" content="查看python版本">
+<meta name="twitter:description" content="如何查看python版本####直接在命令行输入1python 另，可输入1python.exe -m pip install -upgrade pip 进行python版本更新">
 
 
 
@@ -119,13 +119,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/05/24/JAVA oj注意点/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/05/24/python：查看版本/"/>
 
 
 
 
 
-  <title>JAVA oj注意点 | Terrorshadow</title>
+  <title>查看python版本 | Terrorshadow</title>
   
 
 
@@ -272,7 +272,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/24/JAVA oj注意点/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/24/python：查看版本/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Mark Zhang">
@@ -289,7 +289,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">JAVA oj注意点</h1>
+          <h1 class="post-title" itemprop="name headline">查看python版本</h1>
         
 
         <div class="post-meta">
@@ -339,18 +339,9 @@
       
 
       
-        <h2 id="JAVA-OJ中的常用算法总结（慢慢更）"><a href="#JAVA-OJ中的常用算法总结（慢慢更）" class="headerlink" title="JAVA OJ中的常用算法总结（慢慢更）"></a>JAVA OJ中的常用算法总结（慢慢更）</h2><h2 id="参考博客："><a href="#参考博客：" class="headerlink" title="参考博客："></a>参考博客：</h2><p><a href="https://www.cnblogs.com/ECJTUACM-873284962/p/7342030.html" target="_blank" rel="noopener">Java在ACM算法竞赛编程中的易错点</a><br>[集合排序]（<a href="https://blog.csdn.net/hu_shengyang/article/details/6249309" target="_blank" rel="noopener">https://blog.csdn.net/hu_shengyang/article/details/6249309</a>)</p>
-<h2 id="知识点总结"><a href="#知识点总结" class="headerlink" title="知识点总结"></a>知识点总结</h2><p>###声明一下这里的问题并不是很全</p>
-<ol>
-<li><p>有关System.nanoTime()函数的使用，该函数用来返回最准确的可用系统计时器的当前值，以毫微秒为单位。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">long</span> startTime = System.nanoTime();  </span><br><span class="line"><span class="comment">// ... the code being measured ...  </span></span><br><span class="line"><span class="keyword">long</span> estimatedTime = System.nanoTime() - startTime;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>标准的输入函数：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Scanner sc=<span class="keyword">new</span> Scanner(System.in);</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>数组与集合的排序：<br>如果要对数组排序，请使用java.util.Arrays.sort()方法.<br>如果对list排序，请使用java.util.Collections.sort()方法.<br>举个例子： </p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">   <span class="function"><span class="keyword">public</span> ArrayList&lt;Integer&gt; <span class="title">sort</span><span class="params">(ArrayList&lt;Integer&gt; al)</span> </span>&#123;</span><br><span class="line">   Collections.sort(al);<span class="comment">//对数组排序</span></span><br><span class="line">    <span class="keyword">return</span> al;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
-</ol>
+        <h2 id="如何查看python版本"><a href="#如何查看python版本" class="headerlink" title="如何查看python版本"></a>如何查看python版本</h2><p>####直接在命令行输入<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python</span><br></pre></td></tr></table></figure></p>
+<p>另，可输入<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python.exe -m pip install -upgrade pip</span><br></pre></td></tr></table></figure></p>
+<p>进行python版本更新</p>
 
       
     </div>
@@ -375,8 +366,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/05/24/URL/" rel="next" title="URL">
-                <i class="fa fa-chevron-left"></i> URL
+              <a href="/2018/05/24/java：对象数组空指针异常/" rel="next" title="JAVA对象数组空指针异常">
+                <i class="fa fa-chevron-left"></i> JAVA对象数组空指针异常
               </a>
             
           </div>
@@ -385,8 +376,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/05/24/POJ 1002/" rel="prev" title="POJ 1002">
-                POJ 1002 <i class="fa fa-chevron-right"></i>
+              <a href="/2018/05/24/java：URL/" rel="prev" title="URL">
+                URL <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -464,7 +455,7 @@
               
                 <a href="/archives">
               
-                  <span class="site-state-item-count">13</span>
+                  <span class="site-state-item-count">19</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -501,7 +492,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#JAVA-OJ中的常用算法总结（慢慢更）"><span class="nav-number">1.</span> <span class="nav-text">JAVA OJ中的常用算法总结（慢慢更）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考博客："><span class="nav-number">2.</span> <span class="nav-text">参考博客：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#知识点总结"><span class="nav-number">3.</span> <span class="nav-text">知识点总结</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#如何查看python版本"><span class="nav-number">1.</span> <span class="nav-text">如何查看python版本</span></a></li></ol></div>
             
 
           </div>
@@ -521,7 +512,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>

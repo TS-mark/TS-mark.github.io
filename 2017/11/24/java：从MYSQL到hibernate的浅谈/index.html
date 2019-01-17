@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="从MYSQL到hibernate的浅谈在文章的开篇，我想简单的先介绍一下数据库，数据库有三大类数据结构模型，层次结构模型，网状结构模型，关系结构模型，其中最常使用的就是关系结构型数据库。对于关系型数据库而言，我们可以看见最常用的就是Mysql、sqlserver和oracle，下面重点介绍mysql的连接以及使用方式。 ##MYsql 数据库的语言分为三类， 1.数据操纵语言DML（Data Ma">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hibernate">
+<meta property="og:url" content="http://yoursite.com/2017/11/24/java：从MYSQL到hibernate的浅谈/index.html">
+<meta property="og:site_name" content="Terrorshadow">
+<meta property="og:description" content="从MYSQL到hibernate的浅谈在文章的开篇，我想简单的先介绍一下数据库，数据库有三大类数据结构模型，层次结构模型，网状结构模型，关系结构模型，其中最常使用的就是关系结构型数据库。对于关系型数据库而言，我们可以看见最常用的就是Mysql、sqlserver和oracle，下面重点介绍mysql的连接以及使用方式。 ##MYsql 数据库的语言分为三类， 1.数据操纵语言DML（Data Ma">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/8499175-a1fb06cb8711146c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:updated_time" content="2018-06-07T09:44:17.220Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Hibernate">
+<meta name="twitter:description" content="从MYSQL到hibernate的浅谈在文章的开篇，我想简单的先介绍一下数据库，数据库有三大类数据结构模型，层次结构模型，网状结构模型，关系结构模型，其中最常使用的就是关系结构型数据库。对于关系型数据库而言，我们可以看见最常用的就是Mysql、sqlserver和oracle，下面重点介绍mysql的连接以及使用方式。 ##MYsql 数据库的语言分为三类， 1.数据操纵语言DML（Data Ma">
+<meta name="twitter:image" content="http://upload-images.jianshu.io/upload_images/8499175-a1fb06cb8711146c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2017/11/24/java：从MYSQL到hibernate的浅谈/"/>
+
+
+
+
+
+  <title>Hibernate | Terrorshadow</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Terrorshadow</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-search">
+          <a href="/search" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/11/24/java：从MYSQL到hibernate的浅谈/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Mark Zhang">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Terrorshadow">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Hibernate</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-11-24T12:41:43+08:00">
+                2017-11-24
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="从MYSQL到hibernate的浅谈"><a href="#从MYSQL到hibernate的浅谈" class="headerlink" title="从MYSQL到hibernate的浅谈"></a>从MYSQL到hibernate的浅谈</h2><p>在文章的开篇，我想简单的先介绍一下数据库，数据库有三大类数据结构模型，层次结构模型，网状结构模型，<a href="https://baike.baidu.com/item/%E5%85%B3%E7%B3%BB%E5%9E%8B%E6%95%B0%E6%8D%AE%E5%BA%93/8999831?fr=aladdin" target="_blank" rel="noopener">关系结构模型</a>，其中最常使用的就是关系结构型数据库。对于关系型数据库而言，我们可以看见最常用的就是Mysql、sqlserver和oracle，下面重点介绍mysql的连接以及使用方式。</p>
+<p>##MYsql</p>
+<p>数据库的语言分为三类，</p>
+<p>1.数据操纵语言<em>DML</em>（Data Manipulation Language）</p>
+<p>包括常用的select、insert、update、delete。（Select也可再分为一类，称为数据查询语言）</p>
+<p>​    1.insert插入</p>
+<figure class="highlight plain"><figcaption><span>INTO tb_name(id,name,score)VALUES(NULL,'张三',140),(NULL,'张四',178),(NULL,'张五',134);```</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">​	2.update更新(修改)</span><br><span class="line"></span><br><span class="line">`UPDATE tb_name SET score=189 WHERE id=2;`</span><br><span class="line"></span><br><span class="line">​	3.delete删除</span><br><span class="line"></span><br><span class="line">`DELETE FROM tb_name WHERE id=3;`</span><br><span class="line"></span><br><span class="line">​	4.select查询</span><br><span class="line"></span><br><span class="line">`select * from tb_name;`</span><br><span class="line"></span><br><span class="line">2.数据定义语言DDL</span><br><span class="line"></span><br><span class="line">数据定义语言DDL用来创建数据库中的各种对象-----表、视图、索引、同义词。（create）</span><br><span class="line"></span><br><span class="line">3.数据控制语言DCL</span><br><span class="line"></span><br><span class="line">数据控制语言DCL用来授予或回收访问数据库的某种特权，并控制</span><br><span class="line">数据库操纵事务发生的时间及效果，对数据库实行监视等。</span><br><span class="line"></span><br><span class="line">------</span><br><span class="line"></span><br><span class="line">##[JDBC](http://www.baidu.com/link?url=j-nK5AaHr4FOJxLJl5LnpF5xhcmLbuB93GEcY1LRCs29XeIu9h9pn-DurPHKkf5-aFkjiXP31gtMY3lvkw_Lv_&amp;wd=&amp;eqid=e84b53fa00005df10000000359ef5e86)</span><br><span class="line"></span><br><span class="line">为什么数据库之后介绍的是JDBC呢？因为数据库语言的所有操作是在数据库本身进行的，想要与别的语言相关，让其他语言（这里使用到的是java）操作数据库语言，就必须有一个对外的接口，这里JDBC就是java语言与数据库语言的一个接口，也是一个规范。</span><br><span class="line"></span><br><span class="line">#####数据库驱动，connection</span><br></pre></td></tr></table></figure>
+<p>private static Connection getConn() {<br>    String driver = “com.mysql.jdbc.Driver”;<br>    String url = “jdbc:mysql://localhost:3306/samp_db”;<br>    String username = “root”;<br>    String password = “”;<br>    Connection conn = null;<br>    try {<br>        Class.forName(driver); //classLoader,加载对应驱动<br>        conn = (Connection) DriverManager.getConnection(url, username, password);<br>    } catch (ClassNotFoundException e) {<br>        e.printStackTrace();<br>    } catch (SQLException e) {<br>        e.printStackTrace();<br>    }<br>    return conn;<br>}<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">#####插入</span><br><span class="line"></span><br><span class="line">    private static int insert(Student student) &#123;</span><br><span class="line">    Connection conn = getConn();</span><br><span class="line">    int i = 0;</span><br><span class="line">    String sql = &quot;insert into students (Name,Sex,Age) values(?,?,?)&quot;;</span><br><span class="line">    PreparedStatement pstmt;</span><br><span class="line">    try &#123;</span><br><span class="line">        pstmt = (PreparedStatement) conn.prepareStatement(sql);</span><br><span class="line">        pstmt.setString(1, student.getName());</span><br><span class="line">        pstmt.setString(2, student.getSex());</span><br><span class="line">        pstmt.setString(3, student.getAge());</span><br><span class="line">        i = pstmt.executeUpdate();</span><br><span class="line">        pstmt.close();</span><br><span class="line">        conn.close();</span><br><span class="line">    &#125; catch (SQLException e) &#123;</span><br><span class="line">        e.printStackTrace();</span><br><span class="line">    &#125;</span><br><span class="line">    return i;</span><br><span class="line">    &#125;</span><br><span class="line">##### 更新（修改）</span><br></pre></td></tr></table></figure></p>
+<p>private static int update(Student student) {<br>    Connection conn = getConn();<br>    int i = 0;<br>    String sql = “update students set Age=’” + student.getAge() + “‘ where Name=’” + student.getName() + “‘“;<br>    PreparedStatement pstmt;<br>    try {<br>        pstmt = (PreparedStatement) conn.prepareStatement(sql);<br>        i = pstmt.executeUpdate();<br>        System.out.println(“resutl: “ + i);<br>        pstmt.close();<br>        conn.close();<br>    } catch (SQLException e) {<br>        e.printStackTrace();<br>    }<br>    return i;<br>}<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">##### 查询</span><br></pre></td></tr></table></figure></p>
+<p>private static Integer getAll() {<br>    Connection conn = getConn();<br>    String sql = “select * from students”;<br>    PreparedStatement pstmt;<br>    try {<br>        pstmt = (PreparedStatement)conn.prepareStatement(sql);<br>        ResultSet rs = pstmt.executeQuery();<br>        int col = rs.getMetaData().getColumnCount();<br>        System.out.println(“============================”);<br>        while (rs.next()) {<br>            for (int i = 1; i &lt;= col; i++) {<br>                System.out.print(rs.getString(i) + “\t”);<br>                if ((i == 2) &amp;&amp; (rs.getString(i).length() &lt; 8)) {<br>                    System.out.print(“\t”);<br>                }<br>             }<br>            System.out.println(“”);<br>        }<br>            System.out.println(“============================”);<br>    } catch (SQLException e) {<br>        e.printStackTrace();<br>    }<br>    return null;<br>}<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">##### 删除</span><br></pre></td></tr></table></figure></p>
+<p>private static int delete(String name) {<br>    Connection conn = getConn();<br>    int i = 0;<br>    String sql = “delete from students where Name=’” + name + “‘“;<br>    PreparedStatement pstmt;<br>    try {<br>        pstmt = (PreparedStatement) conn.prepareStatement(sql);<br>        i = pstmt.executeUpdate();<br>        System.out.println(“resutl: “ + i);<br>        pstmt.close();<br>        conn.close();<br>    } catch (SQLException e) {<br>        e.printStackTrace();<br>    }<br>    return i;<br>}<br><code>`</code></p>
+<hr>
+<p>##<a href="https://baike.baidu.com/item/Hibernate/206989?fr=aladdin" target="_blank" rel="noopener">hibernate</a></p>
+<p>关于hibernate(ORM-对象关系映射框架)的介绍，其实hibernate这个框架在我眼里看来，就是一个打包好的JDBC，使用起来会比JDBC简单的多。我们可以在面向对象的思想下，使用java语言完成对数据库的操作，减少了使用关系型数据库SQL语言的操作。</p>
+<p>hibernate框架介绍</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/8499175-a1fb06cb8711146c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p>在做hibernate项目之前，首先需要我们导入hibernate的包跟JDBC的包，具体操作<br>右键项目名称-properties-Java build path-add external JARs，其余步骤：</p>
+<p>1.写hibernate配置文件hibernate.cfg.xml</p>
+<p>2.写好一个javabean，并生成其映射文件.hbm.xml。</p>
+<p>3.将映射文件写入配置文件中。</p>
+<p>4.写测试类。</p>
+<p>​    关于测试类，我们重点需要写好：</p>
+<p>​    配置信息：    <code>Configuration configuration = new Configuration().configure();</code></p>
+<p>​    sessionFactory：<code>SessionFactory sessionFactory = configuration.buildSessionFactory();</code></p>
+<p>​    session:        <code>Session session = sessionFactory.openSession();</code></p>
+<p>​    事务开启：    <code>session.beginTransaction();</code></p>
+<p>​    事务操作（包括增删改查）：</p>
+<p>​    事务保存：    <code>session.save(user);</code></p>
+<p>​    事务提交：    <code>session.getTransaction().commit();</code></p>
+<p>​    关闭：        <code>session.close();</code></p>
+<pre><code>`sessionFactory.close();`
+</code></pre><p>关于hibernate的介绍也基本上说完了</p>
+<p><a href="https://www.zhihu.com/question/21142149/answer/24120371?utm_source=qq&amp;utm_medium=social" target="_blank" rel="noopener">1Java新手如何学习Spring、Struts、Hibernate三大框架？</a></p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/05/19/日志：声明/" rel="prev" title="声明">
+                声明 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">Mark Zhang</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives">
+              
+                  <span class="site-state-item-count">19</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#从MYSQL到hibernate的浅谈"><span class="nav-number">1.</span> <span class="nav-text">从MYSQL到hibernate的浅谈</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Mark Zhang</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

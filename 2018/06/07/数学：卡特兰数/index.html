@@ -79,19 +79,17 @@
 
 
 
-<meta name="description" content="Java learning pathJava java基础 关键字 标识符 常量（变量）装箱&amp;amp;拆箱 运算符 数组 方法（包括方法定义、重载、参数和返回值） Java三大特性（封装、继承、多态） 反射（反射原理网上文档很多，不截取了）   Jvm Java 详解 JVM 工作原理和流程 java中JVM的原理 JVM监控工具   集合 Collection和Map系列 Java集合 Hash">
+<meta name="description" content="关于卡特兰数公式：Cn=(n+1)*C(n,2n),及1,1,2,5,14,42,132,429,1430,4862……一系列数字复习数据结构时候看到的，就是给你一个数列组合，将数列进栈，让你求有多少出栈的可能性，答案就是这个数了。详细的看看下面这个好了。卡特兰数">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Java learning">
-<meta property="og:url" content="http://yoursite.com/2018/05/24/JavaLearningPath/index.html">
+<meta property="og:title" content="数学：卡特兰数(Catalan)">
+<meta property="og:url" content="http://yoursite.com/2018/06/07/数学：卡特兰数/index.html">
 <meta property="og:site_name" content="Terrorshadow">
-<meta property="og:description" content="Java learning pathJava java基础 关键字 标识符 常量（变量）装箱&amp;amp;拆箱 运算符 数组 方法（包括方法定义、重载、参数和返回值） Java三大特性（封装、继承、多态） 反射（反射原理网上文档很多，不截取了）   Jvm Java 详解 JVM 工作原理和流程 java中JVM的原理 JVM监控工具   集合 Collection和Map系列 Java集合 Hash">
+<meta property="og:description" content="关于卡特兰数公式：Cn=(n+1)*C(n,2n),及1,1,2,5,14,42,132,429,1430,4862……一系列数字复习数据结构时候看到的，就是给你一个数列组合，将数列进栈，让你求有多少出栈的可能性，答案就是这个数了。详细的看看下面这个好了。卡特兰数">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/8593035-851ad9bdb6f7128e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:updated_time" content="2018-05-27T23:15:12.799Z">
+<meta property="og:updated_time" content="2018-08-13T15:22:59.479Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Java learning">
-<meta name="twitter:description" content="Java learning pathJava java基础 关键字 标识符 常量（变量）装箱&amp;amp;拆箱 运算符 数组 方法（包括方法定义、重载、参数和返回值） Java三大特性（封装、继承、多态） 反射（反射原理网上文档很多，不截取了）   Jvm Java 详解 JVM 工作原理和流程 java中JVM的原理 JVM监控工具   集合 Collection和Map系列 Java集合 Hash">
-<meta name="twitter:image" content="http://upload-images.jianshu.io/upload_images/8593035-851ad9bdb6f7128e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta name="twitter:title" content="数学：卡特兰数(Catalan)">
+<meta name="twitter:description" content="关于卡特兰数公式：Cn=(n+1)*C(n,2n),及1,1,2,5,14,42,132,429,1430,4862……一系列数字复习数据结构时候看到的，就是给你一个数列组合，将数列进栈，让你求有多少出栈的可能性，答案就是这个数了。详细的看看下面这个好了。卡特兰数">
 
 
 
@@ -121,13 +119,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/05/24/JavaLearningPath/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/06/07/数学：卡特兰数/"/>
 
 
 
 
 
-  <title>Java learning | Terrorshadow</title>
+  <title>数学：卡特兰数(Catalan) | Terrorshadow</title>
   
 
 
@@ -274,7 +272,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/24/JavaLearningPath/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/06/07/数学：卡特兰数/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Mark Zhang">
@@ -291,7 +289,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Java learning</h1>
+          <h1 class="post-title" itemprop="name headline">数学：卡特兰数(Catalan)</h1>
         
 
         <div class="post-meta">
@@ -303,8 +301,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-24T12:41:43+08:00">
-                2018-05-24
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-06-07T12:41:43+08:00">
+                2018-06-07
               </time>
             
 
@@ -341,57 +339,7 @@
       
 
       
-        <h2 id="Java-learning-path"><a href="#Java-learning-path" class="headerlink" title="Java learning path"></a>Java learning path</h2><h2 id="Java"><a href="#Java" class="headerlink" title="Java"></a>Java</h2><p><img src="http://upload-images.jianshu.io/upload_images/8593035-851ad9bdb6f7128e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="#da"></p>
-<h3 id="java基础"><a href="#java基础" class="headerlink" title="java基础"></a><em>java基础</em></h3><ul>
-<li>关键字</li>
-<li>标识符</li>
-<li>常量（变量）<a href="https://www.cnblogs.com/dolphin0520/p/3780005.html" target="_blank" rel="noopener">装箱&amp;拆箱</a></li>
-<li>运算符</li>
-<li>数组</li>
-<li>方法（包括方法定义、重载、参数和返回值）</li>
-<li>Java三大特性（封装、继承、多态）</li>
-<li>反射（反射原理网上文档很多，不截取了）</li>
-</ul>
-<hr>
-<h2 id="Jvm"><a href="#Jvm" class="headerlink" title="Jvm"></a><em>Jvm</em></h2><ul>
-<li><a href="http://www.cnblogs.com/lishun1005/p/6019678.html" target="_blank" rel="noopener">Java 详解 JVM 工作原理和流程</a></li>
-<li><a href="http://blog.csdn.net/witsmakemen/article/details/28600127/" target="_blank" rel="noopener">java中JVM的原理</a></li>
-<li><a href="http://blog.csdn.net/wisgood/article/details/25343845" target="_blank" rel="noopener">JVM监控工具</a></li>
-</ul>
-<hr>
-<h2 id="集合"><a href="#集合" class="headerlink" title="集合"></a><em>集合</em></h2><ul>
-<li><a href="https://github.com/pzxwhc/MineKnowContainer/issues/75" target="_blank" rel="noopener">Collection和Map系列</a></li>
-<li><a href="https://github.com/pzxwhc/MineKnowContainer/issues/18" target="_blank" rel="noopener">Java集合</a></li>
-<li><a href="https://github.com/pzxwhc/MineKnowContainer/issues/19" target="_blank" rel="noopener">HashMap</a></li>
-</ul>
-<hr>
-<h2 id="IO"><a href="#IO" class="headerlink" title="IO"></a>IO</h2><ul>
-<li><p><a href="https://github.com/pzxwhc/MineKnowContainer/issues/22" target="_blank" rel="noopener">JavaIO:操作系统的IO处理过程以及五种网络IO模型</a>(这篇文章我没怎么看懂，先罗列上来)</p>
-</li>
-<li><p><a href="https://github.com/pzxwhc/MineKnowContainer/issues/23" target="_blank" rel="noopener">java常见IO流</a></p>
-</li>
-<li><p><a href="http://blog.csdn.net/anxpp/article/details/51512200" target="_blank" rel="noopener">AIO、BIO、NIO</a></p>
-<p>​</p>
-</li>
-</ul>
-<hr>
-<h2 id="线程"><a href="#线程" class="headerlink" title="线程"></a><strong>线程</strong></h2><ul>
-<li><a href="https://github.com/pzxwhc/MineKnowContainer/issues/6" target="_blank" rel="noopener">Java多线程</a></li>
-<li><a href="https://www.cnblogs.com/luxiaoxun/p/3870265.html" target="_blank" rel="noopener">Java多线程编程实例</a></li>
-<li><p>JUC</p>
-</li>
-<li><p>并发包</p>
-</li>
-</ul>
-<hr>
-<h2 id="框架"><a href="#框架" class="headerlink" title="框架"></a>框架</h2><h4 id="Spring"><a href="#Spring" class="headerlink" title="Spring"></a>Spring</h4><ul>
-<li><a href="https://github.com/pzxwhc/MineKnowContainer/issues/28" target="_blank" rel="noopener">AOP</a>(核心)</li>
-<li><a href="https://github.com/pzxwhc/MineKnowContainer/issues/30" target="_blank" rel="noopener">依赖注入(DI)与控制反转(IOC)</a>(核心)</li>
-<li><a href="https://github.com/pzxwhc/MineKnowContainer/issues/29" target="_blank" rel="noopener">异常统一处理的三种方式与Rest接口异常的处理</a></li>
-</ul>
-<h4 id="SpringMVC"><a href="#SpringMVC" class="headerlink" title="SpringMVC"></a>SpringMVC</h4><ul>
-<li><a href="https://github.com/pzxwhc/MineKnowContainer/issues/32" target="_blank" rel="noopener">Servlet体系结构与ServletContext,ServlectConfig</a></li>
-</ul>
+        <h2 id="关于卡特兰数"><a href="#关于卡特兰数" class="headerlink" title="关于卡特兰数"></a>关于卡特兰数</h2><p>公式：Cn=(n+1)*C(n,2n),及1,1,2,5,14,42,132,429,1430,4862……一系列数字<br>复习数据结构时候看到的，就是给你一个数列组合，将数列进栈，让你求有多少出栈的可能性，答案就是这个数了。<br>详细的看看下面这个好了。<br><a href="https://blog.csdn.net/duanruibupt/article/details/6869431" target="_blank" rel="noopener">卡特兰数</a></p>
 
       
     </div>
@@ -416,8 +364,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/05/24/分箱法/" rel="next" title="分箱法">
-                <i class="fa fa-chevron-left"></i> 分箱法
+              <a href="/2018/06/07/日志2018-06-07/" rel="next" title="日志">
+                <i class="fa fa-chevron-left"></i> 日志
               </a>
             
           </div>
@@ -425,6 +373,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/06/19/python：安装tensorflow/" rel="prev" title="win10安装tensorflow">
+                win10安装tensorflow <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -501,7 +453,7 @@
               
                 <a href="/archives">
               
-                  <span class="site-state-item-count">13</span>
+                  <span class="site-state-item-count">19</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -538,7 +490,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Java-learning-path"><span class="nav-number">1.</span> <span class="nav-text">Java learning path</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Java"><span class="nav-number">2.</span> <span class="nav-text">Java</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#java基础"><span class="nav-number">2.1.</span> <span class="nav-text">java基础</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Jvm"><span class="nav-number">3.</span> <span class="nav-text">Jvm</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#集合"><span class="nav-number">4.</span> <span class="nav-text">集合</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#IO"><span class="nav-number">5.</span> <span class="nav-text">IO</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#线程"><span class="nav-number">6.</span> <span class="nav-text">线程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#框架"><span class="nav-number">7.</span> <span class="nav-text">框架</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Spring"><span class="nav-number">7.0.1.</span> <span class="nav-text">Spring</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#SpringMVC"><span class="nav-number">7.0.2.</span> <span class="nav-text">SpringMVC</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#关于卡特兰数"><span class="nav-number">1.</span> <span class="nav-text">关于卡特兰数</span></a></li></ol></div>
             
 
           </div>
@@ -558,7 +510,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>

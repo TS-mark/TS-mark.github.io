@@ -269,7 +269,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/19/关于eclipse报错code=13/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/24/python：查看版本/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Mark Zhang">
@@ -288,7 +288,528 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/05/19/关于eclipse报错code=13/" itemprop="url">eclipse error：code 13</a></h1>
+                <a class="post-title-link" href="/2018/05/24/python：查看版本/" itemprop="url">查看python版本</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-24T12:41:43+08:00">
+                2018-05-24
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="如何查看python版本"><a href="#如何查看python版本" class="headerlink" title="如何查看python版本"></a>如何查看python版本</h2><p>####直接在命令行输入<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python</span><br></pre></td></tr></table></figure></p>
+<p>另，可输入<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python.exe -m pip install -upgrade pip</span><br></pre></td></tr></table></figure></p>
+<p>进行python版本更新</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/24/java：对象数组空指针异常/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Mark Zhang">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Terrorshadow">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/05/24/java：对象数组空指针异常/" itemprop="url">JAVA对象数组空指针异常</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-24T12:41:43+08:00">
+                2018-05-24
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="java-lang-NullPointerException"><a href="#java-lang-NullPointerException" class="headerlink" title="java.lang.NullPointerException"></a>java.lang.NullPointerException</h2><p>在写题过程中遇见问题，创建对象数组之后有空指针异常的错误。<br>引用某<a href="https://blog.csdn.net/boniucode/article/details/75271520" target="_blank" rel="noopener">博主</a>的语句</p>
+<p>再声明对象数组后 ，必须对每个数组成员进行实例化话 才能直接使用，否则报 空指针异常！</p>
+<h4 id="例如："><a href="#例如：" class="headerlink" title="例如："></a>例如：</h4><p><code>//创建一个学生类数组；
+Student  [] stu=new Student[5];
+//在使用数组成员时  必须进行实例化
+stu[i]=new Student();</code></p>
+<h5 id="否则报错"><a href="#否则报错" class="headerlink" title="否则报错"></a>否则报错</h5><p>`Exception in thread “main” java.lang.NullPointerException<br>    at Test.main(Test.java:10)</p>
+<h2 id=""><a href="#" class="headerlink" title="`"></a>`</h2><p>附加小彩蛋，如果某对象数组两个值前后分别指向一个实例化对象，并且在过程中这个对象值发生改变，这数组中两个成员的值还是这个实例化对象改变后的值。<br>例：<br><code>public class Test {
+    public static void main(String[] args) {
+        A[] as=new A[10];
+        A am=new A(5,2);
+        A ac=new A(4,3);
+        as[0]=am;
+        am.a=7;
+        am.b=8;
+        as[1]=am;
+//        as[2].a=73;
+//        as[2].a=671;/*这两句会报错异常*/
+        System.out.println(as[0].a+&quot;  &quot;+as[0].b);
+        System.out.println(as[1].a+&quot;  &quot;+as[1].b);
+    }
+}
+class A{
+    int a;
+    int b;
+    A(int a,int b){
+        this.a=a;
+        this.b=b;
+    }
+    A(){}
+}</code><br>输出结果：<br>7    8<br>7    8</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/24/POJ 1002/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Mark Zhang">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Terrorshadow">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/05/24/POJ 1002/" itemprop="url">POJ 1002</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-24T12:41:43+08:00">
+                2018-05-24
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="poj-1002题"><a href="#poj-1002题" class="headerlink" title="poj 1002题"></a><a href="http://poj.org/problem?id=1002" target="_blank" rel="noopener">poj 1002题</a></h2><h3 id="OUTPUT："><a href="#OUTPUT：" class="headerlink" title="OUTPUT："></a>OUTPUT：</h3><p>输入值为: TEL number<br>输出值为: TEL tel.frequence</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> num;</span><br><span class="line">	<span class="built_in">string</span> str=<span class="string">"ITSEASY"</span>;</span><br><span class="line">	<span class="built_in">string</span> st;</span><br><span class="line">	<span class="keyword">int</span> n=<span class="number">0</span>;</span><br><span class="line">	<span class="keyword">int</span> i=<span class="number">0</span>;</span><br><span class="line">	<span class="keyword">int</span> j=<span class="number">0</span>;</span><br><span class="line">	<span class="keyword">for</span>(i=<span class="number">0</span>,j=<span class="number">0</span>;i&lt;str.length();i++)&#123;</span><br><span class="line">	<span class="keyword">if</span>(str[i]==<span class="string">'-'</span>)&#123;&#125;</span><br><span class="line">	<span class="keyword">else</span> <span class="keyword">if</span>(str[i]&gt;=<span class="string">'A'</span>&amp;&amp;str[i]&lt;=<span class="string">'Z'</span>)&#123;</span><br><span class="line">		<span class="keyword">if</span>(str[i]&lt;=<span class="string">'P'</span>)&#123;</span><br><span class="line">		st+=(str[i]-<span class="string">'A'</span>)/<span class="number">3</span>+<span class="number">2</span>+<span class="string">'0'</span>;</span><br><span class="line">		j++;&#125;</span><br><span class="line">		<span class="keyword">else</span> <span class="keyword">if</span>(str[i]&gt;=<span class="string">'P'</span>)&#123;</span><br><span class="line">		st+=(str[i]-<span class="string">'A'</span><span class="number">-1</span>)/<span class="number">3</span>+<span class="number">2</span>+<span class="string">'0'</span>;</span><br><span class="line">		j++;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;<span class="keyword">else</span> <span class="keyword">if</span>(str[i]&gt;=<span class="string">'0'</span>&amp;&amp;str[i]&lt;=<span class="string">'9'</span>)&#123;</span><br><span class="line">		st+=str[i];</span><br><span class="line">		j++;</span><br><span class="line">	&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">cout</span>&lt;&lt;st&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>完成了基本的读取，剩下的很容易。当然这里题目给挖了个坑，我也是深陷不能自拔，数据中没有Q这个映射关系<br>下面写一个正确答案，但是答案提示是Time Limit Exceeded<br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;string&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> MAX 100000</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> num;</span><br><span class="line">	<span class="built_in">string</span> str;</span><br><span class="line">	<span class="built_in">string</span> st;</span><br><span class="line">	<span class="keyword">int</span> n=<span class="number">0</span>;</span><br><span class="line">	<span class="keyword">int</span> i=<span class="number">0</span>;</span><br><span class="line">	<span class="keyword">int</span> j=<span class="number">0</span>;</span><br><span class="line">	<span class="keyword">int</span> k=<span class="number">0</span>;</span><br><span class="line">	<span class="keyword">int</span> m=<span class="number">0</span>;</span><br><span class="line">	<span class="built_in">cin</span>&gt;&gt;n;</span><br><span class="line">	<span class="built_in">string</span> s[MAX];</span><br><span class="line">	<span class="built_in">string</span> t[MAX],q[MAX];</span><br><span class="line">	<span class="keyword">int</span> freq[MAX];</span><br><span class="line">	<span class="keyword">while</span>(k&lt;n)&#123;</span><br><span class="line">	<span class="built_in">cin</span>&gt;&gt;str;</span><br><span class="line">	<span class="keyword">for</span>(i=<span class="number">0</span>,j=<span class="number">0</span>;i&lt;str.length();i++)&#123;</span><br><span class="line">		<span class="keyword">if</span>(j==<span class="number">3</span>) &#123;</span><br><span class="line">		st+=<span class="string">'-'</span>;</span><br><span class="line">		j++;&#125;</span><br><span class="line">	<span class="keyword">if</span>(str[i]==<span class="string">'-'</span>)&#123;</span><br><span class="line">	&#125;<span class="keyword">else</span> <span class="keyword">if</span>(str[i]&gt;=<span class="string">'A'</span>&amp;&amp;str[i]&lt;=<span class="string">'Z'</span>)&#123;</span><br><span class="line">			<span class="keyword">if</span>(str[i]&lt;=<span class="string">'P'</span>)&#123;</span><br><span class="line">			st+=(str[i]-<span class="string">'A'</span>)/<span class="number">3</span>+<span class="number">2</span>+<span class="string">'0'</span>;</span><br><span class="line">			j++;</span><br><span class="line">			&#125;<span class="keyword">else</span> <span class="keyword">if</span>(str[i]&gt;=<span class="string">'P'</span>)&#123;</span><br><span class="line">			st+=(str[i]-<span class="string">'A'</span><span class="number">-1</span>)/<span class="number">3</span>+<span class="number">2</span>+<span class="string">'0'</span>;</span><br><span class="line">			j++;</span><br><span class="line">			&#125;</span><br><span class="line">	&#125;<span class="keyword">else</span> <span class="keyword">if</span>(str[i]&gt;=<span class="string">'0'</span>&amp;&amp;str[i]&lt;=<span class="string">'9'</span>)&#123;</span><br><span class="line">		st+=str[i];</span><br><span class="line">		j++;</span><br><span class="line">	&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	s[k]=st;</span><br><span class="line">	str.clear();</span><br><span class="line">	st.clear();</span><br><span class="line">	k++;</span><br><span class="line">	&#125;</span><br><span class="line">	t[<span class="number">0</span>]=s[<span class="number">0</span>];</span><br><span class="line">	k=<span class="number">1</span>;</span><br><span class="line">	freq[<span class="number">0</span>]=<span class="number">1</span>;</span><br><span class="line">	<span class="keyword">for</span>(i=<span class="number">1</span>;i&lt;n;i++)&#123;</span><br><span class="line">		<span class="keyword">for</span>(j=<span class="number">0</span>;j&lt;k+<span class="number">1</span>;j++)&#123;</span><br><span class="line">			<span class="keyword">if</span>(s[i]==t[j])&#123;</span><br><span class="line">				freq[j]+=<span class="number">1</span>;</span><br><span class="line">				<span class="keyword">break</span>;</span><br><span class="line">			&#125;<span class="keyword">else</span> <span class="keyword">if</span>(j==k)&#123;</span><br><span class="line">				k++;</span><br><span class="line">				t[k]=s[i];</span><br><span class="line">				freq[k]=<span class="number">1</span>;</span><br><span class="line">				m++;</span><br><span class="line">				<span class="keyword">break</span>;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line"><span class="keyword">int</span> z=<span class="number">0</span>;</span><br><span class="line">	<span class="keyword">for</span>(j=<span class="number">0</span>;j&lt;=k;j++)&#123;</span><br><span class="line">		<span class="keyword">if</span>(freq[j]&gt;=<span class="number">2</span>)&#123;	</span><br><span class="line">		q[z]=t[j];</span><br><span class="line">		q[z]+=<span class="string">' '</span>;</span><br><span class="line">		q[z]+=(freq[j]+<span class="string">'0'</span>);</span><br><span class="line">		z++;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line"><span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;z;i++)&#123;</span><br><span class="line">	<span class="keyword">for</span>(j=<span class="number">0</span>;j&lt;z-i;j++)&#123;</span><br><span class="line">		<span class="keyword">if</span>(q[j]&gt;q[j+<span class="number">1</span>])&#123;</span><br><span class="line">			<span class="built_in">string</span> temp=q[j];</span><br><span class="line">			q[j]=q[j+<span class="number">1</span>];</span><br><span class="line">			q[j+<span class="number">1</span>]=temp;			</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">for</span>(j=<span class="number">0</span>;j&lt;=z;j++)&#123;</span><br><span class="line">	<span class="built_in">cout</span>&lt;&lt;q[j]&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>这段答案始于我忘记题设中有排序这个问题，加上排序之后导致程序冗长而且超出时间限制.<br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;string&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> MAX 100000</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Qsort</span><span class="params">(<span class="built_in">string</span> a[],<span class="keyword">int</span> low,<span class="keyword">int</span> high)</span></span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(low&gt;=high)&#123;</span><br><span class="line">		<span class="keyword">return</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">int</span> first=low;</span><br><span class="line">	<span class="keyword">int</span> last=high;</span><br><span class="line">	<span class="built_in">string</span> key=a[first];</span><br><span class="line">	<span class="keyword">while</span>(first&lt;last)&#123;</span><br><span class="line">		<span class="keyword">while</span>(first&lt;last&amp;&amp;a[last]&gt;key)&#123;</span><br><span class="line">			--last;</span><br><span class="line">		&#125;</span><br><span class="line">		a[first]=a[last];</span><br><span class="line">		<span class="keyword">while</span>(first&lt;last&amp;&amp;a[first]&lt;=key)&#123;</span><br><span class="line">			++first;</span><br><span class="line">		&#125;</span><br><span class="line">		a[last]=a[first];</span><br><span class="line">	&#125;</span><br><span class="line">	a[first]=key;</span><br><span class="line">	Qsort(a,low,first<span class="number">-1</span>);</span><br><span class="line">	Qsort(a,first+<span class="number">1</span>,high);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> num;</span><br><span class="line">	<span class="built_in">string</span> str;</span><br><span class="line">	<span class="built_in">string</span> st;</span><br><span class="line">	<span class="keyword">int</span> n=<span class="number">0</span>;</span><br><span class="line">	<span class="keyword">int</span> i=<span class="number">0</span>;</span><br><span class="line">	<span class="keyword">int</span> j=<span class="number">0</span>;</span><br><span class="line">	<span class="keyword">int</span> k=<span class="number">0</span>;</span><br><span class="line">	<span class="keyword">int</span> m=<span class="number">0</span>;</span><br><span class="line">	<span class="built_in">cin</span>&gt;&gt;n;</span><br><span class="line">	<span class="built_in">string</span> s[MAX];</span><br><span class="line">	<span class="built_in">string</span> t[MAX],q[MAX];</span><br><span class="line">	<span class="keyword">int</span> freq[MAX];</span><br><span class="line">	<span class="keyword">while</span>(k&lt;n)&#123;</span><br><span class="line">	<span class="built_in">cin</span>&gt;&gt;str;</span><br><span class="line">	<span class="keyword">for</span>(i=<span class="number">0</span>,j=<span class="number">0</span>;i&lt;str.length();i++)&#123;</span><br><span class="line">		<span class="keyword">if</span>(j==<span class="number">3</span>) &#123;</span><br><span class="line">		st+=<span class="string">'-'</span>;</span><br><span class="line">		j++;&#125;</span><br><span class="line">	<span class="keyword">if</span>(str[i]==<span class="string">'-'</span>)&#123;</span><br><span class="line">	&#125;<span class="keyword">else</span> <span class="keyword">if</span>(str[i]&gt;=<span class="string">'A'</span>&amp;&amp;str[i]&lt;=<span class="string">'Z'</span>)&#123;</span><br><span class="line">			<span class="keyword">if</span>(str[i]&lt;=<span class="string">'P'</span>)&#123;</span><br><span class="line">			st+=(str[i]-<span class="string">'A'</span>)/<span class="number">3</span>+<span class="number">2</span>+<span class="string">'0'</span>;</span><br><span class="line">			j++;</span><br><span class="line">			&#125;<span class="keyword">else</span> <span class="keyword">if</span>(str[i]&gt;=<span class="string">'P'</span>)&#123;</span><br><span class="line">			st+=(str[i]-<span class="string">'A'</span><span class="number">-1</span>)/<span class="number">3</span>+<span class="number">2</span>+<span class="string">'0'</span>;</span><br><span class="line">			j++;</span><br><span class="line">			&#125;</span><br><span class="line">	&#125;<span class="keyword">else</span> <span class="keyword">if</span>(str[i]&gt;=<span class="string">'0'</span>&amp;&amp;str[i]&lt;=<span class="string">'9'</span>)&#123;</span><br><span class="line">		st+=str[i];</span><br><span class="line">		j++;</span><br><span class="line">	&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	s[k]=st;</span><br><span class="line">	str.clear();</span><br><span class="line">	st.clear();</span><br><span class="line">	k++;</span><br><span class="line">	&#125;</span><br><span class="line">	t[<span class="number">0</span>]=s[<span class="number">0</span>];</span><br><span class="line">	k=<span class="number">1</span>;</span><br><span class="line">	freq[<span class="number">0</span>]=<span class="number">1</span>;</span><br><span class="line">	<span class="keyword">for</span>(i=<span class="number">1</span>;i&lt;n;i++)&#123;</span><br><span class="line">		<span class="keyword">for</span>(j=<span class="number">0</span>;j&lt;k+<span class="number">1</span>;j++)&#123;</span><br><span class="line">			<span class="keyword">if</span>(s[i]==t[j])&#123;</span><br><span class="line">				freq[j]+=<span class="number">1</span>;</span><br><span class="line">				<span class="keyword">break</span>;</span><br><span class="line">			&#125;<span class="keyword">else</span> <span class="keyword">if</span>(j==k)&#123;</span><br><span class="line">				k++;</span><br><span class="line">				t[k]=s[i];</span><br><span class="line">				freq[k]=<span class="number">1</span>;</span><br><span class="line">				m++;</span><br><span class="line">				<span class="keyword">break</span>;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line"><span class="keyword">int</span> z=<span class="number">0</span>;</span><br><span class="line">	<span class="keyword">for</span>(j=<span class="number">0</span>;j&lt;=k;j++)&#123;</span><br><span class="line">		<span class="keyword">if</span>(freq[j]&gt;=<span class="number">2</span>)&#123;	</span><br><span class="line">		q[z]=t[j];</span><br><span class="line">		q[z]+=<span class="string">' '</span>;</span><br><span class="line">		q[z]+=(freq[j]+<span class="string">'0'</span>);</span><br><span class="line">		z++;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">Qsort(q,<span class="number">0</span>,z); </span><br><span class="line"><span class="keyword">for</span>(j=<span class="number">0</span>;j&lt;=z;j++)&#123;</span><br><span class="line">	<span class="built_in">cout</span>&lt;&lt;q[j]&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>用快速排序对程序进行缩减，然而并不能解决之前的问题。<br>关于这个问题我想不继续去续写了，关于本题有几点内容需要反思和思考：<br>1.C++的操作不熟练，在本机编译成功而提交上去之后编译失败因为自己对C版本认识欠缺。<br>2.审题问题，关于题中Q，以及本身缺失排序导致结果错误。<br>3.全程使用字符串操作，不可避免的使数据量上升之后导致超时。<br>4.多余变量设置复杂。<br>在参考了网上诸多答案之后，以及向各位大神请教，对代码的改进方案有些许认识：<br>1.使用整形变量进行操作，可以提高运算效率。<br>2.使用一个新建的函数完成A-Y的映射关系。<br>3.将整个算法设计思路明确之后进行计算。。<br>现阶段还不是很成熟，慢慢去练吧。</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/24/POJ 1001/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Mark Zhang">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Terrorshadow">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/05/24/POJ 1001/" itemprop="url">POJ 1001</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-24T12:41:43+08:00">
+                2018-05-24
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="poj-1001题"><a href="#poj-1001题" class="headerlink" title="poj 1001题"></a><a href="http://poj.org/problem?id=1001" target="_blank" rel="noopener">poj 1001题</a></h2><h3 id="OUTPUT："><a href="#OUTPUT：" class="headerlink" title="OUTPUT："></a>OUTPUT：</h3><p>输入值为 R n<br>输出值为 R^n的具体数值</p>
+<hr>
+<p>这个题在网上看见了一个很神奇的<a href="http://blog.163.com/boatswain%40126/blog/static/1693964122010718105425483/" target="_blank" rel="noopener">java代码</a>，很清新，而且抱着试一试的心态通过了poj的text<br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.math.*;</span><br><span class="line"><span class="keyword">import</span> java.util.*;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span>&#123;</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">        Scanner in=<span class="keyword">new</span> Scanner(System.in);</span><br><span class="line">        <span class="keyword">while</span>(in.hasNext())&#123;</span><br><span class="line">            BigDecimal val=in.nextBigDecimal();</span><br><span class="line">            <span class="keyword">int</span> n=in.nextInt();</span><br><span class="line">            BigDecimal ret=val.<span class="built_in">pow</span>(n).stripTrailingZeros();</span><br><span class="line">            System.out.println( ret.toPlainString().replaceAll(<span class="string">"^0"</span>, <span class="string">""</span>) );</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>其中<code>toPlanString()</code>,返回不带指数字段的字符串，replaceAll(“^0”,””),。这篇文章的作者有很强编程能力，现在用C语言去完成这个高精度计算。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br></pre></td><td class="code"><pre><span class="line">  <span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line">  <span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdlib.h&gt;</span></span></span><br><span class="line">  <span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstring&gt;</span></span></span><br><span class="line">  <span class="meta">#<span class="meta-keyword">define</span> BUFSIZ 200</span></span><br><span class="line">  <span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>; </span><br><span class="line">  <span class="function"><span class="keyword">char</span> * <span class="title">bigmul</span><span class="params">(<span class="keyword">char</span> *m,<span class="keyword">int</span> lena,<span class="keyword">char</span> *f,<span class="keyword">int</span> lenb)</span></span>&#123;  <span class="comment">//乘法运算函数。</span></span><br><span class="line">     <span class="keyword">int</span> i,j,k,lensum,tmp_result,carry,num=<span class="string">'0'</span>;</span><br><span class="line">     lensum=lena+lenb;                               <span class="comment">//确定结果数组的长度。</span></span><br><span class="line">     <span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;lena;i++)&#123;                            <span class="comment">//将ASCII码转为对应的数字存储。</span></span><br><span class="line">       m[i]=m[i]-num;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;lenb;i++)&#123;</span><br><span class="line">       f[i]=f[i]-num;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">char</span> *result,final[BUFSIZ];</span><br><span class="line">    result=(<span class="keyword">char</span>*)<span class="built_in">calloc</span>(lensum,<span class="number">1</span>);</span><br><span class="line">    <span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;lenb;i++)&#123;</span><br><span class="line">       <span class="comment">//为被乘数作一趟乘法。</span></span><br><span class="line">       <span class="keyword">for</span>(j=<span class="number">0</span>;j&lt;lena;j++)&#123;</span><br><span class="line">          tmp_result=f[lenb-i<span class="number">-1</span>]*m[lena-j<span class="number">-1</span>];</span><br><span class="line">          result[j+i]+=tmp_result;</span><br><span class="line">       &#125;</span><br><span class="line">       <span class="keyword">for</span>(k=<span class="number">0</span>;k&lt;=j+i<span class="number">-1</span>;k++)&#123;</span><br><span class="line">       <span class="comment">//每作一趟乘法整理一次结果数组。</span></span><br><span class="line">          <span class="keyword">if</span>(result[k]&gt;<span class="number">9</span>)&#123;</span><br><span class="line">             carry=result[k]/<span class="number">10</span>;</span><br><span class="line">             result[k]=result[k]%<span class="number">10</span>;</span><br><span class="line">             result[k+<span class="number">1</span>] += carry;</span><br><span class="line">          &#125;</span><br><span class="line">       &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    j=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">if</span>(result[lensum<span class="number">-1</span>]!=<span class="number">0</span>)&#123;                  <span class="comment">//去除前导零将结果整理到final数组中。</span></span><br><span class="line">       final[j]=result[lensum<span class="number">-1</span>]+num;</span><br><span class="line">       j++;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span>(i=lensum<span class="number">-2</span>;i&gt;=<span class="number">0</span>;i--)&#123;</span><br><span class="line">       final[j++]=result[i]+num;</span><br><span class="line">    &#125;</span><br><span class="line">    result=final;                             <span class="comment">//将指针指向final数组并返回该指针。      </span></span><br><span class="line">    <span class="keyword">return</span> result;</span><br><span class="line"> &#125;</span><br><span class="line"> <span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;                                                 <span class="comment">//利用main测试方法，用puts打印结果。               </span></span><br><span class="line">    <span class="keyword">int</span> lena,lenb;</span><br><span class="line">    <span class="keyword">char</span> *result,r[BUFSIZ];</span><br><span class="line">    <span class="keyword">int</span> n;</span><br><span class="line">    <span class="keyword">while</span>(<span class="built_in">cin</span>&gt;&gt;r&gt;&gt;n)&#123;</span><br><span class="line">    lena=<span class="built_in">strlen</span>(r);</span><br><span class="line">    lenb=<span class="built_in">strlen</span>(r);</span><br><span class="line">    result=r;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;n;i++)&#123;</span><br><span class="line">    result=bigmul(result,lenb,r,lena);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">puts</span>(result);</span><br><span class="line">&#125;</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
+<p> 关于大数运算，某朋友给我提供了一个代码，不过在我阅读代码后没有发现有小数位的计算。<br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="built_in">string</span> <span class="title">strMultiply</span><span class="params">(<span class="built_in">string</span> str1 , <span class="built_in">string</span> str2)</span>  </span></span><br><span class="line"><span class="function"></span>&#123;  </span><br><span class="line">    <span class="built_in">string</span> strResult = <span class="string">""</span>;  </span><br><span class="line">    <span class="keyword">int</span> len1 = str1.length();   </span><br><span class="line">    <span class="keyword">int</span> len2 = str2.length();  </span><br><span class="line">    <span class="keyword">int</span> num[<span class="number">500</span>] = &#123;<span class="number">0</span>&#125;;  </span><br><span class="line">    <span class="keyword">int</span> i = <span class="number">0</span>, j = <span class="number">0</span>;     </span><br><span class="line">    <span class="keyword">for</span>(i = <span class="number">0</span>; i &lt; len1; i++)  </span><br><span class="line">    &#123;  </span><br><span class="line">        <span class="keyword">for</span>(j = <span class="number">0</span>; j &lt; len2; j++)  </span><br><span class="line">        &#123;  </span><br><span class="line">            num[len1<span class="number">-1</span> - i + len2<span class="number">-1</span> - j] += (str1[i] - <span class="string">'0'</span>)*(str2[j] - <span class="string">'0'</span>);   </span><br><span class="line">        &#125;  </span><br><span class="line">    &#125;  </span><br><span class="line">    <span class="keyword">for</span>(i = <span class="number">0</span>; i &lt; len1 + len2; i++)  </span><br><span class="line">    &#123;  </span><br><span class="line">        num[i+<span class="number">1</span>] += num[i] / <span class="number">10</span>;  </span><br><span class="line">        num[i] = num[i] % <span class="number">10</span>;  </span><br><span class="line">    &#125;  </span><br><span class="line">    <span class="keyword">for</span>(i = len1 + len2 - <span class="number">1</span>; i &gt;= <span class="number">0</span> ; i--)  </span><br><span class="line">    &#123;  </span><br><span class="line">        <span class="keyword">if</span>(<span class="number">0</span> != num[i]) <span class="keyword">break</span>;  </span><br><span class="line">    &#125;  </span><br><span class="line">    <span class="keyword">for</span>(j = i; j &gt;= <span class="number">0</span>; j--)  </span><br><span class="line">    &#123;  </span><br><span class="line">        strResult += num[j] + <span class="string">'0'</span>;  </span><br><span class="line">    &#125;  </span><br><span class="line">    <span class="keyword">return</span> strResult;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/19/java：关于eclipse报错code=13/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Mark Zhang">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Terrorshadow">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/05/19/java：关于eclipse报错code=13/" itemprop="url">eclipse error：code 13</a></h1>
         
 
         <div class="post-meta">
@@ -343,127 +864,6 @@
             <p>##这个错误代码一般情况下是因为安装的jdk版本与系统位数不服。<br>因为我的电脑中有两个eclipse，所以在一次系统更新中，一个eclipse(neon)弹出code13，另一个eclipse(oxygen)弹出code1，两个摸不到头脑的原因，我查看了系统变量中java_home,发现java_home的路径的jdk消失了，仔细回想可能导致jdk自动消失的原因是jdk的一次更新，然后在运行界面输入</p>
 <h2 id="java-version，查询到jdk自动更新之后在电脑上变成32位，在网上查询资料，这种情况只能重新安装jdk。"><a href="#java-version，查询到jdk自动更新之后在电脑上变成32位，在网上查询资料，这种情况只能重新安装jdk。" class="headerlink" title="java -version，查询到jdk自动更新之后在电脑上变成32位，在网上查询资料，这种情况只能重新安装jdk。"></a><code>java -version</code>，查询到jdk自动更新之后在电脑上变成32位，在网上查询资料，这种情况只能重新安装jdk。</h2><p>###造成原因：大多情况因为jdk自己自动更新导致，如果是第一次出现eclipse弹出错误代码，可能是安装eclipse出现问题。</p>
 <p>###解决方案：将jdk重新下载，在系统变量中重新设置java_home。</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/19/声明/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Mark Zhang">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Terrorshadow">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/05/19/声明/" itemprop="url">声明</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-19T12:41:43+08:00">
-                2018-05-19
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>之前写的一些技术文章丢失，虽说语法不成熟而且很多意义上只有我自己可以看明白，因为比较讨厌从网站上直接暴力抄袭，或者因为自己的时间原因懒得去搭建图床和仔细编辑语言去写。不过，既然建了这个博客，还是慢慢去更吧。</p>
-<h2 id="声明"><a href="#声明" class="headerlink" title="声明"></a>声明</h2><p>在文章中的引用导致版权侵犯问题以及一些其他可能会出现的问题，请将意见信息发至 <a href="mailto:markzhang4438@gmail.com" target="_blank" rel="noopener">markzhang4438@gmail.com</a>，博主会马上处理问题</p>
 
           
         
@@ -627,6 +1027,399 @@
 
 
     
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/19/博客搭建/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Mark Zhang">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Terrorshadow">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/05/19/博客搭建/" itemprop="url">博客搭建</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-19T12:41:43+08:00">
+                2018-05-19
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="本博客的搭建"><a href="#本博客的搭建" class="headerlink" title="本博客的搭建"></a>本博客的搭建</h2><p>我写这个博客，一方面是之前写过的很多东西保存效果不好，就是很多知识点放很长时间之后就会遗忘，回过头来去寻找知识点的时候效率很低。所以希望通过博客这种方式记录下自己从今开始的点点滴滴。<br>为什么自己要很麻烦的去搭建博客，而不是在简书上或者CSDN等地方直接去建个账号写博客；关于这个问题，我只是想说，用HEXO搭建的博客，真的是很方便！而且通过与github相连，访问博客也异常容易！自己随时可以去参考自己写过的东西，反反复复的看效率会很高。<br>熟悉git操作的人都会知道git是一款很强大的工具，加上hexo，文章可以轻轻易易的书写，保存在本地仓库，只需要在cmd上运行很简单的操作，即可生成代码并且上传到github上，方便自己随时查看。<br>当然这个博客写完之后，我也会发现有很多不足的地方，从算法开始写起，很多地方因为是自己的原创，导致质量不高；当然除了自己之外，也希望大家可以当做参考。<br>搭建博客并不是一件很困难的事情，当然需要对一些工具有一定的了解，git、github,markdown，这两个是主要的，包括SSH，以及公钥和私钥的设置。以及很有耐心的慢慢去调试博客，以及设置主题。<br>这个博客搭建到现在有很多不完美的地方，也会慢慢去改正，以及很多页面问题，等博客质量上来之后，会去慢慢修改这些问题，完善它。<br><a href="https://www.cnblogs.com/fengxiongZz/p/7707219.html" target="_blank" rel="noopener">hexo+github</a><br>以上是搭建博客时我参考的文章，当然网上也有很多类似，共大家参考、<br>建博客不是为了暴力抄袭，关于一些不熟悉的知识，我可能会自己在博客写（抄）一遍，这样会加深我的记忆，日后也方便我去查看自己的资料。<br>关于域名：至今因为博客质量不高，而且并没有什么更长远的目标，所以不打算在万网租用域名，就暂时挂用github的公共域。</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/19/日志：声明/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Mark Zhang">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Terrorshadow">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/05/19/日志：声明/" itemprop="url">声明</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-19T12:41:43+08:00">
+                2018-05-19
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="关于本博客声明"><a href="#关于本博客声明" class="headerlink" title="关于本博客声明"></a>关于本博客声明</h2><p>之前写的一些技术文章丢失，虽说语法不成熟而且很多意义上只有我自己可以看明白，因为比较讨厌从网站上直接暴力抄袭，或者因为自己的时间原因懒得去搭建图床和仔细编辑语言去写。不过，既然建了这个博客，还是慢慢去更吧。</p>
+<h2 id="版权声明"><a href="#版权声明" class="headerlink" title="版权声明"></a>版权声明</h2><p>在文章中的引用导致版权侵犯问题以及一些其他可能会出现的问题，请将意见信息发至 <a href="mailto:markzhang4438@gmail.com" target="_blank" rel="noopener">markzhang4438@gmail.com</a>，博主会马上处理问题</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/11/24/java：从MYSQL到hibernate的浅谈/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Mark Zhang">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Terrorshadow">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/11/24/java：从MYSQL到hibernate的浅谈/" itemprop="url">Hibernate</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-11-24T12:41:43+08:00">
+                2017-11-24
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="从MYSQL到hibernate的浅谈"><a href="#从MYSQL到hibernate的浅谈" class="headerlink" title="从MYSQL到hibernate的浅谈"></a>从MYSQL到hibernate的浅谈</h2><p>在文章的开篇，我想简单的先介绍一下数据库，数据库有三大类数据结构模型，层次结构模型，网状结构模型，<a href="https://baike.baidu.com/item/%E5%85%B3%E7%B3%BB%E5%9E%8B%E6%95%B0%E6%8D%AE%E5%BA%93/8999831?fr=aladdin" target="_blank" rel="noopener">关系结构模型</a>，其中最常使用的就是关系结构型数据库。对于关系型数据库而言，我们可以看见最常用的就是Mysql、sqlserver和oracle，下面重点介绍mysql的连接以及使用方式。</p>
+<p>##MYsql</p>
+<p>数据库的语言分为三类，</p>
+<p>1.数据操纵语言<em>DML</em>（Data Manipulation Language）</p>
+<p>包括常用的select、insert、update、delete。（Select也可再分为一类，称为数据查询语言）</p>
+<p>​    1.insert插入</p>
+<figure class="highlight plain"><figcaption><span>INTO tb_name(id,name,score)VALUES(NULL,'张三',140),(NULL,'张四',178),(NULL,'张五',134);```</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">​	2.update更新(修改)</span><br><span class="line"></span><br><span class="line">`UPDATE tb_name SET score=189 WHERE id=2;`</span><br><span class="line"></span><br><span class="line">​	3.delete删除</span><br><span class="line"></span><br><span class="line">`DELETE FROM tb_name WHERE id=3;`</span><br><span class="line"></span><br><span class="line">​	4.select查询</span><br><span class="line"></span><br><span class="line">`select * from tb_name;`</span><br><span class="line"></span><br><span class="line">2.数据定义语言DDL</span><br><span class="line"></span><br><span class="line">数据定义语言DDL用来创建数据库中的各种对象-----表、视图、索引、同义词。（create）</span><br><span class="line"></span><br><span class="line">3.数据控制语言DCL</span><br><span class="line"></span><br><span class="line">数据控制语言DCL用来授予或回收访问数据库的某种特权，并控制</span><br><span class="line">数据库操纵事务发生的时间及效果，对数据库实行监视等。</span><br><span class="line"></span><br><span class="line">------</span><br><span class="line"></span><br><span class="line">##[JDBC](http://www.baidu.com/link?url=j-nK5AaHr4FOJxLJl5LnpF5xhcmLbuB93GEcY1LRCs29XeIu9h9pn-DurPHKkf5-aFkjiXP31gtMY3lvkw_Lv_&amp;wd=&amp;eqid=e84b53fa00005df10000000359ef5e86)</span><br><span class="line"></span><br><span class="line">为什么数据库之后介绍的是JDBC呢？因为数据库语言的所有操作是在数据库本身进行的，想要与别的语言相关，让其他语言（这里使用到的是java）操作数据库语言，就必须有一个对外的接口，这里JDBC就是java语言与数据库语言的一个接口，也是一个规范。</span><br><span class="line"></span><br><span class="line">#####数据库驱动，connection</span><br></pre></td></tr></table></figure>
+<p>private static Connection getConn() {<br>    String driver = “com.mysql.jdbc.Driver”;<br>    String url = “jdbc:mysql://localhost:3306/samp_db”;<br>    String username = “root”;<br>    String password = “”;<br>    Connection conn = null;<br>    try {<br>        Class.forName(driver); //classLoader,加载对应驱动<br>        conn = (Connection) DriverManager.getConnection(url, username, password);<br>    } catch (ClassNotFoundException e) {<br>        e.printStackTrace();<br>    } catch (SQLException e) {<br>        e.printStackTrace();<br>    }<br>    return conn;<br>}<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">#####插入</span><br><span class="line"></span><br><span class="line">    private static int insert(Student student) &#123;</span><br><span class="line">    Connection conn = getConn();</span><br><span class="line">    int i = 0;</span><br><span class="line">    String sql = &quot;insert into students (Name,Sex,Age) values(?,?,?)&quot;;</span><br><span class="line">    PreparedStatement pstmt;</span><br><span class="line">    try &#123;</span><br><span class="line">        pstmt = (PreparedStatement) conn.prepareStatement(sql);</span><br><span class="line">        pstmt.setString(1, student.getName());</span><br><span class="line">        pstmt.setString(2, student.getSex());</span><br><span class="line">        pstmt.setString(3, student.getAge());</span><br><span class="line">        i = pstmt.executeUpdate();</span><br><span class="line">        pstmt.close();</span><br><span class="line">        conn.close();</span><br><span class="line">    &#125; catch (SQLException e) &#123;</span><br><span class="line">        e.printStackTrace();</span><br><span class="line">    &#125;</span><br><span class="line">    return i;</span><br><span class="line">    &#125;</span><br><span class="line">##### 更新（修改）</span><br></pre></td></tr></table></figure></p>
+<p>private static int update(Student student) {<br>    Connection conn = getConn();<br>    int i = 0;<br>    String sql = “update students set Age=’” + student.getAge() + “‘ where Name=’” + student.getName() + “‘“;<br>    PreparedStatement pstmt;<br>    try {<br>        pstmt = (PreparedStatement) conn.prepareStatement(sql);<br>        i = pstmt.executeUpdate();<br>        System.out.println(“resutl: “ + i);<br>        pstmt.close();<br>        conn.close();<br>    } catch (SQLException e) {<br>        e.printStackTrace();<br>    }<br>    return i;<br>}<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">##### 查询</span><br></pre></td></tr></table></figure></p>
+<p>private static Integer getAll() {<br>    Connection conn = getConn();<br>    String sql = “select * from students”;<br>    PreparedStatement pstmt;<br>    try {<br>        pstmt = (PreparedStatement)conn.prepareStatement(sql);<br>        ResultSet rs = pstmt.executeQuery();<br>        int col = rs.getMetaData().getColumnCount();<br>        System.out.println(“============================”);<br>        while (rs.next()) {<br>            for (int i = 1; i &lt;= col; i++) {<br>                System.out.print(rs.getString(i) + “\t”);<br>                if ((i == 2) &amp;&amp; (rs.getString(i).length() &lt; 8)) {<br>                    System.out.print(“\t”);<br>                }<br>             }<br>            System.out.println(“”);<br>        }<br>            System.out.println(“============================”);<br>    } catch (SQLException e) {<br>        e.printStackTrace();<br>    }<br>    return null;<br>}<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">##### 删除</span><br></pre></td></tr></table></figure></p>
+<p>private static int delete(String name) {<br>    Connection conn = getConn();<br>    int i = 0;<br>    String sql = “delete from students where Name=’” + name + “‘“;<br>    PreparedStatement pstmt;<br>    try {<br>        pstmt = (PreparedStatement) conn.prepareStatement(sql);<br>        i = pstmt.executeUpdate();<br>        System.out.println(“resutl: “ + i);<br>        pstmt.close();<br>        conn.close();<br>    } catch (SQLException e) {<br>        e.printStackTrace();<br>    }<br>    return i;<br>}<br><code>`</code></p>
+<hr>
+<p>##<a href="https://baike.baidu.com/item/Hibernate/206989?fr=aladdin" target="_blank" rel="noopener">hibernate</a></p>
+<p>关于hibernate(ORM-对象关系映射框架)的介绍，其实hibernate这个框架在我眼里看来，就是一个打包好的JDBC，使用起来会比JDBC简单的多。我们可以在面向对象的思想下，使用java语言完成对数据库的操作，减少了使用关系型数据库SQL语言的操作。</p>
+<p>hibernate框架介绍</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/8499175-a1fb06cb8711146c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p>在做hibernate项目之前，首先需要我们导入hibernate的包跟JDBC的包，具体操作<br>右键项目名称-properties-Java build path-add external JARs，其余步骤：</p>
+<p>1.写hibernate配置文件hibernate.cfg.xml</p>
+<p>2.写好一个javabean，并生成其映射文件.hbm.xml。</p>
+<p>3.将映射文件写入配置文件中。</p>
+<p>4.写测试类。</p>
+<p>​    关于测试类，我们重点需要写好：</p>
+<p>​    配置信息：    <code>Configuration configuration = new Configuration().configure();</code></p>
+<p>​    sessionFactory：<code>SessionFactory sessionFactory = configuration.buildSessionFactory();</code></p>
+<p>​    session:        <code>Session session = sessionFactory.openSession();</code></p>
+<p>​    事务开启：    <code>session.beginTransaction();</code></p>
+<p>​    事务操作（包括增删改查）：</p>
+<p>​    事务保存：    <code>session.save(user);</code></p>
+<p>​    事务提交：    <code>session.getTransaction().commit();</code></p>
+<p>​    关闭：        <code>session.close();</code></p>
+<pre><code>`sessionFactory.close();`
+</code></pre><p>关于hibernate的介绍也基本上说完了</p>
+<p><a href="https://www.zhihu.com/question/21142149/answer/24120371?utm_source=qq&amp;utm_medium=social" target="_blank" rel="noopener">1Java新手如何学习Spring、Struts、Hibernate三大框架？</a></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
   </section>
 
   
@@ -677,7 +1470,7 @@
               
                 <a href="/archives">
               
-                  <span class="site-state-item-count">13</span>
+                  <span class="site-state-item-count">19</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -718,7 +1511,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>
