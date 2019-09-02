@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="AI测试 什么是AI测试人工智能（AI）是研究、开发用于模拟、延伸和扩展人的智能的理论、方法、技术及应用系统的一门新的技术科学（定义）。人工智能利用机器学习技术，通过对现有的经过处理（筛选、消噪、过滤等）的数据，不断进行矫正（设置阀值等方法）机器模型的输出，此过程称为训练，期望通过训练可以得到在未来新数据上有良好表现的模型，从而投入生产。 AI测试内容1. 模型评估测试模型评估主要是测试 模型对未">
+<meta property="og:type" content="article">
+<meta property="og:title" content="AI测试">
+<meta property="og:url" content="http://yoursite.com/2019/08/15/AI测试/index.html">
+<meta property="og:site_name" content="Terrorshadow">
+<meta property="og:description" content="AI测试 什么是AI测试人工智能（AI）是研究、开发用于模拟、延伸和扩展人的智能的理论、方法、技术及应用系统的一门新的技术科学（定义）。人工智能利用机器学习技术，通过对现有的经过处理（筛选、消噪、过滤等）的数据，不断进行矫正（设置阀值等方法）机器模型的输出，此过程称为训练，期望通过训练可以得到在未来新数据上有良好表现的模型，从而投入生产。 AI测试内容1. 模型评估测试模型评估主要是测试 模型对未">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20190118110615237.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2xoaDA4aGFzZWU=,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20190118111301371.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2xoaDA4aGFzZWU=,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/2019042514435680.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2xoaDA4aGFzZWU=,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20190424154925387.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2xoaDA4aGFzZWU=,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdn.net/20180826144119964?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2xoaDA4aGFzZWU=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70">
+<meta property="og:updated_time" content="2019-08-18T05:54:58.785Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="AI测试">
+<meta name="twitter:description" content="AI测试 什么是AI测试人工智能（AI）是研究、开发用于模拟、延伸和扩展人的智能的理论、方法、技术及应用系统的一门新的技术科学（定义）。人工智能利用机器学习技术，通过对现有的经过处理（筛选、消噪、过滤等）的数据，不断进行矫正（设置阀值等方法）机器模型的输出，此过程称为训练，期望通过训练可以得到在未来新数据上有良好表现的模型，从而投入生产。 AI测试内容1. 模型评估测试模型评估主要是测试 模型对未">
+<meta name="twitter:image" content="https://img-blog.csdnimg.cn/20190118110615237.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2xoaDA4aGFzZWU=,size_16,color_FFFFFF,t_70">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2019/08/15/AI测试/"/>
+
+
+
+
+
+  <title>AI测试 | Terrorshadow</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Terrorshadow</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-search">
+          <a href="/search" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/15/AI测试/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Mark Zhang">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Terrorshadow">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">AI测试</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-08-15T12:41:43+08:00">
+                2019-08-15
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="AI测试"><a href="#AI测试" class="headerlink" title="AI测试"></a>AI测试</h1><hr>
+<h2 id="什么是AI测试"><a href="#什么是AI测试" class="headerlink" title="什么是AI测试"></a>什么是AI测试</h2><h6 id="人工智能（AI）是研究、开发用于模拟、延伸和扩展人的智能的理论、方法、技术及应用系统的一门新的技术科学（定义）。人工智能利用机器学习技术，通过对现有的经过处理（筛选、消噪、过滤等）的数据，不断进行矫正（设置阀值等方法）机器模型的输出，此过程称为训练，期望通过训练可以得到在未来新数据上有良好表现的模型，从而投入生产。"><a href="#人工智能（AI）是研究、开发用于模拟、延伸和扩展人的智能的理论、方法、技术及应用系统的一门新的技术科学（定义）。人工智能利用机器学习技术，通过对现有的经过处理（筛选、消噪、过滤等）的数据，不断进行矫正（设置阀值等方法）机器模型的输出，此过程称为训练，期望通过训练可以得到在未来新数据上有良好表现的模型，从而投入生产。" class="headerlink" title="人工智能（AI）是研究、开发用于模拟、延伸和扩展人的智能的理论、方法、技术及应用系统的一门新的技术科学（定义）。人工智能利用机器学习技术，通过对现有的经过处理（筛选、消噪、过滤等）的数据，不断进行矫正（设置阀值等方法）机器模型的输出，此过程称为训练，期望通过训练可以得到在未来新数据上有良好表现的模型，从而投入生产。"></a>人工智能（AI）是研究、开发用于模拟、延伸和扩展人的智能的理论、方法、技术及应用系统的一门新的技术科学（定义）。人工智能利用机器学习技术，通过对现有的经过处理（筛选、消噪、过滤等）的数据，不断进行矫正（设置阀值等方法）机器模型的输出，此过程称为训练，期望通过训练可以得到在未来新数据上有良好表现的模型，从而投入生产。</h6><hr>
+<h2 id="AI测试内容"><a href="#AI测试内容" class="headerlink" title="AI测试内容"></a>AI测试内容</h2><h3 id="1-模型评估测试"><a href="#1-模型评估测试" class="headerlink" title="1. 模型评估测试"></a>1. 模型评估测试</h3><p>模型评估主要是测试 模型对未知新数据的预测能力，即泛化能力。<br>泛化能力越强，模型的预测能力表现越好。而衡量模型泛化能力的评价指标，就是性能度量(performance measure)。性能度量一般有错误率、准确率、精确率、召回率等。</p>
+<p>参数以及说明：</p>
+<h6 id="Accuracy（准确率）"><a href="#Accuracy（准确率）" class="headerlink" title="Accuracy（准确率）"></a>Accuracy（准确率）</h6><h6 id="Precision（精确率）"><a href="#Precision（精确率）" class="headerlink" title="Precision（精确率）"></a>Precision（精确率）</h6><h6 id="Recall（召回率）"><a href="#Recall（召回率）" class="headerlink" title="Recall（召回率）"></a>Recall（召回率）</h6><h6 id="F1值"><a href="#F1值" class="headerlink" title="F1值"></a>F1值</h6><h6 id="P-R（Precision-recall-）曲线"><a href="#P-R（Precision-recall-）曲线" class="headerlink" title="P-R（Precision-recall ）曲线"></a>P-R（Precision-recall ）曲线</h6><h6 id="ROC曲线"><a href="#ROC曲线" class="headerlink" title="ROC曲线"></a>ROC曲线</h6><h6 id="AUC值"><a href="#AUC值" class="headerlink" title="AUC值"></a>AUC值</h6><h6 id="Kappa系数"><a href="#Kappa系数" class="headerlink" title="Kappa系数"></a>Kappa系数</h6><h6 id="OOB误差"><a href="#OOB误差" class="headerlink" title="OOB误差"></a>OOB误差</h6><p>对于二值分类器，或者说分类算法，如分类猫和狗，分类性别男和女。<br>TP、FP、TN、FN，即：<br>True Positive, False Positive, True Negative, False Negative</p>
+<p>预测值与真实值相同，记为T（True）<br>预测值与真实值相反，记为F（False）<br>预测值为正例，记为P（Positive）<br>预测值为反例，记为N（Negative）</p>
+<p>TP：预测类别是正例，真实类别是正例<br>FP：预测类别是正例，真实类别是反例<br>TN：预测类别是反例，真实类别是反例<br>FN：预测类别是反例，真实类别是正例<br><img src="https://img-blog.csdnimg.cn/20190118110615237.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2xoaDA4aGFzZWU=,size_16,color_FFFFFF,t_70" alt="分类混淆矩阵"></p>
+<blockquote>
+<blockquote>
+<p>例子<br><img src="https://img-blog.csdnimg.cn/20190118111301371.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2xoaDA4aGFzZWU=,size_16,color_FFFFFF,t_70" alt="用例说明"></p>
+</blockquote>
+</blockquote>
+<h6 id="AUC-amp-ROC曲线"><a href="#AUC-amp-ROC曲线" class="headerlink" title="AUC&amp;ROC曲线"></a>AUC&amp;ROC曲线</h6><p>受试者操作特征曲线（ROC），这一点网上已经说烂不再赘述，用来衡量二分类问题中的模型性能。</p>
+<h6 id="SKLEARN接口文档代码示例"><a href="#SKLEARN接口文档代码示例" class="headerlink" title="SKLEARN接口文档代码示例"></a>SKLEARN接口文档代码示例</h6><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"><span class="keyword">from</span> itertools <span class="keyword">import</span> cycle</span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> sklearn <span class="keyword">import</span> svm, datasets</span><br><span class="line"><span class="keyword">from</span> sklearn.metrics <span class="keyword">import</span> roc_curve, auc</span><br><span class="line"><span class="keyword">from</span> sklearn.model_selection <span class="keyword">import</span> train_test_split</span><br><span class="line"><span class="keyword">from</span> sklearn.preprocessing <span class="keyword">import</span> label_binarize</span><br><span class="line"><span class="keyword">from</span> sklearn.multiclass <span class="keyword">import</span> OneVsRestClassifier</span><br><span class="line"><span class="keyword">from</span> scipy <span class="keyword">import</span> interp</span><br><span class="line"></span><br><span class="line"><span class="comment"># Import some data to play with</span></span><br><span class="line">iris = datasets.load_iris()</span><br><span class="line">X = iris.data</span><br><span class="line">y = iris.target</span><br><span class="line"></span><br><span class="line"><span class="comment"># Binarize the output</span></span><br><span class="line">y = label_binarize(y, classes=[<span class="number">0</span>, <span class="number">1</span>, <span class="number">2</span>])</span><br><span class="line">n_classes = y.shape[<span class="number">1</span>]</span><br><span class="line"></span><br><span class="line"><span class="comment"># Add noisy features to make the problem harder</span></span><br><span class="line">random_state = np.random.RandomState(<span class="number">0</span>)</span><br><span class="line">n_samples, n_features = X.shape</span><br><span class="line">X = np.c_[X, random_state.randn(n_samples, <span class="number">200</span> * n_features)]</span><br><span class="line"></span><br><span class="line"><span class="comment"># shuffle and split training and test sets</span></span><br><span class="line">X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=<span class="number">.5</span>,</span><br><span class="line">                                                    random_state=<span class="number">0</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># Learn to predict each class against the other</span></span><br><span class="line">classifier = OneVsRestClassifier(svm.SVC(kernel=<span class="string">'linear'</span>, probability=<span class="keyword">True</span>,</span><br><span class="line">                                 random_state=random_state))</span><br><span class="line">y_score = classifier.fit(X_train, y_train).decision_function(X_test)</span><br><span class="line"></span><br><span class="line"><span class="comment"># Compute ROC curve and ROC area for each class</span></span><br><span class="line">fpr = dict()</span><br><span class="line">tpr = dict()</span><br><span class="line">roc_auc = dict()</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(n_classes):</span><br><span class="line">    fpr[i], tpr[i], _ = roc_curve(y_test[:, i], y_score[:, i])</span><br><span class="line">    roc_auc[i] = auc(fpr[i], tpr[i])</span><br><span class="line"></span><br><span class="line"><span class="comment"># Compute micro-average ROC curve and ROC area</span></span><br><span class="line">fpr[<span class="string">"micro"</span>], tpr[<span class="string">"micro"</span>], _ = roc_curve(y_test.ravel(), y_score.ravel())</span><br><span class="line">roc_auc[<span class="string">"micro"</span>] = auc(fpr[<span class="string">"micro"</span>], tpr[<span class="string">"micro"</span>])</span><br></pre></td></tr></table></figure>
+<p><img src="https://img-blog.csdnimg.cn/2019042514435680.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2xoaDA4aGFzZWU=,size_16,color_FFFFFF,t_70" alt="ROC曲线示例图"></p>
+<h6 id="P-R曲线"><a href="#P-R曲线" class="headerlink" title="P-R曲线"></a>P-R曲线</h6><p>P-R曲线用来衡量分类器性能的优劣，横轴为recall ，纵轴为precision。<br>P-R 曲线越靠近右上角性能越好。<br>如果有多个分类器，则可以画出P-R曲线，若一个分类器A的P-R曲线把另外一个分类器B覆盖，则在一方面可以说明 A的分类器性能比B分类器好。<br>有交叉时，用平衡点（BEP）来衡量。平衡点即precision 等于 recall 时的值。那么可以认为A优于B。<br>画出P-R曲线：<br>算法对样本进行分类时，通常都会有个阈值，或者超参数，需要调。<br>不同的阈值时，就可以得出不同的精确率和召回率，从而画出P-R曲线图。</p>
+<h6 id="OOB误差-1"><a href="#OOB误差-1" class="headerlink" title="OOB误差"></a>OOB误差</h6><p>随机森林算法模型误差评价<br><img src="https://img-blog.csdnimg.cn/20190424154925387.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2xoaDA4aGFzZWU=,size_16,color_FFFFFF,t_70" alt="OOB"></p>
+<h3 id="2-稳定性测试"><a href="#2-稳定性测试" class="headerlink" title="2. 稳定性测试"></a>2. 稳定性测试</h3><p>稳定性/鲁棒性主要是测试算法多次运行的稳定性；以及算法在输入值发现较小变化时的输出变化。<br>如果算法在输入值发生微小变化时就产生了巨大的输出变化，就可以说这个算法是不稳定的。</p>
+<h3 id="3-系统测试"><a href="#3-系统测试" class="headerlink" title="3. 系统测试"></a>3. 系统测试</h3><p>将整个基于算法模型的代码作为一个整体，通过与系统的需求定义作比较，发现软件与系统定义不符合或与之矛盾的地方。<br>系统测试主要包括以下三个方面：</p>
+<ol>
+<li>项目的整体业务流程</li>
+<li>真实用户的使用场景</li>
+<li>数据的流动与正确</li>
+</ol>
+<h3 id="4-接口测试"><a href="#4-接口测试" class="headerlink" title="4. 接口测试"></a>4. 接口测试</h3><p>接口测试是测试系统组件间接口的一种测试。接口测试主要用于检测外部系统与系统之间以及内部各个子系统之间的交互点。测试的重点是要检查数据的交换，传递和控制管理过程，以及系统间的相互逻辑依赖关系等。</p>
+<h3 id="5-文档测试"><a href="#5-文档测试" class="headerlink" title="5. 文档测试"></a>5. 文档测试</h3><p>文档测试是检验用户文档的完整性、正确性、一致性、易理解性、易浏览性。<br>在项目的整个生命周期中，会得到很多文档，在各个阶段中都以文档作为前段工作成果的体现和后阶段工作的依据。为避免在测试的过程中发现的缺陷是由于对文档的理解不准确，理解差异或是文档变更等原因引起的，文档测试也需要有足够的重视。</p>
+<h3 id="6-性能测试"><a href="#6-性能测试" class="headerlink" title="6. 性能测试"></a>6. 性能测试</h3><h3 id="7-白盒测试"><a href="#7-白盒测试" class="headerlink" title="7. 白盒测试"></a>7. 白盒测试</h3><hr>
+<h2 id="AI测试流程"><a href="#AI测试流程" class="headerlink" title="AI测试流程"></a>AI测试流程</h2><h6 id="AI测试分为五个步骤，测试需求分析、测试环境准备、测试数据准备与验证、AI测试执行与分析、模型上线与监控。"><a href="#AI测试分为五个步骤，测试需求分析、测试环境准备、测试数据准备与验证、AI测试执行与分析、模型上线与监控。" class="headerlink" title="AI测试分为五个步骤，测试需求分析、测试环境准备、测试数据准备与验证、AI测试执行与分析、模型上线与监控。"></a>AI测试分为五个步骤，测试需求分析、测试环境准备、测试数据准备与验证、AI测试执行与分析、模型上线与监控。</h6><h2 id="AI测试需求分析"><a href="#AI测试需求分析" class="headerlink" title="AI测试需求分析"></a>AI测试需求分析</h2><h6 id="AI测试需求分析与软件开发的需求分析要求基本一致，需要明确测试对象、测试范围、测试的方法和工具、测试的准则等。AI测试需求分析需要通过开发、测试、运营共同参与讨论，确定AI系统测试通过的准则。由于AI开发具有一定的不确定性，还需要根据实际情况去定义可允许的风险，风险可根据技术的限制和社会共识来确定。"><a href="#AI测试需求分析与软件开发的需求分析要求基本一致，需要明确测试对象、测试范围、测试的方法和工具、测试的准则等。AI测试需求分析需要通过开发、测试、运营共同参与讨论，确定AI系统测试通过的准则。由于AI开发具有一定的不确定性，还需要根据实际情况去定义可允许的风险，风险可根据技术的限制和社会共识来确定。" class="headerlink" title="AI测试需求分析与软件开发的需求分析要求基本一致，需要明确测试对象、测试范围、测试的方法和工具、测试的准则等。AI测试需求分析需要通过开发、测试、运营共同参与讨论，确定AI系统测试通过的准则。由于AI开发具有一定的不确定性，还需要根据实际情况去定义可允许的风险，风险可根据技术的限制和社会共识来确定。"></a>AI测试需求分析与软件开发的需求分析要求基本一致，需要明确测试对象、测试范围、测试的方法和工具、测试的准则等。AI测试需求分析需要通过开发、测试、运营共同参与讨论，确定AI系统测试通过的准则。由于AI开发具有一定的不确定性，还需要根据实际情况去定义可允许的风险，风险可根据技术的限制和社会共识来确定。</h6><h2 id="测试环境准备"><a href="#测试环境准备" class="headerlink" title="测试环境准备"></a>测试环境准备</h2><h6 id="AI的算法，比如推荐系统、搜索引擎、图像分类、自然语言处理都依赖于大数据基础架构，因此AI算法模型的测试环境准备，通常需要考虑数据量、计算量、测试时间等因素。此外，AI测试需要高效的持续测试，所以AI测试尤其需要测试环境快速部署的能力。"><a href="#AI的算法，比如推荐系统、搜索引擎、图像分类、自然语言处理都依赖于大数据基础架构，因此AI算法模型的测试环境准备，通常需要考虑数据量、计算量、测试时间等因素。此外，AI测试需要高效的持续测试，所以AI测试尤其需要测试环境快速部署的能力。" class="headerlink" title="AI的算法，比如推荐系统、搜索引擎、图像分类、自然语言处理都依赖于大数据基础架构，因此AI算法模型的测试环境准备，通常需要考虑数据量、计算量、测试时间等因素。此外，AI测试需要高效的持续测试，所以AI测试尤其需要测试环境快速部署的能力。"></a>AI的算法，比如推荐系统、搜索引擎、图像分类、自然语言处理都依赖于大数据基础架构，因此AI算法模型的测试环境准备，通常需要考虑数据量、计算量、测试时间等因素。此外，AI测试需要高效的持续测试，所以AI测试尤其需要测试环境快速部署的能力。</h6><h2 id="测试数据准备与验证"><a href="#测试数据准备与验证" class="headerlink" title="测试数据准备与验证"></a>测试数据准备与验证</h2><h6 id="AI测试与机器学习一样，需要一定量测试数据去进行模型的评估与测试。测试的数据集要根据真实环境下用户产生的数据情况去划分，可以遵守如下原则："><a href="#AI测试与机器学习一样，需要一定量测试数据去进行模型的评估与测试。测试的数据集要根据真实环境下用户产生的数据情况去划分，可以遵守如下原则：" class="headerlink" title="AI测试与机器学习一样，需要一定量测试数据去进行模型的评估与测试。测试的数据集要根据真实环境下用户产生的数据情况去划分，可以遵守如下原则："></a>AI测试与机器学习一样，需要一定量测试数据去进行模型的评估与测试。测试的数据集要根据真实环境下用户产生的数据情况去划分，可以遵守如下原则：</h6><ol>
+<li>测试数据与训练数据的比例要合适</li>
+<li>测试数据与训练数据需要独立同分布</li>
+<li>测试数据与训练数据正负样本的比例也需要尽量保持一致</li>
+<li>对于有监督的模型，测试数据的标签需要保证正确</li>
+</ol>
+<h2 id="AI系统测试与分析"><a href="#AI系统测试与分析" class="headerlink" title="AI系统测试与分析"></a>AI系统测试与分析</h2><h6 id="模型离线评估主要是评测AI模型对未知新数据的预测能力，即泛化能力。泛化能力越强，模型的预测能力越好。可靠性测试，包括了鲁棒性、可用性、容错性、易恢复性等指标。对于无人驾驶、人脸识别等安全攸关的AI系统，需尽可能采用异常数据来进行测试，如对抗样本、易出错的样本等；对于推荐系统和搜索引擎等智能程序则需要测试反作弊能力。"><a href="#模型离线评估主要是评测AI模型对未知新数据的预测能力，即泛化能力。泛化能力越强，模型的预测能力越好。可靠性测试，包括了鲁棒性、可用性、容错性、易恢复性等指标。对于无人驾驶、人脸识别等安全攸关的AI系统，需尽可能采用异常数据来进行测试，如对抗样本、易出错的样本等；对于推荐系统和搜索引擎等智能程序则需要测试反作弊能力。" class="headerlink" title="模型离线评估主要是评测AI模型对未知新数据的预测能力，即泛化能力。泛化能力越强，模型的预测能力越好。可靠性测试，包括了鲁棒性、可用性、容错性、易恢复性等指标。对于无人驾驶、人脸识别等安全攸关的AI系统，需尽可能采用异常数据来进行测试，如对抗样本、易出错的样本等；对于推荐系统和搜索引擎等智能程序则需要测试反作弊能力。"></a>模型离线评估主要是评测AI模型对未知新数据的预测能力，即泛化能力。泛化能力越强，模型的预测能力越好。可靠性测试，包括了鲁棒性、可用性、容错性、易恢复性等指标。对于无人驾驶、人脸识别等安全攸关的AI系统，需尽可能采用异常数据来进行测试，如对抗样本、易出错的样本等；对于推荐系统和搜索引擎等智能程序则需要测试反作弊能力。</h6><h2 id="AI模型上线与监控"><a href="#AI模型上线与监控" class="headerlink" title="AI模型上线与监控"></a>AI模型上线与监控</h2><p>AI模型上线后，根据实际业务每隔几天或几星期，对模型各类指标进行评估。指标应设置对应阀值，当低于阀值时应触发报警。如果模型随着数据的演化而性能下降，说明模型在新数据下性能不佳，就需要利用新数据重新训练模型。此外，在一些场景中，我们还需要对用户输入数据进行监控。</p>
+<h2 id="测试结果"><a href="#测试结果" class="headerlink" title="测试结果"></a>测试结果</h2><p>通过测试文档以及各种测试的资料，可以整合成一个整个文档。通过文档说明可以更正所有测试的内容。<br><img src="https://img-blog.csdn.net/20180826144119964?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2xoaDA4aGFzZWU=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="fenleijuzhen"></p>
+<hr>
+<p>参考博客<br><a href="http://tryenough.com/test-ai-functions" target="_blank" rel="noopener">人工智能测试方法–释梦石</a></p>
+<p><a href="https://blog.csdn.net/lhh08hasee/article/details/81748680" target="_blank" rel="noopener">【AI测试】也许这有你想知道的人工智能 (AI) 测试–凌晨点点</a></p>
+<p><a href="https://mp.weixin.qq.com/s?__biz=MzIwNzE0MzM4NA==&amp;mid=2650339068&amp;idx=1&amp;sn=75d8dcd8b3ba9704aaa62408325ec426&amp;chksm=8f1abe4bb86d375d191ffe7546589b51e7c1e8d9214ef31bf4fe20f9528df9e585e56363ece1&amp;mpshare=1&amp;scene=1&amp;srcid=0131qMXxtuRfMzzfBTutmpC9&amp;sharer_sharetime=1565488988902&amp;sharer_shareid=ecf9114d296e0c1a021142b730746c98&amp;key=e8e84aec0427272dc0001ffa32b88141184f9d0fdb49734c7574c709d0073e0b35b0ada9635156908f81fae3e4eb5263d9b4651ffb4efa13de1e92026ee80596ba1778fd1cf23e9c52f8f1fd49a9c7d8&amp;ascene=1&amp;uin=NTY3MzA5NTQw&amp;devicetype=Windows+10&amp;version=62060833&amp;lang=zh_CN&amp;pass_ticket=H%2FpD2uSiwULCFPCWPsd7sVMWwhM8MAeezSz%2BUikTVpWrzVVX41FNhp76qV%2BHDzP8" target="_blank" rel="noopener">AI测试的思考与探索–陈敏刚</a></p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/03/12/java：输入String按位转换成int/" rel="next" title="">
+                <i class="fa fa-chevron-left"></i> 
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">Mark Zhang</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives">
+              
+                  <span class="site-state-item-count">24</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#AI测试"><span class="nav-number">1.</span> <span class="nav-text">AI测试</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#什么是AI测试"><span class="nav-number">1.1.</span> <span class="nav-text">什么是AI测试</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#人工智能（AI）是研究、开发用于模拟、延伸和扩展人的智能的理论、方法、技术及应用系统的一门新的技术科学（定义）。人工智能利用机器学习技术，通过对现有的经过处理（筛选、消噪、过滤等）的数据，不断进行矫正（设置阀值等方法）机器模型的输出，此过程称为训练，期望通过训练可以得到在未来新数据上有良好表现的模型，从而投入生产。"><span class="nav-number">1.1.0.0.0.1.</span> <span class="nav-text">人工智能（AI）是研究、开发用于模拟、延伸和扩展人的智能的理论、方法、技术及应用系统的一门新的技术科学（定义）。人工智能利用机器学习技术，通过对现有的经过处理（筛选、消噪、过滤等）的数据，不断进行矫正（设置阀值等方法）机器模型的输出，此过程称为训练，期望通过训练可以得到在未来新数据上有良好表现的模型，从而投入生产。</span></a></li></ol></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#AI测试内容"><span class="nav-number">1.2.</span> <span class="nav-text">AI测试内容</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-模型评估测试"><span class="nav-number">1.2.1.</span> <span class="nav-text">1. 模型评估测试</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#Accuracy（准确率）"><span class="nav-number">1.2.1.0.0.1.</span> <span class="nav-text">Accuracy（准确率）</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#Precision（精确率）"><span class="nav-number">1.2.1.0.0.2.</span> <span class="nav-text">Precision（精确率）</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#Recall（召回率）"><span class="nav-number">1.2.1.0.0.3.</span> <span class="nav-text">Recall（召回率）</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#F1值"><span class="nav-number">1.2.1.0.0.4.</span> <span class="nav-text">F1值</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#P-R（Precision-recall-）曲线"><span class="nav-number">1.2.1.0.0.5.</span> <span class="nav-text">P-R（Precision-recall ）曲线</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#ROC曲线"><span class="nav-number">1.2.1.0.0.6.</span> <span class="nav-text">ROC曲线</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#AUC值"><span class="nav-number">1.2.1.0.0.7.</span> <span class="nav-text">AUC值</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#Kappa系数"><span class="nav-number">1.2.1.0.0.8.</span> <span class="nav-text">Kappa系数</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#OOB误差"><span class="nav-number">1.2.1.0.0.9.</span> <span class="nav-text">OOB误差</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#AUC-amp-ROC曲线"><span class="nav-number">1.2.1.0.0.10.</span> <span class="nav-text">AUC&amp;ROC曲线</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#SKLEARN接口文档代码示例"><span class="nav-number">1.2.1.0.0.11.</span> <span class="nav-text">SKLEARN接口文档代码示例</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#P-R曲线"><span class="nav-number">1.2.1.0.0.12.</span> <span class="nav-text">P-R曲线</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#OOB误差-1"><span class="nav-number">1.2.1.0.0.13.</span> <span class="nav-text">OOB误差</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-稳定性测试"><span class="nav-number">1.2.2.</span> <span class="nav-text">2. 稳定性测试</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-系统测试"><span class="nav-number">1.2.3.</span> <span class="nav-text">3. 系统测试</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-接口测试"><span class="nav-number">1.2.4.</span> <span class="nav-text">4. 接口测试</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-文档测试"><span class="nav-number">1.2.5.</span> <span class="nav-text">5. 文档测试</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-性能测试"><span class="nav-number">1.2.6.</span> <span class="nav-text">6. 性能测试</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-白盒测试"><span class="nav-number">1.2.7.</span> <span class="nav-text">7. 白盒测试</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#AI测试流程"><span class="nav-number">1.3.</span> <span class="nav-text">AI测试流程</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#AI测试分为五个步骤，测试需求分析、测试环境准备、测试数据准备与验证、AI测试执行与分析、模型上线与监控。"><span class="nav-number">1.3.0.0.0.1.</span> <span class="nav-text">AI测试分为五个步骤，测试需求分析、测试环境准备、测试数据准备与验证、AI测试执行与分析、模型上线与监控。</span></a></li></ol></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#AI测试需求分析"><span class="nav-number">1.4.</span> <span class="nav-text">AI测试需求分析</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#AI测试需求分析与软件开发的需求分析要求基本一致，需要明确测试对象、测试范围、测试的方法和工具、测试的准则等。AI测试需求分析需要通过开发、测试、运营共同参与讨论，确定AI系统测试通过的准则。由于AI开发具有一定的不确定性，还需要根据实际情况去定义可允许的风险，风险可根据技术的限制和社会共识来确定。"><span class="nav-number">1.4.0.0.0.1.</span> <span class="nav-text">AI测试需求分析与软件开发的需求分析要求基本一致，需要明确测试对象、测试范围、测试的方法和工具、测试的准则等。AI测试需求分析需要通过开发、测试、运营共同参与讨论，确定AI系统测试通过的准则。由于AI开发具有一定的不确定性，还需要根据实际情况去定义可允许的风险，风险可根据技术的限制和社会共识来确定。</span></a></li></ol></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#测试环境准备"><span class="nav-number">1.5.</span> <span class="nav-text">测试环境准备</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#AI的算法，比如推荐系统、搜索引擎、图像分类、自然语言处理都依赖于大数据基础架构，因此AI算法模型的测试环境准备，通常需要考虑数据量、计算量、测试时间等因素。此外，AI测试需要高效的持续测试，所以AI测试尤其需要测试环境快速部署的能力。"><span class="nav-number">1.5.0.0.0.1.</span> <span class="nav-text">AI的算法，比如推荐系统、搜索引擎、图像分类、自然语言处理都依赖于大数据基础架构，因此AI算法模型的测试环境准备，通常需要考虑数据量、计算量、测试时间等因素。此外，AI测试需要高效的持续测试，所以AI测试尤其需要测试环境快速部署的能力。</span></a></li></ol></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#测试数据准备与验证"><span class="nav-number">1.6.</span> <span class="nav-text">测试数据准备与验证</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#AI测试与机器学习一样，需要一定量测试数据去进行模型的评估与测试。测试的数据集要根据真实环境下用户产生的数据情况去划分，可以遵守如下原则："><span class="nav-number">1.6.0.0.0.1.</span> <span class="nav-text">AI测试与机器学习一样，需要一定量测试数据去进行模型的评估与测试。测试的数据集要根据真实环境下用户产生的数据情况去划分，可以遵守如下原则：</span></a></li></ol></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#AI系统测试与分析"><span class="nav-number">1.7.</span> <span class="nav-text">AI系统测试与分析</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#模型离线评估主要是评测AI模型对未知新数据的预测能力，即泛化能力。泛化能力越强，模型的预测能力越好。可靠性测试，包括了鲁棒性、可用性、容错性、易恢复性等指标。对于无人驾驶、人脸识别等安全攸关的AI系统，需尽可能采用异常数据来进行测试，如对抗样本、易出错的样本等；对于推荐系统和搜索引擎等智能程序则需要测试反作弊能力。"><span class="nav-number">1.7.0.0.0.1.</span> <span class="nav-text">模型离线评估主要是评测AI模型对未知新数据的预测能力，即泛化能力。泛化能力越强，模型的预测能力越好。可靠性测试，包括了鲁棒性、可用性、容错性、易恢复性等指标。对于无人驾驶、人脸识别等安全攸关的AI系统，需尽可能采用异常数据来进行测试，如对抗样本、易出错的样本等；对于推荐系统和搜索引擎等智能程序则需要测试反作弊能力。</span></a></li></ol></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#AI模型上线与监控"><span class="nav-number">1.8.</span> <span class="nav-text">AI模型上线与监控</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#测试结果"><span class="nav-number">1.9.</span> <span class="nav-text">测试结果</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Mark Zhang</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
