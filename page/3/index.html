@@ -269,6 +269,248 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/24/java：URL/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Mark Zhang">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Terrorshadow">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/05/24/java：URL/" itemprop="url">URL</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-24T12:41:43+08:00">
+                2018-05-24
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="URL"><a href="#URL" class="headerlink" title="URL"></a>URL</h2><p>URL<br>1、URL(Uniform Resource Locator)统一资源定位符，表示Internet上某一资源的地址，协议名：资源名称</p>
+<h2 id="TCP"><a href="#TCP" class="headerlink" title="TCP"></a>TCP</h2><p><strong>1、TCP协议是面向连接的、可靠的、有序的、以字节流的方式发送数据，通过三次握手方式建立连接，形成传输数据的通道，在连接中进行大量数据的传输，效率会稍低</strong></p>
+<p><strong>2、Java中基于TCP协议实现网络通信的类</strong><br>​        客户端的Socket类<br>​        服务器端的ServerSocket类<br><img src="http://images2015.cnblogs.com/blog/740688/201509/740688-20150907234728090-211300057.jpg" alt="Socket通信模型"><br> <strong>3、Socket通信的步骤</strong><br>​             ① 创建ServerSocket和Socket<br>​            ② 打开连接到Socket的输入/输出流<br>​            ③ 按照协议对Socket进行读/写操作<br>​            ④ 关闭输入输出流、关闭Socket<br>   <strong>4、服务器端：</strong><br>​           ① 创建ServerSocket对象，绑定监听端口<br>​           ② 通过accept()方法监听客户端请求<br>​           ③ 连接建立后，通过输入流读取客户端发送的请求信息<br>​           ④ 通过输出流向客户端发送乡音信息<br>​           ⑤ 关闭相关资源<br><strong>5、客户端：</strong><br>​    ① 创建Socket对象，指明需要连接的服务器的地址和端口号<br>​    ② 连接建立后，通过输出流想服务器端发送请求信息<br>​    ③ 通过输入流获取服务器响应的信息<br>​    ④ 关闭响应资源<br><strong>6、应用多线程实现服务器与多客户端之间的通信</strong><br>​    ①服务器端创建ServerSocket，循环调用accept()等待客户端连接<br>​    ② 客户端创建一个socket并请求和服务器端连接<br>​    ③ 服务器端接受苦读段请求，创建socket与该客户建立专线连接<br>​    ④ 建立连接的两个socket在一个单独的线程上对话<br>​    ⑤ 服务器端继续等待新的连接</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/24/dm：分箱法/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Mark Zhang">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Terrorshadow">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/05/24/dm：分箱法/" itemprop="url">分箱法</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-24T12:41:43+08:00">
+                2018-05-24
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="分箱"><a href="#分箱" class="headerlink" title="分箱"></a>分箱</h2><h2 id="参考文章："><a href="#参考文章：" class="headerlink" title="参考文章："></a>参考文章：</h2><p>[集合排序]（<a href="https://blog.csdn.net/hu_shengyang/article/details/6249309" target="_blank" rel="noopener">https://blog.csdn.net/hu_shengyang/article/details/6249309</a>)<br><a href="https://blog.csdn.net/zaozxueyuan/article/details/22613509" target="_blank" rel="noopener">离群点分析</a><br><a href="https://blog.csdn.net/wangyibo0201/article/details/51705966" target="_blank" rel="noopener">异常点/离群点检测算法-Lof</a><br>整个分箱法的算法没有什么难度，重点在于离群点分析，这里对离群点的分析采用局部异常因子算法(Lof),具体代码参考参考文献。<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> data_mining;</span><br><span class="line"><span class="keyword">import</span> java.util.ArrayList;</span><br><span class="line"><span class="keyword">import</span> java.util.Collections;</span><br><span class="line"><span class="comment">/*文中不包含离群点分析*/</span></span><br><span class="line"><span class="comment">//import java.util.Scanner;</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Fenxiang</span> </span>&#123;</span><br><span class="line">	<span class="keyword">private</span> ArrayList&lt;Integer&gt; data;</span><br><span class="line">	<span class="keyword">private</span> ArrayList&lt;Integer&gt; box;</span><br><span class="line">	<span class="keyword">private</span> ArrayList&lt;Integer&gt; border;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="title">Fenxiang</span><span class="params">(ArrayList&lt;Integer&gt; d)</span> </span>&#123;</span><br><span class="line">		</span><br><span class="line">		<span class="keyword">this</span>.data=sort(d);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="title">Fenxiang</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line"><span class="function"><span class="keyword">public</span> ArrayList&lt;Integer&gt; <span class="title">sort</span><span class="params">(ArrayList&lt;Integer&gt; al)</span> </span>&#123;<span class="comment">//分箱法中data集合赋值后直接进行排序</span></span><br><span class="line"><span class="comment">//    int[] arr1=&#123;1,3,5,7,9&#125;;</span></span><br><span class="line"><span class="comment">//    int[] arr2=&#123;2,4,6,8,10&#125;;</span></span><br><span class="line"><span class="comment">////    List&lt;Comparable&gt; al = new ArrayList&lt;Comparable&gt;();</span></span><br><span class="line"><span class="comment">//    ArrayList&lt;Integer&gt; al = new ArrayList&lt;Integer&gt;();</span></span><br><span class="line"><span class="comment">//    for(int i=0;i&lt;arr1.length;i++)&#123;</span></span><br><span class="line"><span class="comment">//        al.add(arr1[i]);</span></span><br><span class="line"><span class="comment">//    &#125;</span></span><br><span class="line"><span class="comment">//    System.out.println(al);</span></span><br><span class="line"><span class="comment">//    for(int j=0;j&lt;arr2.length;j++)&#123;</span></span><br><span class="line"><span class="comment">//        al.add(arr2[j]);</span></span><br><span class="line"><span class="comment">//    &#125;</span></span><br><span class="line"><span class="comment">//    System.out.println(al);</span></span><br><span class="line"><span class="comment">/*  Iterator&lt;Comparable&gt; it=al.iterator();</span></span><br><span class="line"><span class="comment">    Integer obj = null;</span></span><br><span class="line"><span class="comment">    while(it.hasNext())&#123;</span></span><br><span class="line"><span class="comment">        obj=(Integer)it.next();    </span></span><br><span class="line"><span class="comment">        al.add(obj.intValue());</span></span><br><span class="line"><span class="comment">    &#125;</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line">    Collections.sort(al);<span class="comment">//对数组排序</span></span><br><span class="line">    <span class="comment">//Arrays.sort(al.toArray());//对list排序</span></span><br><span class="line"><span class="comment">//    System.out.println(al);</span></span><br><span class="line">    <span class="keyword">return</span> al;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//	public void scan(Scanner s) &#123;</span></span><br><span class="line"><span class="comment">//		data.add(s.nextInt());</span></span><br><span class="line"><span class="comment">//	&#125;</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setData</span><span class="params">(ArrayList&lt;Integer&gt; d)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">this</span>.data=sort(d);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> ArrayList&lt;Integer&gt; <span class="title">average</span><span class="params">(<span class="keyword">int</span> n)</span> </span>&#123;<span class="comment">//向下取整average,箱深度为n</span></span><br><span class="line">		ArrayList&lt;Integer&gt; box1=<span class="keyword">new</span> ArrayList&lt;Integer&gt;();</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;data.size();i=i+n) &#123;</span><br><span class="line">			<span class="keyword">int</span> ave=<span class="number">0</span>;</span><br><span class="line">			<span class="keyword">if</span>(data.size()-i&lt;n) &#123;</span><br><span class="line">				<span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">0</span>;j&lt;data.size()-i;j++) &#123;</span><br><span class="line">					ave+=data.get(i+j);</span><br><span class="line">				&#125;</span><br><span class="line">				ave=ave/(data.size()-i);</span><br><span class="line">				box1.add(ave);</span><br><span class="line">			&#125;<span class="keyword">else</span> &#123;</span><br><span class="line">				<span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">0</span>;j&lt;n;j++) &#123;</span><br><span class="line">					ave+=data.get(i+j);</span><br><span class="line">				&#125;</span><br><span class="line">				ave=ave/(n);</span><br><span class="line"><span class="comment">//				System.out.println(ave);</span></span><br><span class="line">				box1.add(ave);</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		setBox(box1);</span><br><span class="line">		<span class="keyword">return</span> box1;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">showBorder</span><span class="params">(<span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;border.size();i+=n) &#123;</span><br><span class="line">			System.out.print(<span class="string">"箱"</span>+((i/n)+<span class="number">1</span>)+<span class="string">": "</span>);</span><br><span class="line">			<span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">0</span>;j&lt;n;j++) &#123;</span><br><span class="line">				System.out.print(border.get(i+j)+<span class="string">" "</span>);</span><br><span class="line">			&#125;</span><br><span class="line">			System.out.println();</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> ArrayList&lt;Integer&gt; <span class="title">border</span><span class="params">(<span class="keyword">int</span> n)</span></span>&#123;</span><br><span class="line">		ArrayList&lt;Integer&gt; bo=<span class="keyword">new</span> ArrayList&lt;Integer&gt;();</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;data.size();i=i+n) &#123;</span><br><span class="line">			bo.add(data.get(i));</span><br><span class="line">			<span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">1</span>;j&lt;n-<span class="number">1</span>;j++) &#123;</span><br><span class="line">				<span class="keyword">if</span>((data.get(i+j)-data.get(i))&lt;(data.get(i+n-<span class="number">1</span>)-data.get(i+j))) &#123;</span><br><span class="line">					bo.add(data.get(i));</span><br><span class="line">				&#125;<span class="keyword">else</span> &#123;</span><br><span class="line">					bo.add(data.get(i+n-<span class="number">1</span>));</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">			bo.add(data.get(i+n-<span class="number">1</span>));</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">this</span>.border=bo;</span><br><span class="line">		<span class="keyword">return</span> bo;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> ArrayList&lt;Integer&gt; <span class="title">Mediam</span><span class="params">(<span class="keyword">int</span> n)</span> </span>&#123;<span class="comment">//取中位数,箱深度为n</span></span><br><span class="line">		ArrayList&lt;Integer&gt; box1=<span class="keyword">new</span> ArrayList&lt;Integer&gt;();</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;data.size();i=i+n) &#123;</span><br><span class="line">			<span class="keyword">int</span> med=<span class="number">0</span>;</span><br><span class="line">			<span class="keyword">if</span>(data.size()-i&lt;n) &#123;</span><br><span class="line">				<span class="keyword">if</span>((data.size()-i)/<span class="number">2</span>==<span class="number">0</span>) &#123;</span><br><span class="line">					med=(data.get(i+(data.size()-i)/<span class="number">2</span>)+data.get(i+(data.size()-i)/<span class="number">2</span>-<span class="number">1</span>))/<span class="number">2</span>;</span><br><span class="line">				&#125;<span class="keyword">else</span> &#123;</span><br><span class="line">				med=(data.get(i+(data.size()-i)/<span class="number">2</span>));&#125;</span><br><span class="line">				med=med/(data.size()-i);</span><br><span class="line">				box1.add(med);</span><br><span class="line">			&#125;<span class="keyword">else</span> &#123;</span><br><span class="line">				<span class="keyword">if</span>(n/<span class="number">2</span>==<span class="number">0</span>) &#123;</span><br><span class="line">					med=(data.get(i+n/<span class="number">2</span>)+data.get(i+n/<span class="number">2</span>-<span class="number">1</span>))/<span class="number">2</span>;</span><br><span class="line">				&#125;<span class="keyword">else</span> &#123;</span><br><span class="line">				med=(data.get(i+n/<span class="number">2</span>));&#125;</span><br><span class="line"><span class="comment">//				System.out.println(ave);</span></span><br><span class="line">				box1.add(med);</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		setBox(box1);</span><br><span class="line">		<span class="keyword">return</span> box1;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> ArrayList&lt;Integer&gt; <span class="title">getBox</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		<span class="keyword">return</span> box;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setBox</span><span class="params">(ArrayList&lt;Integer&gt; box)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">this</span>.box = box;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">showData</span><span class="params">()</span></span>&#123;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;data.size();i++) &#123;</span><br><span class="line">			<span class="keyword">if</span>(i==<span class="number">10</span>) System.out.println(<span class="string">" "</span>);</span><br><span class="line">			System.out.print(data.get(i)+<span class="string">"  "</span>);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">showBox</span><span class="params">()</span></span>&#123;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;box.size();i++) &#123;</span><br><span class="line">			<span class="keyword">if</span>(i==<span class="number">10</span>) System.out.println(<span class="string">" "</span>);</span><br><span class="line">			System.out.print(box.get(i)+<span class="string">"  "</span>);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	</span><br><span class="line">	</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> data_mining;</span><br><span class="line"><span class="keyword">import</span> java.util.ArrayList;</span><br><span class="line"><span class="keyword">import</span> java.util.Collections;</span><br><span class="line"><span class="keyword">import</span> java.util.List;</span><br><span class="line"><span class="keyword">import</span> java.util.Scanner;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String args[])</span> </span>&#123;</span><br><span class="line">		ArrayList&lt;Integer&gt; ar=<span class="keyword">new</span> ArrayList&lt;Integer&gt;();</span><br><span class="line">		Scanner sc=<span class="keyword">new</span> Scanner(System.in);	</span><br><span class="line">		<span class="keyword">int</span> n=<span class="number">3</span>;</span><br><span class="line"><span class="comment">//		int n=sc.nextInt();</span></span><br><span class="line">		<span class="keyword">while</span>(sc.hasNextInt()) &#123;</span><br><span class="line">			ar.add(sc.nextInt());</span><br><span class="line">		&#125;</span><br><span class="line">		Fenxiang fx=<span class="keyword">new</span> Fenxiang(ar);</span><br><span class="line">		fx.showData();</span><br><span class="line">		System.out.println(<span class="string">""</span>);</span><br><span class="line">		System.out.println(<span class="string">"平均值平滑"</span>);</span><br><span class="line">		fx.average(n);</span><br><span class="line">		fx.showBox();</span><br><span class="line">		System.out.println(<span class="string">""</span>);</span><br><span class="line">		System.out.println(<span class="string">"中值平滑"</span>);</span><br><span class="line">		 fx.Mediam(n);</span><br><span class="line">		 fx.showBox();</span><br><span class="line">		 System.out.println(<span class="string">""</span>);</span><br><span class="line">		 System.out.println(<span class="string">"边界值平滑"</span>);</span><br><span class="line">		</span><br><span class="line">		fx.border(n);</span><br><span class="line">		fx.showBorder(n);</span><br><span class="line">		</span><br><span class="line">		</span><br><span class="line"><span class="comment">//		test();</span></span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/24/POJ 1001/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -523,128 +765,6 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/24/java：URL/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Mark Zhang">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Terrorshadow">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/05/24/java：URL/" itemprop="url">URL</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-24T12:41:43+08:00">
-                2018-05-24
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="URL"><a href="#URL" class="headerlink" title="URL"></a>URL</h2><p>URL<br>1、URL(Uniform Resource Locator)统一资源定位符，表示Internet上某一资源的地址，协议名：资源名称</p>
-<h2 id="TCP"><a href="#TCP" class="headerlink" title="TCP"></a>TCP</h2><p><strong>1、TCP协议是面向连接的、可靠的、有序的、以字节流的方式发送数据，通过三次握手方式建立连接，形成传输数据的通道，在连接中进行大量数据的传输，效率会稍低</strong></p>
-<p><strong>2、Java中基于TCP协议实现网络通信的类</strong><br>​        客户端的Socket类<br>​        服务器端的ServerSocket类<br><img src="http://images2015.cnblogs.com/blog/740688/201509/740688-20150907234728090-211300057.jpg" alt="Socket通信模型"><br> <strong>3、Socket通信的步骤</strong><br>​             ① 创建ServerSocket和Socket<br>​            ② 打开连接到Socket的输入/输出流<br>​            ③ 按照协议对Socket进行读/写操作<br>​            ④ 关闭输入输出流、关闭Socket<br>   <strong>4、服务器端：</strong><br>​           ① 创建ServerSocket对象，绑定监听端口<br>​           ② 通过accept()方法监听客户端请求<br>​           ③ 连接建立后，通过输入流读取客户端发送的请求信息<br>​           ④ 通过输出流向客户端发送乡音信息<br>​           ⑤ 关闭相关资源<br><strong>5、客户端：</strong><br>​    ① 创建Socket对象，指明需要连接的服务器的地址和端口号<br>​    ② 连接建立后，通过输出流想服务器端发送请求信息<br>​    ③ 通过输入流获取服务器响应的信息<br>​    ④ 关闭响应资源<br><strong>6、应用多线程实现服务器与多客户端之间的通信</strong><br>​    ①服务器端创建ServerSocket，循环调用accept()等待客户端连接<br>​    ② 客户端创建一个socket并请求和服务器端连接<br>​    ③ 服务器端接受苦读段请求，创建socket与该客户建立专线连接<br>​    ④ 建立连接的两个socket在一个单独的线程上对话<br>​    ⑤ 服务器端继续等待新的连接</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/24/java：JAVA oj注意点/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -733,544 +853,6 @@
 </li>
 </ol>
 <p>5.String拆分成一位一位的char<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test_2</span></span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">String name = <span class="string">"CHINA"</span>;</span><br><span class="line"><span class="keyword">char</span>[] c = name.toCharArray();</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>;i &lt; c.length;i ++)</span><br><span class="line">&#123;</span><br><span class="line">System.out.println(c[i]);</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/24/java：JavaLearningPath/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Mark Zhang">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Terrorshadow">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/05/24/java：JavaLearningPath/" itemprop="url">Java learning</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-24T12:41:43+08:00">
-                2018-05-24
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="Java-learning-path"><a href="#Java-learning-path" class="headerlink" title="Java learning path"></a>Java learning path</h2><h2 id="Java"><a href="#Java" class="headerlink" title="Java"></a>Java</h2><p><img src="http://upload-images.jianshu.io/upload_images/8593035-851ad9bdb6f7128e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="#da"></p>
-<h3 id="java基础"><a href="#java基础" class="headerlink" title="java基础"></a><em>java基础</em></h3><ul>
-<li>关键字</li>
-<li>标识符</li>
-<li>常量（变量）<a href="https://www.cnblogs.com/dolphin0520/p/3780005.html" target="_blank" rel="noopener">装箱&amp;拆箱</a></li>
-<li>运算符</li>
-<li>数组</li>
-<li>方法（包括方法定义、重载、参数和返回值）</li>
-<li>Java三大特性（封装、继承、多态）</li>
-<li>反射（反射原理网上文档很多，不截取了）</li>
-</ul>
-<hr>
-<h2 id="Jvm"><a href="#Jvm" class="headerlink" title="Jvm"></a><em>Jvm</em></h2><ul>
-<li><a href="http://www.cnblogs.com/lishun1005/p/6019678.html" target="_blank" rel="noopener">Java 详解 JVM 工作原理和流程</a></li>
-<li><a href="http://blog.csdn.net/witsmakemen/article/details/28600127/" target="_blank" rel="noopener">java中JVM的原理</a></li>
-<li><a href="http://blog.csdn.net/wisgood/article/details/25343845" target="_blank" rel="noopener">JVM监控工具</a></li>
-</ul>
-<hr>
-<h2 id="集合"><a href="#集合" class="headerlink" title="集合"></a><em>集合</em></h2><ul>
-<li><a href="https://github.com/pzxwhc/MineKnowContainer/issues/75" target="_blank" rel="noopener">Collection和Map系列</a></li>
-<li><a href="https://github.com/pzxwhc/MineKnowContainer/issues/18" target="_blank" rel="noopener">Java集合</a></li>
-<li><a href="https://github.com/pzxwhc/MineKnowContainer/issues/19" target="_blank" rel="noopener">HashMap</a></li>
-</ul>
-<hr>
-<h2 id="IO"><a href="#IO" class="headerlink" title="IO"></a>IO</h2><ul>
-<li><p><a href="https://github.com/pzxwhc/MineKnowContainer/issues/22" target="_blank" rel="noopener">JavaIO:操作系统的IO处理过程以及五种网络IO模型</a>(这篇文章我没怎么看懂，先罗列上来)</p>
-</li>
-<li><p><a href="https://github.com/pzxwhc/MineKnowContainer/issues/23" target="_blank" rel="noopener">java常见IO流</a></p>
-</li>
-<li><p><a href="http://blog.csdn.net/anxpp/article/details/51512200" target="_blank" rel="noopener">AIO、BIO、NIO</a></p>
-<p>​</p>
-</li>
-</ul>
-<hr>
-<h2 id="线程"><a href="#线程" class="headerlink" title="线程"></a><strong>线程</strong></h2><ul>
-<li><a href="https://github.com/pzxwhc/MineKnowContainer/issues/6" target="_blank" rel="noopener">Java多线程</a></li>
-<li><a href="https://www.cnblogs.com/luxiaoxun/p/3870265.html" target="_blank" rel="noopener">Java多线程编程实例</a></li>
-<li><p>JUC</p>
-</li>
-<li><p>并发包</p>
-</li>
-</ul>
-<hr>
-<h2 id="框架"><a href="#框架" class="headerlink" title="框架"></a>框架</h2><h4 id="Spring"><a href="#Spring" class="headerlink" title="Spring"></a>Spring</h4><ul>
-<li><a href="https://github.com/pzxwhc/MineKnowContainer/issues/28" target="_blank" rel="noopener">AOP</a>(核心)</li>
-<li><a href="https://github.com/pzxwhc/MineKnowContainer/issues/30" target="_blank" rel="noopener">依赖注入(DI)与控制反转(IOC)</a>(核心)</li>
-<li><a href="https://github.com/pzxwhc/MineKnowContainer/issues/29" target="_blank" rel="noopener">异常统一处理的三种方式与Rest接口异常的处理</a></li>
-</ul>
-<h4 id="SpringMVC"><a href="#SpringMVC" class="headerlink" title="SpringMVC"></a>SpringMVC</h4><ul>
-<li><a href="https://github.com/pzxwhc/MineKnowContainer/issues/32" target="_blank" rel="noopener">Servlet体系结构与ServletContext,ServlectConfig</a></li>
-</ul>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/19/hello-world/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Mark Zhang">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Terrorshadow">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/05/19/hello-world/" itemprop="url">Hello World</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-19T12:41:43+08:00">
-                2018-05-19
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/19/java：关于eclipse报错code=13/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Mark Zhang">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Terrorshadow">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/05/19/java：关于eclipse报错code=13/" itemprop="url">eclipse error：code 13</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-19T12:41:43+08:00">
-                2018-05-19
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="这个错误代码一般情况下是因为安装的jdk版本与系统位数不服。"><a href="#这个错误代码一般情况下是因为安装的jdk版本与系统位数不服。" class="headerlink" title="这个错误代码一般情况下是因为安装的jdk版本与系统位数不服。"></a>这个错误代码一般情况下是因为安装的jdk版本与系统位数不服。</h2><p>因为我的电脑中有两个eclipse，所以在一次系统更新中，一个eclipse(neon)弹出code13，另一个eclipse(oxygen)弹出code1，两个摸不到头脑的原因，我查看了系统变量中java_home,发现java_home的路径的jdk消失了，仔细回想可能导致jdk自动消失的原因是jdk的一次更新，然后在运行界面输入</p>
-<h2 id="java-version，查询到jdk自动更新之后在电脑上变成32位，在网上查询资料，这种情况只能重新安装jdk。"><a href="#java-version，查询到jdk自动更新之后在电脑上变成32位，在网上查询资料，这种情况只能重新安装jdk。" class="headerlink" title="java -version，查询到jdk自动更新之后在电脑上变成32位，在网上查询资料，这种情况只能重新安装jdk。"></a><code>java -version</code>，查询到jdk自动更新之后在电脑上变成32位，在网上查询资料，这种情况只能重新安装jdk。</h2><h3 id="造成原因：大多情况因为jdk自己自动更新导致，如果是第一次出现eclipse弹出错误代码，可能是安装eclipse出现问题。"><a href="#造成原因：大多情况因为jdk自己自动更新导致，如果是第一次出现eclipse弹出错误代码，可能是安装eclipse出现问题。" class="headerlink" title="造成原因：大多情况因为jdk自己自动更新导致，如果是第一次出现eclipse弹出错误代码，可能是安装eclipse出现问题。"></a>造成原因：大多情况因为jdk自己自动更新导致，如果是第一次出现eclipse弹出错误代码，可能是安装eclipse出现问题。</h3><h3 id="解决方案：将jdk重新下载，在系统变量中重新设置java-home。"><a href="#解决方案：将jdk重新下载，在系统变量中重新设置java-home。" class="headerlink" title="解决方案：将jdk重新下载，在系统变量中重新设置java_home。"></a>解决方案：将jdk重新下载，在系统变量中重新设置java_home。</h3>
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/19/java：IDEA中.java文件左下角红色j问题/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Mark Zhang">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Terrorshadow">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/05/19/java：IDEA中.java文件左下角红色j问题/" itemprop="url">idea .java文件 右下角有个红色j，解决方法</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-19T12:41:43+08:00">
-                2018-05-19
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>不可编译，File里打开project structure找到Modules，其中有个Sources，把右边第一个X点击，去掉Root路径后，重新添加。<br><a href="https://blog.csdn.net/w348399060/article/details/70312518/" target="_blank" rel="noopener">原文链接</a></p>
 
           
         
@@ -1729,6 +1311,367 @@
 
 
     
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/19/java：IDEA中.java文件左下角红色j问题/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Mark Zhang">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Terrorshadow">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/05/19/java：IDEA中.java文件左下角红色j问题/" itemprop="url">idea .java文件 右下角有个红色j，解决方法</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-19T12:41:43+08:00">
+                2018-05-19
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>不可编译，File里打开project structure找到Modules，其中有个Sources，把右边第一个X点击，去掉Root路径后，重新添加。<br><a href="https://blog.csdn.net/w348399060/article/details/70312518/" target="_blank" rel="noopener">原文链接</a></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/19/日志：声明/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Mark Zhang">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Terrorshadow">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/05/19/日志：声明/" itemprop="url">声明</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-19T12:41:43+08:00">
+                2018-05-19
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="关于本博客声明"><a href="#关于本博客声明" class="headerlink" title="关于本博客声明"></a>关于本博客声明</h2><p>之前写的一些技术文章丢失，虽说语法不成熟而且很多意义上只有我自己可以看明白，因为比较讨厌从网站上直接暴力抄袭，或者因为自己的时间原因懒得去搭建图床和仔细编辑语言去写。不过，既然建了这个博客，还是慢慢去更吧。</p>
+<h2 id="版权声明"><a href="#版权声明" class="headerlink" title="版权声明"></a>版权声明</h2><p>在文章中的引用导致版权侵犯问题以及一些其他可能会出现的问题，请将意见信息发至 <a href="mailto:markzhang4438@gmail.com" target="_blank" rel="noopener">markzhang4438@gmail.com</a>，博主会马上处理问题</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/19/java：关于eclipse报错code=13/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Mark Zhang">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Terrorshadow">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/05/19/java：关于eclipse报错code=13/" itemprop="url">eclipse error：code 13</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-19T12:41:43+08:00">
+                2018-05-19
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="这个错误代码一般情况下是因为安装的jdk版本与系统位数不服。"><a href="#这个错误代码一般情况下是因为安装的jdk版本与系统位数不服。" class="headerlink" title="这个错误代码一般情况下是因为安装的jdk版本与系统位数不服。"></a>这个错误代码一般情况下是因为安装的jdk版本与系统位数不服。</h2><p>因为我的电脑中有两个eclipse，所以在一次系统更新中，一个eclipse(neon)弹出code13，另一个eclipse(oxygen)弹出code1，两个摸不到头脑的原因，我查看了系统变量中java_home,发现java_home的路径的jdk消失了，仔细回想可能导致jdk自动消失的原因是jdk的一次更新，然后在运行界面输入</p>
+<h2 id="java-version，查询到jdk自动更新之后在电脑上变成32位，在网上查询资料，这种情况只能重新安装jdk。"><a href="#java-version，查询到jdk自动更新之后在电脑上变成32位，在网上查询资料，这种情况只能重新安装jdk。" class="headerlink" title="java -version，查询到jdk自动更新之后在电脑上变成32位，在网上查询资料，这种情况只能重新安装jdk。"></a><code>java -version</code>，查询到jdk自动更新之后在电脑上变成32位，在网上查询资料，这种情况只能重新安装jdk。</h2><h3 id="造成原因：大多情况因为jdk自己自动更新导致，如果是第一次出现eclipse弹出错误代码，可能是安装eclipse出现问题。"><a href="#造成原因：大多情况因为jdk自己自动更新导致，如果是第一次出现eclipse弹出错误代码，可能是安装eclipse出现问题。" class="headerlink" title="造成原因：大多情况因为jdk自己自动更新导致，如果是第一次出现eclipse弹出错误代码，可能是安装eclipse出现问题。"></a>造成原因：大多情况因为jdk自己自动更新导致，如果是第一次出现eclipse弹出错误代码，可能是安装eclipse出现问题。</h3><h3 id="解决方案：将jdk重新下载，在系统变量中重新设置java-home。"><a href="#解决方案：将jdk重新下载，在系统变量中重新设置java-home。" class="headerlink" title="解决方案：将jdk重新下载，在系统变量中重新设置java_home。"></a>解决方案：将jdk重新下载，在系统变量中重新设置java_home。</h3>
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
   </section>
 
   
@@ -1779,7 +1722,7 @@
               
                 <a href="/archives">
               
-                  <span class="site-state-item-count">32</span>
+                  <span class="site-state-item-count">33</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
