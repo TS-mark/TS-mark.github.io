@@ -1,0 +1,802 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="知识图谱 什么是知识图谱 为提高搜索效率，优化搜索质量，2012年，Google首先提出知识图谱这以概念，以知识图谱为底层技术支持的搜索引擎，用户不再需要通过不停的点击链接来获取自己想要的信息，实现智能搜索。  知识图谱定义 知识图谱，是结构化的语义知识库，用于以符号形式描述物理世界中的概念及其相互关系，其基本组成单位是“实体-关系-实体”三元素，以及实体及其相互属性-值对，实体间通过关系相互联结">
+<meta property="og:type" content="article">
+<meta property="og:title" content="知识图谱">
+<meta property="og:url" content="http://yoursite.com/2020/06/13/知识图谱/index.html">
+<meta property="og:site_name" content="Terrorshadow">
+<meta property="og:description" content="知识图谱 什么是知识图谱 为提高搜索效率，优化搜索质量，2012年，Google首先提出知识图谱这以概念，以知识图谱为底层技术支持的搜索引擎，用户不再需要通过不停的点击链接来获取自己想要的信息，实现智能搜索。  知识图谱定义 知识图谱，是结构化的语义知识库，用于以符号形式描述物理世界中的概念及其相互关系，其基本组成单位是“实体-关系-实体”三元素，以及实体及其相互属性-值对，实体间通过关系相互联结">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/8593035-2ddbc229c9a7a3a7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/8593035-0dea1625c12b9321.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/8593035-ec3f0f96dfbf0f1b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:updated_time" content="2020-06-14T10:54:26.160Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="知识图谱">
+<meta name="twitter:description" content="知识图谱 什么是知识图谱 为提高搜索效率，优化搜索质量，2012年，Google首先提出知识图谱这以概念，以知识图谱为底层技术支持的搜索引擎，用户不再需要通过不停的点击链接来获取自己想要的信息，实现智能搜索。  知识图谱定义 知识图谱，是结构化的语义知识库，用于以符号形式描述物理世界中的概念及其相互关系，其基本组成单位是“实体-关系-实体”三元素，以及实体及其相互属性-值对，实体间通过关系相互联结">
+<meta name="twitter:image" content="https://upload-images.jianshu.io/upload_images/8593035-2ddbc229c9a7a3a7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2020/06/13/知识图谱/"/>
+
+
+
+
+
+  <title>知识图谱 | Terrorshadow</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Terrorshadow</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-search">
+          <a href="/search" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/06/13/知识图谱/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Mark Zhang">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Terrorshadow">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">知识图谱</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-06-13T12:41:43+08:00">
+                2020-06-13
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="知识图谱"><a href="#知识图谱" class="headerlink" title="知识图谱"></a>知识图谱</h1><hr>
+<h2 id="什么是知识图谱"><a href="#什么是知识图谱" class="headerlink" title="什么是知识图谱"></a>什么是知识图谱</h2><hr>
+<p>为提高搜索效率，优化搜索质量，2012年，Google首先提出知识图谱这以概念，以知识图谱为底层技术支持的搜索引擎，用户不再需要通过不停的点击链接来获取自己想要的信息，实现智能搜索。</p>
+<hr>
+<h2 id="知识图谱定义"><a href="#知识图谱定义" class="headerlink" title="知识图谱定义"></a>知识图谱定义</h2><hr>
+<p>知识图谱，是结构化的语义知识库，用于以符号形式描述物理世界中的概念及其相互关系，其基本组成单位是“实体-关系-实体”三元素，以及实体及其相互属性-值对，实体间通过关系相互联结，构成网络的知识结构。<br>这个定义的含义：</p>
+<ul>
+<li>知识图谱本身是一个具有属性的实体通过关系链接而成的网状知识库．从图的角度来看，知识图谱在本质上是一种概念网络，其中的节点表示物理世界的实体（或概念），而实体间的各种语义关系则构成网络中的边．由此，知识图谱是对物理世界的 一种符号表达。</li>
+<li>知识图谱的研究价值在于，它是构建在当前Web基础之上的一层覆盖网络（overlay network），借助知识图谱，能够在Web网页之上建立概念间的链接关系，从而以最小的代价将互联网中积累的信息组织起来，成为可以被利用的知识．</li>
+<li>知识图谱的应用价值在于，它能够改变现有的信息检索方式，一方面通过推理实现概念检索（相对于现有的字符串模糊匹配方式而言）;另一方面以图形化方式向用户展示经过分类整理的结构化知识，从而使人们从人工过滤网页寻找答案的模式中 解脱出来。</li>
+</ul>
+<hr>
+<h2 id="知识图谱的架构"><a href="#知识图谱的架构" class="headerlink" title="知识图谱的架构"></a>知识图谱的架构</h2><hr>
+<h3 id="1-知识图谱逻辑架构"><a href="#1-知识图谱逻辑架构" class="headerlink" title="1. 知识图谱逻辑架构"></a>1. 知识图谱逻辑架构</h3><h5 id="数据层"><a href="#数据层" class="headerlink" title="数据层"></a>数据层</h5><p>在知识图谱数据层，知识以事务（fact）为单位存储在图数据库，如果以“实体-关系-实体”或者“实体-属性-性质”三元组作为事务的基本表达方式，存储在图数据库中的所有数据将构成庞大的实体关系网络，形成知识的“图谱”。</p>
+<h5 id="模式层"><a href="#模式层" class="headerlink" title="模式层"></a>模式层</h5><p>模式层是知识图谱的核心，在模式层存储的是经过提炼的知识，通常采用本体库来管理知识图谱的模式曾，借助本体库对公理、规则和约束条件的支持能力来规范实体、关系以及实体的类型和属性等对象之间的联系，本体在知识图谱中的地位相当于知识库的模具，拥有本体库的冗余知识很少。<br>知识图谱的一般构建结构，知识图谱构建过程从原始数据出发，采用一系列自动或者半自动技术手段，从原始数据中提取出知识，并将其存储到知识库的数据层和模式层的过程。这是一个迭代的过程，根据知识获取的逻辑，每一轮迭代包含三个阶段：信息抽取、知识融合以及知识加工。<br><img src="https://upload-images.jianshu.io/upload_images/8593035-2ddbc229c9a7a3a7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="知识图谱构建"></p>
+<h3 id="2-知识图谱构建"><a href="#2-知识图谱构建" class="headerlink" title="2. 知识图谱构建"></a>2. 知识图谱构建</h3><h5 id="自顶向下构建"><a href="#自顶向下构建" class="headerlink" title="自顶向下构建"></a>自顶向下构建</h5><p>所谓自顶向下构建是指借助本体和模式信息，加入到知识库中。</p>
+<h5 id="自底向上"><a href="#自底向上" class="headerlink" title="自底向上"></a>自底向上</h5><p>所谓自底向上构建，则是借助一定的技术手段，从公开采集的数据中提取出资源模式，选择其中置信度较高的新模式，经过人工审核后，加入知识库中。</p>
+<h3 id="3-知识图谱构建过程"><a href="#3-知识图谱构建过程" class="headerlink" title="3. 知识图谱构建过程"></a>3. 知识图谱构建过程</h3><h4 id="信息抽取"><a href="#信息抽取" class="headerlink" title="信息抽取"></a>信息抽取</h4><p>信息抽取是一种自动化地从半结构化和无结构数据中抽取实体、关系以及实体属性等结构化信息的技术。涉及的关键技术包括：实体抽取、关系抽取和属性抽取。</p>
+<h6 id="1-实体抽取"><a href="#1-实体抽取" class="headerlink" title="1.实体抽取"></a>1.实体抽取</h6><p>指从文本数据集中自动识别出命名实体，实体抽取质量（准确率、召回率）对整个知识获取效率影响极大，是信息抽取最为基础和关键的部分。</p>
+<h6 id="2-关系抽取"><a href="#2-关系抽取" class="headerlink" title="2.关系抽取"></a>2.关系抽取</h6><p>文本语料经过实体抽取，得到的是一系列离散的命名实体，为了得到语义信息，还需要从相关语料中提取出实体之间的关联关系，通过关系将实体联系起来，形成网状的知识结构。<br>早期相关研究主要通过人工构造语法和语义规则，这种方法有两个不足：</p>
+<ul>
+<li>要求制定规则的人对特定领域有深入理解和认知</li>
+<li>制定工作量大，并且难以扩展到其他领域</li>
+</ul>
+<p>随后出现了一系列关于实体关系的模型研究：</p>
+<ul>
+<li>机器学习方法（统计学）</li>
+<li>基于特征向量或核函数的有监督学习方法（缺点需要进行大量的人工标注来确保算法有效性）</li>
+<li>半监督、无监督学习方法</li>
+</ul>
+<h6 id="3-属性抽取"><a href="#3-属性抽取" class="headerlink" title="3.属性抽取"></a>3.属性抽取</h6><p>属性抽取的目标是从不同信息源中采集特定实体的属性信息，例如针对某个公共人物，可以从网络公开信息中得到其昵称、生日、国籍、教育背景等信息。属性抽取技术从多种数据来源中汇集这些信息，实现对实体属性的完整勾画。</p>
+<h4 id="知识融合-knowledge-fusion"><a href="#知识融合-knowledge-fusion" class="headerlink" title="知识融合(knowledge fusion)"></a>知识融合(knowledge fusion)</h4><p>目的：将知识抽取中包含的冗余和错误信息进行清理和整合<br>主要包含两个内容：实体链接和知识合并。</p>
+<h6 id="1-实体链接"><a href="#1-实体链接" class="headerlink" title="1.实体链接"></a>1.实体链接</h6><p>是指对从文本中抽取得到的实体对象，将其链接到知识库中对应的正确实体对象的操作。基本思想是根据给定的实体 <strong>指称项</strong> ，从知识库中选取一组候选实体对象，然后通过相似度计算将 <strong>指称项</strong> 链接到正确的实体对象。<br>实体链接的基本思想是首先根据给定的实体指称项，从知识库中选出一组候选实体对象，然后通过相似度计算将指称项链接到正确的实体对象。<br>实体链接的一般流程：</p>
+<ol>
+<li>从文本中通过实体抽取得到实体指称项</li>
+<li>进行实体峭岐和共指消解，判断知识库中的同名实体与之是否代表不同的含义以及知识库中是否存在其他命名实体与之表示相同的含义；</li>
+<li>在确认知识库中对应的正确实体对象后，将该实体指称项链接到知识库中对应实体。</li>
+</ol>
+<p>关于消除歧义的补充：</p>
+<ol>
+<li>实体消歧<br>消除同名实体产生的歧义问题。例如“李娜”这个名词可能指代中国顶级网球运动员，也可能指代现在在某高校就读的研究生。通过实体消岐结合当前语义环境来分辨实体的具体指代是什么。（聚类）</li>
+<li>共指消解<br>解决多个指称项对应于同一实体对象的问题。例如“母亲”和“妈妈”在汉语中是对同一个实体的不同称谓，它们的意思是相同的。</li>
+</ol>
+<h6 id="2-知识合并"><a href="#2-知识合并" class="headerlink" title="2.知识合并"></a>2.知识合并</h6><p>指将两个内容相近的知识库进行融合，形成一个更大的知识库。</p>
+<ol>
+<li>合并外部知识库<br>主要处理两方面的问题：</li>
+</ol>
+<ul>
+<li>数据层融合：包括实体的指称、属性、关系以及所属类别等<br>其主要研究问题是如何避免实例以及关系冲突等问题（冗余问题）</li>
+<li>模式层融合：将新得到的本体融入到已有的本体库中。</li>
+</ul>
+<ol start="2">
+<li>合并关系数据库<br>对两个关系型数据库求左合并，右合并，笛卡尔积等操作。（关于这个我可能解释的比较狭义但是好像就是这样的）</li>
+</ol>
+<h4 id="知识推理"><a href="#知识推理" class="headerlink" title="知识推理"></a>知识推理</h4><p>是指从知识库中已有的实体关系数据触发，经过计算机推理，建立实体的新关联，从而拓展和丰富知识网络。例如（曹操，父子，曹丕），（曹丕，兄弟，曹植），可以推导出（曹操，父子，曹植）</p>
+<hr>
+<h2 id="知识图谱相关PAAS服务"><a href="#知识图谱相关PAAS服务" class="headerlink" title="知识图谱相关PAAS服务"></a>知识图谱相关PAAS服务</h2><hr>
+<h4 id="百度AI开放平台"><a href="#百度AI开放平台" class="headerlink" title="百度AI开放平台"></a>百度AI开放平台</h4><ul>
+<li><a href="https://ai.baidu.com/ai-doc/KG/jk3h9ztgd" target="_blank" rel="noopener">实体标注</a></li>
+</ul>
+<p>输入：<br>待标注的文本字符串（utf8编码，最多64个汉字）<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">// 输入示例</span><br><span class="line">curl -X POST <span class="string">'https://aip.baidubce.com/rpc/2.0/kg/v1/cognitive/entity_annotation?access_token=【用户access_token】'</span> -H <span class="string">'content-type: application/json'</span> -d <span class="string">'&#123;"data": "刘德华的老婆"&#125;'</span></span><br></pre></td></tr></table></figure></p>
+<p>输出：（示例）<br><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">// 输出示例</span><br><span class="line">&#123;</span><br><span class="line">    <span class="attr">"log_id"</span>: <span class="number">6367018173853945311</span>,</span><br><span class="line">    <span class="attr">"entity_annotation"</span>: [</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="attr">"status"</span>: <span class="string">"LINKED"</span>,</span><br><span class="line">            <span class="attr">"confidence"</span>: <span class="string">"0.991616"</span>,</span><br><span class="line">            <span class="attr">"concept"</span>: &#123;</span><br><span class="line">                <span class="attr">"level1"</span>: <span class="string">"人物"</span>,</span><br><span class="line">                <span class="attr">"level2"</span>: <span class="string">"文化人物,娱乐人物"</span></span><br><span class="line">            &#125;,</span><br><span class="line">            <span class="attr">"_bdbkKgId"</span>: <span class="string">"114923"</span>,</span><br><span class="line">            <span class="attr">"mention"</span>: <span class="string">"刘德华"</span>,</span><br><span class="line">            <span class="attr">"_bdbkUrl"</span>: <span class="string">"http://baike.baidu.com/item/%E5%88%98%E5%BE%B7%E5%8D%8E/114923"</span>,</span><br><span class="line">            <span class="attr">"offset"</span>: <span class="string">"0"</span>,</span><br><span class="line">            <span class="attr">"desc"</span>: <span class="string">"中国香港男演员、歌手、词作人"</span></span><br><span class="line">        &#125;,</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="attr">"status"</span>: <span class="string">"LINKED"</span>,</span><br><span class="line">            <span class="attr">"confidence"</span>: <span class="string">"0.817889"</span>,</span><br><span class="line">            <span class="attr">"concept"</span>: &#123;</span><br><span class="line">                <span class="attr">"level1"</span>: <span class="string">"语言文化"</span>,</span><br><span class="line">                <span class="attr">"level2"</span>: <span class="string">"文字词汇"</span></span><br><span class="line">            &#125;,</span><br><span class="line">            <span class="attr">"_bdbkKgId"</span>: <span class="string">"827"</span>,</span><br><span class="line">            <span class="attr">"mention"</span>: <span class="string">"老婆"</span>,</span><br><span class="line">            <span class="attr">"_bdbkUrl"</span>: <span class="string">"http://baike.baidu.com/item/%E8%80%81%E5%A9%86/827"</span>,</span><br><span class="line">            <span class="attr">"offset"</span>: <span class="string">"4"</span>,</span><br><span class="line">            <span class="attr">"desc"</span>: <span class="string">"汉语词语"</span></span><br><span class="line">        &#125;</span><br><span class="line">    ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<ul>
+<li><a href="https://ai.baidu.com/ai-doc/KG/6k8dhe8b5" target="_blank" rel="noopener">知识问答</a></li>
+</ul>
+<hr>
+<h2 id="知识图谱的应用领域"><a href="#知识图谱的应用领域" class="headerlink" title="知识图谱的应用领域"></a>知识图谱的应用领域</h2><hr>
+<h4 id="智能问答"><a href="#智能问答" class="headerlink" title="智能问答"></a>智能问答</h4><p>降低了人机交互门槛，用户可以通过关键词向网页发送请求得到他们想要的答案。</p>
+<h4 id="智能推荐"><a href="#智能推荐" class="headerlink" title="智能推荐"></a>智能推荐</h4><p>例如Facebook的Graph Search,用户查询产品信息时仅需输入关键词，以知识图谱为基础的智能推荐就会向用户输出产品相关信息。</p>
+<h4 id="金融领域"><a href="#金融领域" class="headerlink" title="金融领域"></a>金融领域</h4><p>金融领域是知识图谱最早、最广泛的应用领域之一，目前最常用的主要是风险控制和智能投顾两方面。<br>例如金融知识图谱，对数据进行智能分析，当用户进行投资理财时，可以根据提取出来的信息，结合用户实际需求，为用户智能推荐理财产品。</p>
+<hr>
+<h2 id="数据获取来源"><a href="#数据获取来源" class="headerlink" title="数据获取来源"></a>数据获取来源</h2><ul>
+<li>爬虫</li>
+<li>数据库获取</li>
+</ul>
+<p>##数据预处理</p>
+<ul>
+<li>数据清洗</li>
+<li>知识抽取</li>
+</ul>
+<p>##导入数据到知识图谱</p>
+<ul>
+<li>数据筛选（决定哪些数据需要到知识图谱系统，性能，业务要求）</li>
+<li>知识图谱设计（类似数据库设计）</li>
+<li>批量导入（初次导入基础数据）</li>
+<li>增量导入</li>
+</ul>
+<hr>
+<h2 id="本体论"><a href="#本体论" class="headerlink" title="本体论"></a>本体论</h2><hr>
+<p>本体论（Ontology），是探究世界的本原或基质的哲学理论。“本体论”一词是由17世纪的德国经院学者P·戈科列尼乌斯首先使用的。<br>传统上的本体含义，是一个哲学的分支，即形而上学，本体论一般包含了有关所有的实体的存在或者一些可能会存在的问题，以及实体之间如何被归类研究对立的问题，如何在层次的体系结构中，根据相互作用和差异上进行分类的问题。本体论还有个通俗易懂的定义是，它是对事物“存在”性的定性检验。</p>
+<p>关于本体论的例子：</p>
+<h5 id="基因本体论（gene-ontology"><a href="#基因本体论（gene-ontology" class="headerlink" title="基因本体论（gene ontology)"></a>基因本体论（gene ontology)</h5><p>基因本体（Gene Ontology，GO）是一个在生物信息学领域中广泛使用的本体，它涵盖生物学的三个方面：细胞组分、分子功能、生物过程。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/8593035-0dea1625c12b9321.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="基因本体论"></p>
+<p>基因本体是一个有向无环图（DAG）型的本体。目前，GO中使用了is_a和part_of和regulates三种关系。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/8593035-ec3f0f96dfbf0f1b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="基因本体论的关系示例"></p>
+<h4 id="本体论与知识图谱的区别"><a href="#本体论与知识图谱的区别" class="headerlink" title="本体论与知识图谱的区别"></a>本体论与知识图谱的区别</h4><p>例如要对档案领域的知识库分类，这个分类本身就是本体。比如档案数据分为毕业生类和学校文件类，毕业生类又分为本科生类、研究生类；关于每个分类下又有不同的数据信息，每种信息对应着不同的实体，每个实体有其不同的属性值，可以将其抽象成为一个三元组，例如（毕业生A，毕业年份，2017），这个三元组就是知识图谱中的基本结构了。<br>由于知识图谱这个概念是由Google提出，而知识库的概念没有明确的提出，可以将其理解为是知识数据库，即所有数据的集合体，包含知识和本体，例如Wiki百科就可以理解为一个半结构化的知识库。（我的理解是知识库是广义的知识图谱，知识图谱最终构建的逻辑结构为一个图）<br>还有一个浅而易懂的例子，对于概念型的三元组（老虎，科，猫科），如果将猫科定义为一个本体，则这个三元组就反映了本体与实体之间的关系。</p>
+<p>参考：<br>(1)<a href="https://www.jianshu.com/p/ba03f8e19bcf" target="_blank" rel="noopener">知识图谱基础知识</a><br>(2)田莉霞.知识图谱研究综述[J].软件,2020,04:67-71.<br>(3)段宏. 知识图谱构建技术综述[J]. 计算机研究与发展(03).<br>(4)<a href="https://ai.baidu.com/" target="_blank" rel="noopener">百度AI开放平台</a><br>(5)<a href="https://baike.baidu.com/item/%E6%9C%AC%E4%BD%93%E8%AE%BA/1114602?fr=aladdin" target="_blank" rel="noopener">百度百科-本体论</a><br>(6)Paulheim H , Cimiano P . Knowledge graph refinement: A survey of approaches and evaluation methods[J]. Semantic Web, 2016, 8(3):489-508.</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/11/25/R语言-从入门到入土/" rel="next" title="R语言">
+                <i class="fa fa-chevron-left"></i> R语言
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">Mark Zhang</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives">
+              
+                  <span class="site-state-item-count">32</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#知识图谱"><span class="nav-number">1.</span> <span class="nav-text">知识图谱</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#什么是知识图谱"><span class="nav-number">1.1.</span> <span class="nav-text">什么是知识图谱</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#知识图谱定义"><span class="nav-number">1.2.</span> <span class="nav-text">知识图谱定义</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#知识图谱的架构"><span class="nav-number">1.3.</span> <span class="nav-text">知识图谱的架构</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-知识图谱逻辑架构"><span class="nav-number">1.3.1.</span> <span class="nav-text">1. 知识图谱逻辑架构</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#数据层"><span class="nav-number">1.3.1.0.1.</span> <span class="nav-text">数据层</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#模式层"><span class="nav-number">1.3.1.0.2.</span> <span class="nav-text">模式层</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-知识图谱构建"><span class="nav-number">1.3.2.</span> <span class="nav-text">2. 知识图谱构建</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#自顶向下构建"><span class="nav-number">1.3.2.0.1.</span> <span class="nav-text">自顶向下构建</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#自底向上"><span class="nav-number">1.3.2.0.2.</span> <span class="nav-text">自底向上</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-知识图谱构建过程"><span class="nav-number">1.3.3.</span> <span class="nav-text">3. 知识图谱构建过程</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#信息抽取"><span class="nav-number">1.3.3.1.</span> <span class="nav-text">信息抽取</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#1-实体抽取"><span class="nav-number">1.3.3.1.0.1.</span> <span class="nav-text">1.实体抽取</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#2-关系抽取"><span class="nav-number">1.3.3.1.0.2.</span> <span class="nav-text">2.关系抽取</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#3-属性抽取"><span class="nav-number">1.3.3.1.0.3.</span> <span class="nav-text">3.属性抽取</span></a></li></ol></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#知识融合-knowledge-fusion"><span class="nav-number">1.3.3.2.</span> <span class="nav-text">知识融合(knowledge fusion)</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#1-实体链接"><span class="nav-number">1.3.3.2.0.1.</span> <span class="nav-text">1.实体链接</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#2-知识合并"><span class="nav-number">1.3.3.2.0.2.</span> <span class="nav-text">2.知识合并</span></a></li></ol></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#知识推理"><span class="nav-number">1.3.3.3.</span> <span class="nav-text">知识推理</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#知识图谱相关PAAS服务"><span class="nav-number">1.4.</span> <span class="nav-text">知识图谱相关PAAS服务</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#百度AI开放平台"><span class="nav-number">1.4.0.1.</span> <span class="nav-text">百度AI开放平台</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#知识图谱的应用领域"><span class="nav-number">1.5.</span> <span class="nav-text">知识图谱的应用领域</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#智能问答"><span class="nav-number">1.5.0.1.</span> <span class="nav-text">智能问答</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#智能推荐"><span class="nav-number">1.5.0.2.</span> <span class="nav-text">智能推荐</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#金融领域"><span class="nav-number">1.5.0.3.</span> <span class="nav-text">金融领域</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数据获取来源"><span class="nav-number">1.6.</span> <span class="nav-text">数据获取来源</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#本体论"><span class="nav-number">1.7.</span> <span class="nav-text">本体论</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#基因本体论（gene-ontology"><span class="nav-number">1.7.0.0.1.</span> <span class="nav-text">基因本体论（gene ontology)</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#本体论与知识图谱的区别"><span class="nav-number">1.7.0.1.</span> <span class="nav-text">本体论与知识图谱的区别</span></a></li></ol></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Mark Zhang</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

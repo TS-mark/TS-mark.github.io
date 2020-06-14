@@ -269,7 +269,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/19/日志：声明/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/24/POJ 1001/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Mark Zhang">
@@ -288,7 +288,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/05/19/日志：声明/" itemprop="url">声明</a></h1>
+                <a class="post-title-link" href="/2018/05/24/POJ 1001/" itemprop="url">POJ 1001</a></h1>
         
 
         <div class="post-meta">
@@ -300,8 +300,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-19T12:41:43+08:00">
-                2018-05-19
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-24T12:41:43+08:00">
+                2018-05-24
               </time>
             
 
@@ -340,8 +340,12 @@
       
         
           
-            <h2 id="关于本博客声明"><a href="#关于本博客声明" class="headerlink" title="关于本博客声明"></a>关于本博客声明</h2><p>之前写的一些技术文章丢失，虽说语法不成熟而且很多意义上只有我自己可以看明白，因为比较讨厌从网站上直接暴力抄袭，或者因为自己的时间原因懒得去搭建图床和仔细编辑语言去写。不过，既然建了这个博客，还是慢慢去更吧。</p>
-<h2 id="版权声明"><a href="#版权声明" class="headerlink" title="版权声明"></a>版权声明</h2><p>在文章中的引用导致版权侵犯问题以及一些其他可能会出现的问题，请将意见信息发至 <a href="mailto:markzhang4438@gmail.com" target="_blank" rel="noopener">markzhang4438@gmail.com</a>，博主会马上处理问题</p>
+            <h2 id="poj-1001题"><a href="#poj-1001题" class="headerlink" title="poj 1001题"></a><a href="http://poj.org/problem?id=1001" target="_blank" rel="noopener">poj 1001题</a></h2><h3 id="OUTPUT："><a href="#OUTPUT：" class="headerlink" title="OUTPUT："></a>OUTPUT：</h3><p>输入值为 R n<br>输出值为 R^n的具体数值</p>
+<hr>
+<p>这个题在网上看见了一个很神奇的<a href="http://blog.163.com/boatswain%40126/blog/static/1693964122010718105425483/" target="_blank" rel="noopener">java代码</a>，很清新，而且抱着试一试的心态通过了poj的text<br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.math.*;</span><br><span class="line"><span class="keyword">import</span> java.util.*;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span>&#123;</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">        Scanner in=<span class="keyword">new</span> Scanner(System.in);</span><br><span class="line">        <span class="keyword">while</span>(in.hasNext())&#123;</span><br><span class="line">            BigDecimal val=in.nextBigDecimal();</span><br><span class="line">            <span class="keyword">int</span> n=in.nextInt();</span><br><span class="line">            BigDecimal ret=val.<span class="built_in">pow</span>(n).stripTrailingZeros();</span><br><span class="line">            System.out.println( ret.toPlainString().replaceAll(<span class="string">"^0"</span>, <span class="string">""</span>) );</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>其中<code>toPlanString()</code>,返回不带指数字段的字符串，replaceAll(“^0”,””),。这篇文章的作者有很强编程能力，现在用C语言去完成这个高精度计算。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br></pre></td><td class="code"><pre><span class="line">  <span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line">  <span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdlib.h&gt;</span></span></span><br><span class="line">  <span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstring&gt;</span></span></span><br><span class="line">  <span class="meta">#<span class="meta-keyword">define</span> BUFSIZ 200</span></span><br><span class="line">  <span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>; </span><br><span class="line">  <span class="function"><span class="keyword">char</span> * <span class="title">bigmul</span><span class="params">(<span class="keyword">char</span> *m,<span class="keyword">int</span> lena,<span class="keyword">char</span> *f,<span class="keyword">int</span> lenb)</span></span>&#123;  <span class="comment">//乘法运算函数。</span></span><br><span class="line">     <span class="keyword">int</span> i,j,k,lensum,tmp_result,carry,num=<span class="string">'0'</span>;</span><br><span class="line">     lensum=lena+lenb;                               <span class="comment">//确定结果数组的长度。</span></span><br><span class="line">     <span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;lena;i++)&#123;                            <span class="comment">//将ASCII码转为对应的数字存储。</span></span><br><span class="line">       m[i]=m[i]-num;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;lenb;i++)&#123;</span><br><span class="line">       f[i]=f[i]-num;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">char</span> *result,final[BUFSIZ];</span><br><span class="line">    result=(<span class="keyword">char</span>*)<span class="built_in">calloc</span>(lensum,<span class="number">1</span>);</span><br><span class="line">    <span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;lenb;i++)&#123;</span><br><span class="line">       <span class="comment">//为被乘数作一趟乘法。</span></span><br><span class="line">       <span class="keyword">for</span>(j=<span class="number">0</span>;j&lt;lena;j++)&#123;</span><br><span class="line">          tmp_result=f[lenb-i<span class="number">-1</span>]*m[lena-j<span class="number">-1</span>];</span><br><span class="line">          result[j+i]+=tmp_result;</span><br><span class="line">       &#125;</span><br><span class="line">       <span class="keyword">for</span>(k=<span class="number">0</span>;k&lt;=j+i<span class="number">-1</span>;k++)&#123;</span><br><span class="line">       <span class="comment">//每作一趟乘法整理一次结果数组。</span></span><br><span class="line">          <span class="keyword">if</span>(result[k]&gt;<span class="number">9</span>)&#123;</span><br><span class="line">             carry=result[k]/<span class="number">10</span>;</span><br><span class="line">             result[k]=result[k]%<span class="number">10</span>;</span><br><span class="line">             result[k+<span class="number">1</span>] += carry;</span><br><span class="line">          &#125;</span><br><span class="line">       &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    j=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">if</span>(result[lensum<span class="number">-1</span>]!=<span class="number">0</span>)&#123;                  <span class="comment">//去除前导零将结果整理到final数组中。</span></span><br><span class="line">       final[j]=result[lensum<span class="number">-1</span>]+num;</span><br><span class="line">       j++;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span>(i=lensum<span class="number">-2</span>;i&gt;=<span class="number">0</span>;i--)&#123;</span><br><span class="line">       final[j++]=result[i]+num;</span><br><span class="line">    &#125;</span><br><span class="line">    result=final;                             <span class="comment">//将指针指向final数组并返回该指针。      </span></span><br><span class="line">    <span class="keyword">return</span> result;</span><br><span class="line"> &#125;</span><br><span class="line"> <span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;                                                 <span class="comment">//利用main测试方法，用puts打印结果。               </span></span><br><span class="line">    <span class="keyword">int</span> lena,lenb;</span><br><span class="line">    <span class="keyword">char</span> *result,r[BUFSIZ];</span><br><span class="line">    <span class="keyword">int</span> n;</span><br><span class="line">    <span class="keyword">while</span>(<span class="built_in">cin</span>&gt;&gt;r&gt;&gt;n)&#123;</span><br><span class="line">    lena=<span class="built_in">strlen</span>(r);</span><br><span class="line">    lenb=<span class="built_in">strlen</span>(r);</span><br><span class="line">    result=r;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;n;i++)&#123;</span><br><span class="line">    result=bigmul(result,lenb,r,lena);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">puts</span>(result);</span><br><span class="line">&#125;</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
+<p> 关于大数运算，某朋友给我提供了一个代码，不过在我阅读代码后没有发现有小数位的计算。<br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="built_in">string</span> <span class="title">strMultiply</span><span class="params">(<span class="built_in">string</span> str1 , <span class="built_in">string</span> str2)</span>  </span></span><br><span class="line"><span class="function"></span>&#123;  </span><br><span class="line">    <span class="built_in">string</span> strResult = <span class="string">""</span>;  </span><br><span class="line">    <span class="keyword">int</span> len1 = str1.length();   </span><br><span class="line">    <span class="keyword">int</span> len2 = str2.length();  </span><br><span class="line">    <span class="keyword">int</span> num[<span class="number">500</span>] = &#123;<span class="number">0</span>&#125;;  </span><br><span class="line">    <span class="keyword">int</span> i = <span class="number">0</span>, j = <span class="number">0</span>;     </span><br><span class="line">    <span class="keyword">for</span>(i = <span class="number">0</span>; i &lt; len1; i++)  </span><br><span class="line">    &#123;  </span><br><span class="line">        <span class="keyword">for</span>(j = <span class="number">0</span>; j &lt; len2; j++)  </span><br><span class="line">        &#123;  </span><br><span class="line">            num[len1<span class="number">-1</span> - i + len2<span class="number">-1</span> - j] += (str1[i] - <span class="string">'0'</span>)*(str2[j] - <span class="string">'0'</span>);   </span><br><span class="line">        &#125;  </span><br><span class="line">    &#125;  </span><br><span class="line">    <span class="keyword">for</span>(i = <span class="number">0</span>; i &lt; len1 + len2; i++)  </span><br><span class="line">    &#123;  </span><br><span class="line">        num[i+<span class="number">1</span>] += num[i] / <span class="number">10</span>;  </span><br><span class="line">        num[i] = num[i] % <span class="number">10</span>;  </span><br><span class="line">    &#125;  </span><br><span class="line">    <span class="keyword">for</span>(i = len1 + len2 - <span class="number">1</span>; i &gt;= <span class="number">0</span> ; i--)  </span><br><span class="line">    &#123;  </span><br><span class="line">        <span class="keyword">if</span>(<span class="number">0</span> != num[i]) <span class="keyword">break</span>;  </span><br><span class="line">    &#125;  </span><br><span class="line">    <span class="keyword">for</span>(j = i; j &gt;= <span class="number">0</span>; j--)  </span><br><span class="line">    &#123;  </span><br><span class="line">        strResult += num[j] + <span class="string">'0'</span>;  </span><br><span class="line">    &#125;  </span><br><span class="line">    <span class="keyword">return</span> strResult;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 
           
         
@@ -390,7 +394,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/19/java：关于eclipse报错code=13/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/24/CCF 201403-2/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Mark Zhang">
@@ -409,7 +413,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/05/19/java：关于eclipse报错code=13/" itemprop="url">eclipse error：code 13</a></h1>
+                <a class="post-title-link" href="/2018/05/24/CCF 201403-2/" itemprop="url">CCF 201403-2</a></h1>
         
 
         <div class="post-meta">
@@ -421,8 +425,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-19T12:41:43+08:00">
-                2018-05-19
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-24T12:41:43+08:00">
+                2018-05-24
               </time>
             
 
@@ -461,8 +465,445 @@
       
         
           
-            <h2 id="这个错误代码一般情况下是因为安装的jdk版本与系统位数不服。"><a href="#这个错误代码一般情况下是因为安装的jdk版本与系统位数不服。" class="headerlink" title="这个错误代码一般情况下是因为安装的jdk版本与系统位数不服。"></a>这个错误代码一般情况下是因为安装的jdk版本与系统位数不服。</h2><p>因为我的电脑中有两个eclipse，所以在一次系统更新中，一个eclipse(neon)弹出code13，另一个eclipse(oxygen)弹出code1，两个摸不到头脑的原因，我查看了系统变量中java_home,发现java_home的路径的jdk消失了，仔细回想可能导致jdk自动消失的原因是jdk的一次更新，然后在运行界面输入</p>
-<h2 id="java-version，查询到jdk自动更新之后在电脑上变成32位，在网上查询资料，这种情况只能重新安装jdk。"><a href="#java-version，查询到jdk自动更新之后在电脑上变成32位，在网上查询资料，这种情况只能重新安装jdk。" class="headerlink" title="java -version，查询到jdk自动更新之后在电脑上变成32位，在网上查询资料，这种情况只能重新安装jdk。"></a><code>java -version</code>，查询到jdk自动更新之后在电脑上变成32位，在网上查询资料，这种情况只能重新安装jdk。</h2><h3 id="造成原因：大多情况因为jdk自己自动更新导致，如果是第一次出现eclipse弹出错误代码，可能是安装eclipse出现问题。"><a href="#造成原因：大多情况因为jdk自己自动更新导致，如果是第一次出现eclipse弹出错误代码，可能是安装eclipse出现问题。" class="headerlink" title="造成原因：大多情况因为jdk自己自动更新导致，如果是第一次出现eclipse弹出错误代码，可能是安装eclipse出现问题。"></a>造成原因：大多情况因为jdk自己自动更新导致，如果是第一次出现eclipse弹出错误代码，可能是安装eclipse出现问题。</h3><h3 id="解决方案：将jdk重新下载，在系统变量中重新设置java-home。"><a href="#解决方案：将jdk重新下载，在系统变量中重新设置java-home。" class="headerlink" title="解决方案：将jdk重新下载，在系统变量中重新设置java_home。"></a>解决方案：将jdk重新下载，在系统变量中重新设置java_home。</h3>
+            <h2 id="窗口"><a href="#窗口" class="headerlink" title="窗口"></a>窗口</h2><h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p>　　在某图形操作系统中,有 N 个窗口,每个窗口都是一个两边与坐标轴分别平行的矩形区域。窗口的边界上的点也属于该窗口。窗口之间有层次的区别,在多于一个窗口重叠的区域里,只会显示位于顶层的窗口里的内容。<br>　　当你点击屏幕上一个点的时候,你就选择了处于被点击位置的最顶层窗口,并且这个窗口就会被移到所有窗口的最顶层,而剩余的窗口的层次顺序不变。如果你点击的位置不属于任何窗口,则系统会忽略你这次点击。<br>　　现在我们希望你写一个程序模拟点击窗口的过程。</p>
+<h2 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式"></a>输入格式</h2><p>　　输入的第一行有两个正整数,即 N 和 M。(1 ≤ N ≤ 10,1 ≤ M ≤ 10)<br>　　接下来 N 行按照从最下层到最顶层的顺序给出 N 个窗口的位置。 每行包含四个非负整数 x1, y1, x2, y2,表示该窗口的一对顶点坐标分别为 (x1, y1) 和 (x2, y2)。保证 x1 &lt; x2,y1 2。<br>　　接下来 M 行每行包含两个非负整数 x, y,表示一次鼠标点击的坐标。<br>　　题目中涉及到的所有点和矩形的顶点的 x, y 坐标分别不超过 2559 和　　1439。</p>
+<h2 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式"></a>输出格式</h2><p>　　输出包括 M 行,每一行表示一次鼠标点击的结果。如果该次鼠标点击选择了一个窗口,则输出这个窗口的编号(窗口按照输入中的顺序从 1 编号到 N);如果没有,则输出”IGNORED”(不含双引号)。</p>
+<h2 id="样例输入"><a href="#样例输入" class="headerlink" title="样例输入"></a>样例输入</h2><p>3 4<br>0 0 4 4<br>1 1 5 5<br>2 2 6 6<br>1 1<br>0 0<br>4 4<br>0 5</p>
+<h2 id="样例输出"><a href="#样例输出" class="headerlink" title="样例输出"></a>样例输出</h2><p>2<br>1<br>1<br>IGNORED</p>
+<h2 id="样例说明"><a href="#样例说明" class="headerlink" title="样例说明"></a>样例说明</h2><p>　　第一次点击的位置同时属于第 1 和第 2 个窗口,但是由于第 2 个窗口在上面,它被选择并且被置于顶层。<br>　　第二次点击的位置只属于第 1 个窗口,因此该次点击选择了此窗口并将其置于顶层。现在的三个窗口的层次关系与初始状态恰好相反了。<br>　　第三次点击的位置同时属于三个窗口的范围,但是由于现在第 1 个窗口处于顶层,它被选择。</p>
+<h2 id="最后点击的-0-5-不属于任何窗口。"><a href="#最后点击的-0-5-不属于任何窗口。" class="headerlink" title="　　最后点击的 (0, 5) 不属于任何窗口。"></a>　　最后点击的 (0, 5) 不属于任何窗口。</h2><p>提交上去90分的代码，暂时不想改了，现在也蛮晚的。<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Scanner;</span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 201403-2</span></span><br><span class="line"><span class="comment"> * */</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">window</span></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> x1,y1,x2,y2;</span><br><span class="line">	<span class="keyword">int</span> level;</span><br><span class="line">	<span class="keyword">int</span> next;</span><br><span class="line">	<span class="keyword">int</span> beyond;	</span><br><span class="line">&#125;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">point</span></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> x,y;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ccf005</span> </span>&#123;</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String args[])</span></span>&#123;</span><br><span class="line">	Scanner s=<span class="keyword">new</span> Scanner(System.in);</span><br><span class="line">	window[] wins=<span class="keyword">new</span> window[<span class="number">10</span>];</span><br><span class="line">	point[] p=<span class="keyword">new</span> point[<span class="number">10</span>];</span><br><span class="line">	<span class="keyword">int</span> n=s.nextInt();</span><br><span class="line">	<span class="keyword">int</span> m=s.nextInt();</span><br><span class="line">	<span class="keyword">int</span> head=n-<span class="number">1</span>;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;n;i++) &#123;</span><br><span class="line">		wins[i]=<span class="keyword">new</span> window();</span><br><span class="line">		wins[i].x1=s.nextInt();</span><br><span class="line">		wins[i].y1=s.nextInt();</span><br><span class="line">		wins[i].x2=s.nextInt();</span><br><span class="line">		wins[i].y2=s.nextInt();</span><br><span class="line">		wins[i].next=i-<span class="number">1</span>;<span class="comment">//next=-1时invilid</span></span><br><span class="line">		wins[i].beyond=i+<span class="number">1</span>;<span class="comment">//beyond=+n时invilid</span></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;m;i++) &#123;</span><br><span class="line">		p[i]=<span class="keyword">new</span> point();</span><br><span class="line">		p[i].x=s.nextInt();</span><br><span class="line">		p[i].y=s.nextInt();</span><br><span class="line">	&#125;</span><br><span class="line">	 <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;m;i++) &#123;</span><br><span class="line">		 <span class="keyword">int</span> j=head;</span><br><span class="line"><span class="comment">//		 for(;wins[j].next&gt;-1;j=wins[j].next) &#123;</span></span><br><span class="line">		 <span class="keyword">for</span>(;;j=wins[j].next) &#123;</span><br><span class="line">			 <span class="keyword">if</span>(j==-<span class="number">1</span>)  &#123;System.out.println(<span class="string">"IGNORED"</span>);</span><br><span class="line">			 <span class="keyword">break</span>;&#125;</span><br><span class="line">			 <span class="keyword">if</span>(p[i].x&gt;=wins[j].x1&amp;&amp;p[i].x&lt;=wins[j].x2&amp;&amp;p[i].y&gt;=wins[j].y1&amp;&amp;p[i].y&lt;=wins[j].y2)</span><br><span class="line">			 &#123;</span><br><span class="line">				 <span class="keyword">if</span>(wins[j].next==-<span class="number">1</span>) &#123;<span class="comment">//最后一个页面</span></span><br><span class="line">					 System.out.println(j+<span class="number">1</span>);</span><br><span class="line">					 wins[wins[j].beyond].next=-<span class="number">1</span>;</span><br><span class="line">					 wins[head].beyond=j;</span><br><span class="line">					 wins[j].next=head;</span><br><span class="line">					 wins[j].beyond=n;</span><br><span class="line">					 head=j;</span><br><span class="line">					 <span class="keyword">break</span>;		 </span><br><span class="line">				 &#125;<span class="keyword">else</span> <span class="keyword">if</span>(wins[j].beyond==n) &#123;<span class="comment">//第一个页面</span></span><br><span class="line">					 System.out.println(j+<span class="number">1</span>);</span><br><span class="line">					 <span class="keyword">break</span>;</span><br><span class="line">				 &#125;<span class="keyword">else</span> &#123;</span><br><span class="line">					 System.out.println(j+<span class="number">1</span>);</span><br><span class="line">					 wins[wins[j].beyond].next=wins[j].next;</span><br><span class="line">					 wins[wins[j].next].beyond=wins[j].beyond;</span><br><span class="line">					 wins[j].beyond=n;</span><br><span class="line">					 wins[j].next=head;</span><br><span class="line">					 wins[head].beyond=j;</span><br><span class="line">					 head=j;</span><br><span class="line">					 <span class="keyword">break</span>;</span><br><span class="line">				 &#125;</span><br><span class="line">			 &#125;	</span><br><span class="line">		 &#125;</span><br><span class="line"><span class="comment">//		 if(wins[j].next==-1) &#123;</span></span><br><span class="line"><span class="comment">//			 System.out.println("IGNORED");</span></span><br><span class="line"><span class="comment">//		 &#125;</span></span><br><span class="line">	 &#125;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h2 id="初次总结吧，这类问题真的要好好考虑边界值的问题。"><a href="#初次总结吧，这类问题真的要好好考虑边界值的问题。" class="headerlink" title="初次总结吧，这类问题真的要好好考虑边界值的问题。"></a>初次总结吧，这类问题真的要好好考虑边界值的问题。</h2><p>在算法中模拟了双向链表的使用，然而结果并不能如我所愿，只有90分，认真思考过后没有发现那里出现问题。于是准备使用已经封装好的数组。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.awt.List;</span><br><span class="line"><span class="keyword">import</span> java.util.ArrayList;</span><br><span class="line"><span class="keyword">import</span> java.util.Scanner;</span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 201403-2</span></span><br><span class="line"><span class="comment"> * */</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">window</span></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> x1,y1,x2,y2;</span><br><span class="line">	<span class="keyword">int</span> id;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">inside</span><span class="params">(<span class="keyword">int</span> x,<span class="keyword">int</span> y)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">if</span>(x&gt;=<span class="keyword">this</span>.x1&amp;&amp;x&lt;=<span class="keyword">this</span>.x2&amp;&amp;y&gt;=<span class="keyword">this</span>.y1&amp;&amp;y&lt;=<span class="keyword">this</span>.y2) &#123;</span><br><span class="line">			<span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">		&#125;<span class="keyword">else</span> &#123;</span><br><span class="line">			<span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ccf005</span> </span>&#123;</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String args[])</span></span>&#123;</span><br><span class="line">	Scanner s=<span class="keyword">new</span> Scanner(System.in);</span><br><span class="line">	ArrayList&lt;window&gt; w=<span class="keyword">new</span> ArrayList&lt;window&gt;();</span><br><span class="line">	<span class="keyword">int</span> n=s.nextInt();</span><br><span class="line">	<span class="keyword">int</span> m=s.nextInt();</span><br><span class="line">	<span class="keyword">int</span>[] result=<span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">10</span>];</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;n;i++) &#123;</span><br><span class="line">		window wins=<span class="keyword">new</span> window();</span><br><span class="line">		wins.x1=s.nextInt();</span><br><span class="line">		wins.y1=s.nextInt();</span><br><span class="line">		wins.x2=s.nextInt();</span><br><span class="line">		wins.y2=s.nextInt();</span><br><span class="line">		wins.id=i+<span class="number">1</span>;</span><br><span class="line">		w.add(wins);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;m;i++) &#123;</span><br><span class="line">		<span class="keyword">int</span> x=s.nextInt();</span><br><span class="line">		<span class="keyword">int</span> y=s.nextInt();</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> j=w.size()-<span class="number">1</span>;j&gt;=<span class="number">0</span>;j--) &#123;</span><br><span class="line">			<span class="keyword">if</span>(w.get(j).inside(x, y)) &#123;</span><br><span class="line">				result[i]=w.get(j).id;</span><br><span class="line">				w.add(w.get(j));</span><br><span class="line">				w.remove(j);</span><br><span class="line">				<span class="keyword">break</span>;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;m;i++) &#123;</span><br><span class="line">		<span class="keyword">if</span>(result[i]==<span class="number">0</span>)</span><br><span class="line">			System.out.println(<span class="string">"IGNORED"</span>);</span><br><span class="line">		<span class="keyword">else</span> System.out.println(result[i]);</span><br><span class="line">	&#125;</span><br><span class="line">	 &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>这份代码看起来效率是不如之前的代码好，但是相对来说结果正确，而且思路清晰，同样在评测的时候也是100分。</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/24/java：URL/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Mark Zhang">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Terrorshadow">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/05/24/java：URL/" itemprop="url">URL</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-24T12:41:43+08:00">
+                2018-05-24
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="URL"><a href="#URL" class="headerlink" title="URL"></a>URL</h2><p>URL<br>1、URL(Uniform Resource Locator)统一资源定位符，表示Internet上某一资源的地址，协议名：资源名称</p>
+<h2 id="TCP"><a href="#TCP" class="headerlink" title="TCP"></a>TCP</h2><p><strong>1、TCP协议是面向连接的、可靠的、有序的、以字节流的方式发送数据，通过三次握手方式建立连接，形成传输数据的通道，在连接中进行大量数据的传输，效率会稍低</strong></p>
+<p><strong>2、Java中基于TCP协议实现网络通信的类</strong><br>​        客户端的Socket类<br>​        服务器端的ServerSocket类<br><img src="http://images2015.cnblogs.com/blog/740688/201509/740688-20150907234728090-211300057.jpg" alt="Socket通信模型"><br> <strong>3、Socket通信的步骤</strong><br>​             ① 创建ServerSocket和Socket<br>​            ② 打开连接到Socket的输入/输出流<br>​            ③ 按照协议对Socket进行读/写操作<br>​            ④ 关闭输入输出流、关闭Socket<br>   <strong>4、服务器端：</strong><br>​           ① 创建ServerSocket对象，绑定监听端口<br>​           ② 通过accept()方法监听客户端请求<br>​           ③ 连接建立后，通过输入流读取客户端发送的请求信息<br>​           ④ 通过输出流向客户端发送乡音信息<br>​           ⑤ 关闭相关资源<br><strong>5、客户端：</strong><br>​    ① 创建Socket对象，指明需要连接的服务器的地址和端口号<br>​    ② 连接建立后，通过输出流想服务器端发送请求信息<br>​    ③ 通过输入流获取服务器响应的信息<br>​    ④ 关闭响应资源<br><strong>6、应用多线程实现服务器与多客户端之间的通信</strong><br>​    ①服务器端创建ServerSocket，循环调用accept()等待客户端连接<br>​    ② 客户端创建一个socket并请求和服务器端连接<br>​    ③ 服务器端接受苦读段请求，创建socket与该客户建立专线连接<br>​    ④ 建立连接的两个socket在一个单独的线程上对话<br>​    ⑤ 服务器端继续等待新的连接</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/24/java：JAVA oj注意点/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Mark Zhang">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Terrorshadow">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/05/24/java：JAVA oj注意点/" itemprop="url">JAVA oj注意点</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-24T12:41:43+08:00">
+                2018-05-24
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="JAVA-OJ中的常用算法总结（慢慢更）"><a href="#JAVA-OJ中的常用算法总结（慢慢更）" class="headerlink" title="JAVA OJ中的常用算法总结（慢慢更）"></a>JAVA OJ中的常用算法总结（慢慢更）</h2><h2 id="参考博客："><a href="#参考博客：" class="headerlink" title="参考博客："></a>参考博客：</h2><p><a href="https://www.cnblogs.com/ECJTUACM-873284962/p/7342030.html" target="_blank" rel="noopener">Java在ACM算法竞赛编程中的易错点</a><br>[集合排序]（<a href="https://blog.csdn.net/hu_shengyang/article/details/6249309" target="_blank" rel="noopener">https://blog.csdn.net/hu_shengyang/article/details/6249309</a>)</p>
+<h2 id="知识点总结"><a href="#知识点总结" class="headerlink" title="知识点总结"></a>知识点总结</h2><p>###声明一下这里的问题并不是很全</p>
+<ol>
+<li><p>有关System.nanoTime()函数的使用，该函数用来返回最准确的可用系统计时器的当前值，以毫微秒为单位。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">long</span> startTime = System.nanoTime();  </span><br><span class="line"><span class="comment">// ... the code being measured ...  </span></span><br><span class="line"><span class="keyword">long</span> estimatedTime = System.nanoTime() - startTime;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>标准的输入函数：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Scanner sc=<span class="keyword">new</span> Scanner(System.in);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>数组与集合的排序：<br>如果要对数组排序，请使用java.util.Arrays.sort()方法.<br>如果对list排序，请使用java.util.Collections.sort()方法.<br>举个例子： </p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">   <span class="function"><span class="keyword">public</span> ArrayList&lt;Integer&gt; <span class="title">sort</span><span class="params">(ArrayList&lt;Integer&gt; al)</span> </span>&#123;</span><br><span class="line">   Collections.sort(al);<span class="comment">//对数组排序</span></span><br><span class="line">    <span class="keyword">return</span> al;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>java单个字符型数转换成整数</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">char</span> c = <span class="string">'4'</span>;</span><br><span class="line">        <span class="keyword">int</span> t = c - <span class="string">'0'</span>;</span><br><span class="line">        System.out.println(<span class="string">"char转换为数字: "</span> + t);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>5.String拆分成一位一位的char<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test_2</span></span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">String name = <span class="string">"CHINA"</span>;</span><br><span class="line"><span class="keyword">char</span>[] c = name.toCharArray();</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>;i &lt; c.length;i ++)</span><br><span class="line">&#123;</span><br><span class="line">System.out.println(c[i]);</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/24/java：JavaLearningPath/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Mark Zhang">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Terrorshadow">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/05/24/java：JavaLearningPath/" itemprop="url">Java learning</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-24T12:41:43+08:00">
+                2018-05-24
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="Java-learning-path"><a href="#Java-learning-path" class="headerlink" title="Java learning path"></a>Java learning path</h2><h2 id="Java"><a href="#Java" class="headerlink" title="Java"></a>Java</h2><p><img src="http://upload-images.jianshu.io/upload_images/8593035-851ad9bdb6f7128e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="#da"></p>
+<h3 id="java基础"><a href="#java基础" class="headerlink" title="java基础"></a><em>java基础</em></h3><ul>
+<li>关键字</li>
+<li>标识符</li>
+<li>常量（变量）<a href="https://www.cnblogs.com/dolphin0520/p/3780005.html" target="_blank" rel="noopener">装箱&amp;拆箱</a></li>
+<li>运算符</li>
+<li>数组</li>
+<li>方法（包括方法定义、重载、参数和返回值）</li>
+<li>Java三大特性（封装、继承、多态）</li>
+<li>反射（反射原理网上文档很多，不截取了）</li>
+</ul>
+<hr>
+<h2 id="Jvm"><a href="#Jvm" class="headerlink" title="Jvm"></a><em>Jvm</em></h2><ul>
+<li><a href="http://www.cnblogs.com/lishun1005/p/6019678.html" target="_blank" rel="noopener">Java 详解 JVM 工作原理和流程</a></li>
+<li><a href="http://blog.csdn.net/witsmakemen/article/details/28600127/" target="_blank" rel="noopener">java中JVM的原理</a></li>
+<li><a href="http://blog.csdn.net/wisgood/article/details/25343845" target="_blank" rel="noopener">JVM监控工具</a></li>
+</ul>
+<hr>
+<h2 id="集合"><a href="#集合" class="headerlink" title="集合"></a><em>集合</em></h2><ul>
+<li><a href="https://github.com/pzxwhc/MineKnowContainer/issues/75" target="_blank" rel="noopener">Collection和Map系列</a></li>
+<li><a href="https://github.com/pzxwhc/MineKnowContainer/issues/18" target="_blank" rel="noopener">Java集合</a></li>
+<li><a href="https://github.com/pzxwhc/MineKnowContainer/issues/19" target="_blank" rel="noopener">HashMap</a></li>
+</ul>
+<hr>
+<h2 id="IO"><a href="#IO" class="headerlink" title="IO"></a>IO</h2><ul>
+<li><p><a href="https://github.com/pzxwhc/MineKnowContainer/issues/22" target="_blank" rel="noopener">JavaIO:操作系统的IO处理过程以及五种网络IO模型</a>(这篇文章我没怎么看懂，先罗列上来)</p>
+</li>
+<li><p><a href="https://github.com/pzxwhc/MineKnowContainer/issues/23" target="_blank" rel="noopener">java常见IO流</a></p>
+</li>
+<li><p><a href="http://blog.csdn.net/anxpp/article/details/51512200" target="_blank" rel="noopener">AIO、BIO、NIO</a></p>
+<p>​</p>
+</li>
+</ul>
+<hr>
+<h2 id="线程"><a href="#线程" class="headerlink" title="线程"></a><strong>线程</strong></h2><ul>
+<li><a href="https://github.com/pzxwhc/MineKnowContainer/issues/6" target="_blank" rel="noopener">Java多线程</a></li>
+<li><a href="https://www.cnblogs.com/luxiaoxun/p/3870265.html" target="_blank" rel="noopener">Java多线程编程实例</a></li>
+<li><p>JUC</p>
+</li>
+<li><p>并发包</p>
+</li>
+</ul>
+<hr>
+<h2 id="框架"><a href="#框架" class="headerlink" title="框架"></a>框架</h2><h4 id="Spring"><a href="#Spring" class="headerlink" title="Spring"></a>Spring</h4><ul>
+<li><a href="https://github.com/pzxwhc/MineKnowContainer/issues/28" target="_blank" rel="noopener">AOP</a>(核心)</li>
+<li><a href="https://github.com/pzxwhc/MineKnowContainer/issues/30" target="_blank" rel="noopener">依赖注入(DI)与控制反转(IOC)</a>(核心)</li>
+<li><a href="https://github.com/pzxwhc/MineKnowContainer/issues/29" target="_blank" rel="noopener">异常统一处理的三种方式与Rest接口异常的处理</a></li>
+</ul>
+<h4 id="SpringMVC"><a href="#SpringMVC" class="headerlink" title="SpringMVC"></a>SpringMVC</h4><ul>
+<li><a href="https://github.com/pzxwhc/MineKnowContainer/issues/32" target="_blank" rel="noopener">Servlet体系结构与ServletContext,ServlectConfig</a></li>
+</ul>
+
           
         
       
@@ -638,7 +1079,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/11/24/java：从MYSQL到hibernate的浅谈/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/19/java：关于eclipse报错code=13/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Mark Zhang">
@@ -657,7 +1098,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2017/11/24/java：从MYSQL到hibernate的浅谈/" itemprop="url">Hibernate</a></h1>
+                <a class="post-title-link" href="/2018/05/19/java：关于eclipse报错code=13/" itemprop="url">eclipse error：code 13</a></h1>
         
 
         <div class="post-meta">
@@ -669,8 +1110,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-11-24T12:41:43+08:00">
-                2017-11-24
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-19T12:41:43+08:00">
+                2018-05-19
               </time>
             
 
@@ -709,39 +1150,550 @@
       
         
           
-            <h2 id="从MYSQL到hibernate的浅谈"><a href="#从MYSQL到hibernate的浅谈" class="headerlink" title="从MYSQL到hibernate的浅谈"></a>从MYSQL到hibernate的浅谈</h2><p>在文章的开篇，我想简单的先介绍一下数据库，数据库有三大类数据结构模型，层次结构模型，网状结构模型，<a href="https://baike.baidu.com/item/%E5%85%B3%E7%B3%BB%E5%9E%8B%E6%95%B0%E6%8D%AE%E5%BA%93/8999831?fr=aladdin" target="_blank" rel="noopener">关系结构模型</a>，其中最常使用的就是关系结构型数据库。对于关系型数据库而言，我们可以看见最常用的就是Mysql、sqlserver和oracle，下面重点介绍mysql的连接以及使用方式。</p>
-<p>##MYsql</p>
-<p>数据库的语言分为三类，</p>
-<p>1.数据操纵语言<em>DML</em>（Data Manipulation Language）</p>
-<p>包括常用的select、insert、update、delete。（Select也可再分为一类，称为数据查询语言）</p>
-<p>​    1.insert插入</p>
-<figure class="highlight plain"><figcaption><span>INTO tb_name(id,name,score)VALUES(NULL,'张三',140),(NULL,'张四',178),(NULL,'张五',134);```</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">​	2.update更新(修改)</span><br><span class="line"></span><br><span class="line">`UPDATE tb_name SET score=189 WHERE id=2;`</span><br><span class="line"></span><br><span class="line">​	3.delete删除</span><br><span class="line"></span><br><span class="line">`DELETE FROM tb_name WHERE id=3;`</span><br><span class="line"></span><br><span class="line">​	4.select查询</span><br><span class="line"></span><br><span class="line">`select * from tb_name;`</span><br><span class="line"></span><br><span class="line">2.数据定义语言DDL</span><br><span class="line"></span><br><span class="line">数据定义语言DDL用来创建数据库中的各种对象-----表、视图、索引、同义词。（create）</span><br><span class="line"></span><br><span class="line">3.数据控制语言DCL</span><br><span class="line"></span><br><span class="line">数据控制语言DCL用来授予或回收访问数据库的某种特权，并控制</span><br><span class="line">数据库操纵事务发生的时间及效果，对数据库实行监视等。</span><br><span class="line"></span><br><span class="line">------</span><br><span class="line"></span><br><span class="line">##[JDBC](http://www.baidu.com/link?url=j-nK5AaHr4FOJxLJl5LnpF5xhcmLbuB93GEcY1LRCs29XeIu9h9pn-DurPHKkf5-aFkjiXP31gtMY3lvkw_Lv_&amp;wd=&amp;eqid=e84b53fa00005df10000000359ef5e86)</span><br><span class="line"></span><br><span class="line">为什么数据库之后介绍的是JDBC呢？因为数据库语言的所有操作是在数据库本身进行的，想要与别的语言相关，让其他语言（这里使用到的是java）操作数据库语言，就必须有一个对外的接口，这里JDBC就是java语言与数据库语言的一个接口，也是一个规范。</span><br><span class="line"></span><br><span class="line">#####数据库驱动，connection</span><br></pre></td></tr></table></figure>
-<p>private static Connection getConn() {<br>    String driver = “com.mysql.jdbc.Driver”;<br>    String url = “jdbc:mysql://localhost:3306/samp_db”;<br>    String username = “root”;<br>    String password = “”;<br>    Connection conn = null;<br>    try {<br>        Class.forName(driver); //classLoader,加载对应驱动<br>        conn = (Connection) DriverManager.getConnection(url, username, password);<br>    } catch (ClassNotFoundException e) {<br>        e.printStackTrace();<br>    } catch (SQLException e) {<br>        e.printStackTrace();<br>    }<br>    return conn;<br>}<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">#####插入</span><br><span class="line"></span><br><span class="line">    private static int insert(Student student) &#123;</span><br><span class="line">    Connection conn = getConn();</span><br><span class="line">    int i = 0;</span><br><span class="line">    String sql = &quot;insert into students (Name,Sex,Age) values(?,?,?)&quot;;</span><br><span class="line">    PreparedStatement pstmt;</span><br><span class="line">    try &#123;</span><br><span class="line">        pstmt = (PreparedStatement) conn.prepareStatement(sql);</span><br><span class="line">        pstmt.setString(1, student.getName());</span><br><span class="line">        pstmt.setString(2, student.getSex());</span><br><span class="line">        pstmt.setString(3, student.getAge());</span><br><span class="line">        i = pstmt.executeUpdate();</span><br><span class="line">        pstmt.close();</span><br><span class="line">        conn.close();</span><br><span class="line">    &#125; catch (SQLException e) &#123;</span><br><span class="line">        e.printStackTrace();</span><br><span class="line">    &#125;</span><br><span class="line">    return i;</span><br><span class="line">    &#125;</span><br><span class="line">##### 更新（修改）</span><br></pre></td></tr></table></figure></p>
-<p>private static int update(Student student) {<br>    Connection conn = getConn();<br>    int i = 0;<br>    String sql = “update students set Age=’” + student.getAge() + “‘ where Name=’” + student.getName() + “‘“;<br>    PreparedStatement pstmt;<br>    try {<br>        pstmt = (PreparedStatement) conn.prepareStatement(sql);<br>        i = pstmt.executeUpdate();<br>        System.out.println(“resutl: “ + i);<br>        pstmt.close();<br>        conn.close();<br>    } catch (SQLException e) {<br>        e.printStackTrace();<br>    }<br>    return i;<br>}<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">##### 查询</span><br></pre></td></tr></table></figure></p>
-<p>private static Integer getAll() {<br>    Connection conn = getConn();<br>    String sql = “select * from students”;<br>    PreparedStatement pstmt;<br>    try {<br>        pstmt = (PreparedStatement)conn.prepareStatement(sql);<br>        ResultSet rs = pstmt.executeQuery();<br>        int col = rs.getMetaData().getColumnCount();<br>        System.out.println(“============================”);<br>        while (rs.next()) {<br>            for (int i = 1; i &lt;= col; i++) {<br>                System.out.print(rs.getString(i) + “\t”);<br>                if ((i == 2) &amp;&amp; (rs.getString(i).length() &lt; 8)) {<br>                    System.out.print(“\t”);<br>                }<br>             }<br>            System.out.println(“”);<br>        }<br>            System.out.println(“============================”);<br>    } catch (SQLException e) {<br>        e.printStackTrace();<br>    }<br>    return null;<br>}<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">##### 删除</span><br></pre></td></tr></table></figure></p>
-<p>private static int delete(String name) {<br>    Connection conn = getConn();<br>    int i = 0;<br>    String sql = “delete from students where Name=’” + name + “‘“;<br>    PreparedStatement pstmt;<br>    try {<br>        pstmt = (PreparedStatement) conn.prepareStatement(sql);<br>        i = pstmt.executeUpdate();<br>        System.out.println(“resutl: “ + i);<br>        pstmt.close();<br>        conn.close();<br>    } catch (SQLException e) {<br>        e.printStackTrace();<br>    }<br>    return i;<br>}<br><code>`</code></p>
-<hr>
-<p>##<a href="https://baike.baidu.com/item/Hibernate/206989?fr=aladdin" target="_blank" rel="noopener">hibernate</a></p>
-<p>关于hibernate(ORM-对象关系映射框架)的介绍，其实hibernate这个框架在我眼里看来，就是一个打包好的JDBC，使用起来会比JDBC简单的多。我们可以在面向对象的思想下，使用java语言完成对数据库的操作，减少了使用关系型数据库SQL语言的操作。</p>
-<p>hibernate框架介绍</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/8499175-a1fb06cb8711146c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
-<p>在做hibernate项目之前，首先需要我们导入hibernate的包跟JDBC的包，具体操作<br>右键项目名称-properties-Java build path-add external JARs，其余步骤：</p>
-<p>1.写hibernate配置文件hibernate.cfg.xml</p>
-<p>2.写好一个javabean，并生成其映射文件.hbm.xml。</p>
-<p>3.将映射文件写入配置文件中。</p>
-<p>4.写测试类。</p>
-<p>​    关于测试类，我们重点需要写好：</p>
-<p>​    配置信息：    <code>Configuration configuration = new Configuration().configure();</code></p>
-<p>​    sessionFactory：<code>SessionFactory sessionFactory = configuration.buildSessionFactory();</code></p>
-<p>​    session:        <code>Session session = sessionFactory.openSession();</code></p>
-<p>​    事务开启：    <code>session.beginTransaction();</code></p>
-<p>​    事务操作（包括增删改查）：</p>
-<p>​    事务保存：    <code>session.save(user);</code></p>
-<p>​    事务提交：    <code>session.getTransaction().commit();</code></p>
-<p>​    关闭：        <code>session.close();</code></p>
-<pre><code>`sessionFactory.close();`
-</code></pre><p>关于hibernate的介绍也基本上说完了</p>
-<p><a href="https://www.zhihu.com/question/21142149/answer/24120371?utm_source=qq&amp;utm_medium=social" target="_blank" rel="noopener">1Java新手如何学习Spring、Struts、Hibernate三大框架？</a></p>
+            <h2 id="这个错误代码一般情况下是因为安装的jdk版本与系统位数不服。"><a href="#这个错误代码一般情况下是因为安装的jdk版本与系统位数不服。" class="headerlink" title="这个错误代码一般情况下是因为安装的jdk版本与系统位数不服。"></a>这个错误代码一般情况下是因为安装的jdk版本与系统位数不服。</h2><p>因为我的电脑中有两个eclipse，所以在一次系统更新中，一个eclipse(neon)弹出code13，另一个eclipse(oxygen)弹出code1，两个摸不到头脑的原因，我查看了系统变量中java_home,发现java_home的路径的jdk消失了，仔细回想可能导致jdk自动消失的原因是jdk的一次更新，然后在运行界面输入</p>
+<h2 id="java-version，查询到jdk自动更新之后在电脑上变成32位，在网上查询资料，这种情况只能重新安装jdk。"><a href="#java-version，查询到jdk自动更新之后在电脑上变成32位，在网上查询资料，这种情况只能重新安装jdk。" class="headerlink" title="java -version，查询到jdk自动更新之后在电脑上变成32位，在网上查询资料，这种情况只能重新安装jdk。"></a><code>java -version</code>，查询到jdk自动更新之后在电脑上变成32位，在网上查询资料，这种情况只能重新安装jdk。</h2><h3 id="造成原因：大多情况因为jdk自己自动更新导致，如果是第一次出现eclipse弹出错误代码，可能是安装eclipse出现问题。"><a href="#造成原因：大多情况因为jdk自己自动更新导致，如果是第一次出现eclipse弹出错误代码，可能是安装eclipse出现问题。" class="headerlink" title="造成原因：大多情况因为jdk自己自动更新导致，如果是第一次出现eclipse弹出错误代码，可能是安装eclipse出现问题。"></a>造成原因：大多情况因为jdk自己自动更新导致，如果是第一次出现eclipse弹出错误代码，可能是安装eclipse出现问题。</h3><h3 id="解决方案：将jdk重新下载，在系统变量中重新设置java-home。"><a href="#解决方案：将jdk重新下载，在系统变量中重新设置java-home。" class="headerlink" title="解决方案：将jdk重新下载，在系统变量中重新设置java_home。"></a>解决方案：将jdk重新下载，在系统变量中重新设置java_home。</h3>
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/19/java：IDEA中.java文件左下角红色j问题/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Mark Zhang">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Terrorshadow">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/05/19/java：IDEA中.java文件左下角红色j问题/" itemprop="url">idea .java文件 右下角有个红色j，解决方法</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-19T12:41:43+08:00">
+                2018-05-19
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>不可编译，File里打开project structure找到Modules，其中有个Sources，把右边第一个X点击，去掉Root路径后，重新添加。<br><a href="https://blog.csdn.net/w348399060/article/details/70312518/" target="_blank" rel="noopener">原文链接</a></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/19/java：正则表达式/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Mark Zhang">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Terrorshadow">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/05/19/java：正则表达式/" itemprop="url">正则表达式（JAVA)</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-19T12:41:43+08:00">
+                2018-05-19
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>##根据多年无聊的本科程序类项目发现，正则表达式对于数据的提取有不可取代的作用，当然比起很多现成的ctrl+f完成的查找替换操作来说，正则表达式还算是一种superior的方法了哈哈哈。</p>
+<p>###关于<a href="http://www.runoob.com/java/java-regular-expressions.html" target="_blank" rel="noopener">正则表达式</a>的学习，首先我直接来完成正则表达式的书写，毕竟这个才是重中之重。</p>
+<table>
+<thead>
+<tr>
+<th>字符</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>\</td>
+<td>将下一字符标记为特殊字符、文本、反向引用或八进制转义符。例如，”n”匹配字符”n”。”\n”匹配换行符。序列”\\“匹配”\“，”\(“匹配”(“。</td>
+</tr>
+<tr>
+<td>^</td>
+<td>匹配输入字符串开始的位置。如果设置了 <strong>RegExp</strong> 对象的 <strong>Multiline</strong> 属性，^ 还会与”\n”或”\r”之后的位置匹配。</td>
+</tr>
+<tr>
+<td>\$</td>
+<td>匹配输入字符串结尾的位置。如果设置了 <strong>RegExp</strong> 对象的 <strong>Multiline</strong> 属性，$ 还会与”\n”或”\r”之前的位置匹配。</td>
+</tr>
+<tr>
+<td>*</td>
+<td>零次或多次匹配前面的字符或子表达式。例如，zo<em> 匹配”z”和”zoo”。</em> 等效于 {0,}。</td>
+</tr>
+<tr>
+<td>+</td>
+<td>一次或多次匹配前面的字符或子表达式。例如，”zo+”与”zo”和”zoo”匹配，但与”z”不匹配。+ 等效于 {1,}。</td>
+</tr>
+<tr>
+<td>?</td>
+<td>零次或一次匹配前面的字符或子表达式。例如，”do(es)?”匹配”do”或”does”中的”do”。? 等效于 {0,1}。</td>
+</tr>
+<tr>
+<td>{<em>n</em>}</td>
+<td><em>n</em>是非负整数。正好匹配 <em>n</em> 次。例如，”o{2}”与”Bob”中的”o”不匹配，但与”food”中的两个”o”匹配。</td>
+</tr>
+<tr>
+<td>{<em>n</em>,}</td>
+<td><em>n</em>是非负整数。至少匹配 <em>n </em>次。例如，”o{2,}”不匹配”Bob”中的”o”，而匹配”foooood”中的所有 o。”o{1,}”等效于”o+”。”o{0,}”等效于”o*”。</td>
+</tr>
+<tr>
+<td>{<em>n</em>,<em>m</em>}</td>
+<td><em>m</em> 和 <em>n</em> 是非负整数，其中 <em>n</em> &lt;= <em>m</em>。匹配至少 <em>n</em> 次，至多 <em>m</em> 次。例如，”o{1,3}”匹配”fooooood”中的头三个 o。’o{0,1}’ 等效于 ‘o?’。注意：您不能将空格插入逗号和数字之间。</td>
+</tr>
+<tr>
+<td>?</td>
+<td>当此字符紧随任何其他限定符（<em>、+、?、{</em>n<em>}、{</em>n<em>,}、{</em>n<em>,</em>m*}）之后时，匹配模式是”非贪心的”。”非贪心的”模式匹配搜索到的、尽可能短的字符串，而默认的”贪心的”模式匹配搜索到的、尽可能长的字符串。例如，在字符串”oooo”中，”o+?”只匹配单个”o”，而”o+”匹配所有”o”。</td>
+</tr>
+<tr>
+<td>.</td>
+<td>匹配除”\r\n”之外的任何单个字符。若要匹配包括”\r\n”在内的任意字符，请使用诸如”[\s\S]”之类的模式。</td>
+</tr>
+<tr>
+<td>(<em>pattern</em>)</td>
+<td>匹配 <em>pattern</em> 并捕获该匹配的子表达式。可以使用 <strong>$0…$9</strong> 属性从结果”匹配”集合中检索捕获的匹配。若要匹配括号字符 ( )，请使用”(“或者”)“。</td>
+</tr>
+<tr>
+<td>(?:<em>pattern</em>)</td>
+<td>匹配 <em>pattern</em> 但不捕获该匹配的子表达式，即它是一个非捕获匹配，不存储供以后使用的匹配。这对于用”or”字符 (\</td>
+<td>) 组合模式部件的情况很有用。例如，’industr(?:y\</td>
+<td>ies) 是比 ‘industry\</td>
+<td>industries’ 更经济的表达式。</td>
+</tr>
+<tr>
+<td>(?=<em>pattern</em>)</td>
+<td>执行正向预测先行搜索的子表达式，该表达式匹配处于匹配 <em>pattern</em> 的字符串的起始点的字符串。它是一个非捕获匹配，即不能捕获供以后使用的匹配。例如，’Windows (?=95\</td>
+<td>98\</td>
+<td>NT\</td>
+<td>2000)’ 匹配”Windows 2000”中的”Windows”，但不匹配”Windows 3.1”中的”Windows”。预测先行不占用字符，即发生匹配后，下一匹配的搜索紧随上一匹配之后，而不是在组成预测先行的字符后。</td>
+</tr>
+<tr>
+<td>(?!<em>pattern</em>)</td>
+<td>执行反向预测先行搜索的子表达式，该表达式匹配不处于匹配 <em>pattern</em> 的字符串的起始点的搜索字符串。它是一个非捕获匹配，即不能捕获供以后使用的匹配。例如，’Windows (?!95\</td>
+<td>98\</td>
+<td>NT\</td>
+<td>2000)’ 匹配”Windows 3.1”中的 “Windows”，但不匹配”Windows 2000”中的”Windows”。预测先行不占用字符，即发生匹配后，下一匹配的搜索紧随上一匹配之后，而不是在组成预测先行的字符后。</td>
+</tr>
+<tr>
+<td><em>x</em>\</td>
+<td><em>y</em></td>
+<td>匹配 <em>x</em> 或 <em>y</em>。例如，’z\</td>
+<td>food’ 匹配”z”或”food”。’(z\</td>
+<td>f)ood’ 匹配”zood”或”food”。</td>
+</tr>
+<tr>
+<td>[<em>xyz</em>]</td>
+<td>字符集。匹配包含的任一字符。例如，”[abc]”匹配”plain”中的”a”。</td>
+</tr>
+<tr>
+<td>[^<em>xyz</em>]</td>
+<td>反向字符集。匹配未包含的任何字符。例如，”[^abc]”匹配”plain”中”p”，”l”，”i”，”n”。</td>
+</tr>
+<tr>
+<td>[<em>a-z</em>]</td>
+<td>字符范围。匹配指定范围内的任何字符。例如，”[a-z]”匹配”a”到”z”范围内的任何小写字母。</td>
+</tr>
+<tr>
+<td>[^<em>a-z</em>]</td>
+<td>反向范围字符。匹配不在指定的范围内的任何字符。例如，”[^a-z]”匹配任何不在”a”到”z”范围内的任何字符。</td>
+</tr>
+<tr>
+<td>\b</td>
+<td>匹配一个字边界，即字与空格间的位置。例如，”er\b”匹配”never”中的”er”，但不匹配”verb”中的”er”。</td>
+</tr>
+<tr>
+<td>\B</td>
+<td>非字边界匹配。”er\B”匹配”verb”中的”er”，但不匹配”never”中的”er”。</td>
+</tr>
+<tr>
+<td>\c<em>x</em></td>
+<td>匹配 <em>x</em> 指示的控制字符。例如，\cM 匹配 Control-M 或回车符。<em>x</em> 的值必须在 A-Z 或 a-z 之间。如果不是这样，则假定 c 就是”c”字符本身。</td>
+</tr>
+<tr>
+<td>\d</td>
+<td>数字字符匹配。等效于 [0-9]。</td>
+</tr>
+<tr>
+<td>\D</td>
+<td>非数字字符匹配。等效于 [^0-9]。</td>
+</tr>
+<tr>
+<td>\f</td>
+<td>换页符匹配。等效于 \x0c 和 \cL。</td>
+</tr>
+<tr>
+<td>\n</td>
+<td>换行符匹配。等效于 \x0a 和 \cJ。</td>
+</tr>
+<tr>
+<td>\r</td>
+<td>匹配一个回车符。等效于 \x0d 和 \cM。</td>
+</tr>
+<tr>
+<td>\s</td>
+<td>匹配任何空白字符，包括空格、制表符、换页符等。与 [ \f\n\r\t\v] 等效。</td>
+</tr>
+<tr>
+<td>\S</td>
+<td>匹配任何非空白字符。与 [^ \f\n\r\t\v] 等效。</td>
+</tr>
+<tr>
+<td>\t</td>
+<td>制表符匹配。与 \x09 和 \cI 等效。</td>
+</tr>
+<tr>
+<td>\v</td>
+<td>垂直制表符匹配。与 \x0b 和 \cK 等效。</td>
+</tr>
+<tr>
+<td>\w</td>
+<td>匹配任何字类字符，包括下划线。与”[A-Za-z0-9_]”等效。</td>
+</tr>
+<tr>
+<td>\W</td>
+<td>与任何非单词字符匹配。与”[^A-Za-z0-9_]”等效。</td>
+</tr>
+<tr>
+<td>\x<em>n</em></td>
+<td>匹配 <em>n</em>，此处的 <em>n</em> 是一个十六进制转义码。十六进制转义码必须正好是两位数长。例如，”\x41”匹配”A”。”\x041”与”\x04”&amp;”1”等效。允许在正则表达式中使用 ASCII 代码。</td>
+</tr>
+<tr>
+<td>\<em>num</em></td>
+<td>匹配 <em>num</em>，此处的 <em>num</em> 是一个正整数。到捕获匹配的反向引用。例如，”(.)\1”匹配两个连续的相同字符。</td>
+</tr>
+<tr>
+<td>\<em>n</em></td>
+<td>标识一个八进制转义码或反向引用。如果 \<em>n</em> 前面至少有 <em>n</em> 个捕获子表达式，那么 <em>n</em> 是反向引用。否则，如果 <em>n</em> 是八进制数 (0-7)，那么 <em>n</em> 是八进制转义码。</td>
+</tr>
+<tr>
+<td>\<em>nm</em></td>
+<td>标识一个八进制转义码或反向引用。如果 \<em>nm</em> 前面至少有 <em>nm</em> 个捕获子表达式，那么 <em>nm</em> 是反向引用。如果 \<em>nm</em> 前面至少有 <em>n</em> 个捕获，则 <em>n</em> 是反向引用，后面跟有字符 <em>m</em>。如果两种前面的情况都不存在，则 \<em>nm</em> 匹配八进制值 <em>nm</em>，其中 <em>n</em> 和 <em>m</em> 是八进制数字 (0-7)。</td>
+</tr>
+<tr>
+<td>\nml</td>
+<td>当 <em>n</em> 是八进制数 (0-3)，<em>m</em> 和 <em>l</em> 是八进制数 (0-7) 时，匹配八进制转义码 <em>nml</em>。</td>
+</tr>
+<tr>
+<td>\u<em>n</em></td>
+<td>匹配 <em>n</em>，其中 <em>n</em> 是以四位十六进制数表示的 Unicode 字符。例如，\u00A9 匹配版权符号 (©)。</td>
+</tr>
+</tbody>
+</table>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/19/博客搭建/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Mark Zhang">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Terrorshadow">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/05/19/博客搭建/" itemprop="url">博客搭建</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-19T12:41:43+08:00">
+                2018-05-19
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="本博客的搭建"><a href="#本博客的搭建" class="headerlink" title="本博客的搭建"></a>本博客的搭建</h2><p>我写这个博客，一方面是之前写过的很多东西保存效果不好，就是很多知识点放很长时间之后就会遗忘，回过头来去寻找知识点的时候效率很低。所以希望通过博客这种方式记录下自己从今开始的点点滴滴。<br>为什么自己要很麻烦的去搭建博客，而不是在简书上或者CSDN等地方直接去建个账号写博客；关于这个问题，我只是想说，用HEXO搭建的博客，真的是很方便！而且通过与github相连，访问博客也异常容易！自己随时可以去参考自己写过的东西，反反复复的看效率会很高。<br>熟悉git操作的人都会知道git是一款很强大的工具，加上hexo，文章可以轻轻易易的书写，保存在本地仓库，只需要在cmd上运行很简单的操作，即可生成代码并且上传到github上，方便自己随时查看。<br>当然这个博客写完之后，我也会发现有很多不足的地方，从算法开始写起，很多地方因为是自己的原创，导致质量不高；当然除了自己之外，也希望大家可以当做参考。<br>搭建博客并不是一件很困难的事情，当然需要对一些工具有一定的了解，git、github,markdown，这两个是主要的，包括SSH，以及公钥和私钥的设置。以及很有耐心的慢慢去调试博客，以及设置主题。<br>这个博客搭建到现在有很多不完美的地方，也会慢慢去改正，以及很多页面问题，等博客质量上来之后，会去慢慢修改这些问题，完善它。<br><a href="https://www.cnblogs.com/fengxiongZz/p/7707219.html" target="_blank" rel="noopener">hexo+github</a><br>以上是搭建博客时我参考的文章，当然网上也有很多类似，共大家参考、<br>建博客不是为了暴力抄袭，关于一些不熟悉的知识，我可能会自己在博客写（抄）一遍，这样会加深我的记忆，日后也方便我去查看自己的资料。<br>关于域名：至今因为博客质量不高，而且并没有什么更长远的目标，所以不打算在万网租用域名，就暂时挂用github的公共域。</p>
 
           
         
@@ -781,7 +1733,7 @@
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/2/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span>
+    <a class="extend prev" rel="prev" href="/page/2/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/4/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -827,7 +1779,7 @@
               
                 <a href="/archives">
               
-                  <span class="site-state-item-count">24</span>
+                  <span class="site-state-item-count">32</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -868,7 +1820,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>

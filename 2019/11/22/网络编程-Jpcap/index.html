@@ -1,0 +1,954 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="Java利用Jpcap抓包 NetworkInterfaceAddress[]   类型-参数名 参数解释     String-datalink_description 数据链路层的描述。描述所在的局域网是什么网。例如，以太网（Ethernet）、无线LAN网（wireless LAN）、令牌环网(token ring)等等。    String-datalink_name 该网络设备所对应数据">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Jpcap">
+<meta property="og:url" content="http://yoursite.com/2019/11/22/网络编程-Jpcap/index.html">
+<meta property="og:site_name" content="Terrorshadow">
+<meta property="og:description" content="Java利用Jpcap抓包 NetworkInterfaceAddress[]   类型-参数名 参数解释     String-datalink_description 数据链路层的描述。描述所在的局域网是什么网。例如，以太网（Ethernet）、无线LAN网（wireless LAN）、令牌环网(token ring)等等。    String-datalink_name 该网络设备所对应数据">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-11-23T07:34:19.428Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Jpcap">
+<meta name="twitter:description" content="Java利用Jpcap抓包 NetworkInterfaceAddress[]   类型-参数名 参数解释     String-datalink_description 数据链路层的描述。描述所在的局域网是什么网。例如，以太网（Ethernet）、无线LAN网（wireless LAN）、令牌环网(token ring)等等。    String-datalink_name 该网络设备所对应数据">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2019/11/22/网络编程-Jpcap/"/>
+
+
+
+
+
+  <title>Jpcap | Terrorshadow</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Terrorshadow</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-search">
+          <a href="/search" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/11/22/网络编程-Jpcap/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Mark Zhang">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Terrorshadow">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Jpcap</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-11-22T12:41:43+08:00">
+                2019-11-22
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="Java利用Jpcap抓包"><a href="#Java利用Jpcap抓包" class="headerlink" title="Java利用Jpcap抓包"></a>Java利用Jpcap抓包</h1><hr>
+<h2 id="NetworkInterfaceAddress"><a href="#NetworkInterfaceAddress" class="headerlink" title="NetworkInterfaceAddress[]"></a>NetworkInterfaceAddress[]</h2><table>
+<thead>
+<tr>
+<th>类型-参数名</th>
+<th style="text-align:left">参数解释</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>String-datalink_description</td>
+<td style="text-align:left">数据链路层的描述。描述所在的局域网是什么网。例如，以太网（Ethernet）、无线LAN网（wireless LAN）、令牌环网(token ring)等等。</td>
+<td></td>
+</tr>
+<tr>
+<td>String-datalink_name</td>
+<td style="text-align:left">该网络设备所对应数据链路层的名称。具体来说，例如Ethernet10M、100M、1000M等等。</td>
+<td></td>
+</tr>
+<tr>
+<td>String-decription</td>
+<td style="text-align:left">网卡信息</td>
+<td></td>
+</tr>
+<tr>
+<td>boolean_Loopback</td>
+<td style="text-align:left">是否是loopback设备</td>
+<td></td>
+</tr>
+<tr>
+<td>Byte[]-mac_address</td>
+<td style="text-align:left">网卡的MAC地址</td>
+<td></td>
+</tr>
+<tr>
+<td>String-Name</td>
+<td style="text-align:left">网卡设备名称</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="JpcapCaptor"><a href="#JpcapCaptor" class="headerlink" title="JpcapCaptor"></a>JpcapCaptor</h2><table>
+<thead>
+<tr>
+<th>类型-参数名</th>
+<th style="text-align:left">参数解释</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>int-dropped_packets</td>
+<td style="text-align:left">被抛弃包数目</td>
+<td></td>
+</tr>
+<tr>
+<td>int-ID</td>
+<td style="text-align:left">未知</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="JpcapCaptor方法"><a href="#JpcapCaptor方法" class="headerlink" title="JpcapCaptor方法"></a>JpcapCaptor方法</h4><table>
+<thead>
+<tr>
+<th>返回值类型</th>
+<th style="text-align:left">方法名-说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>static NetworkInterface[]</td>
+<td style="text-align:left">getDeviceList()<br>返回一个网络设备列表。</td>
+<td></td>
+</tr>
+<tr>
+<td>static JpcapCaptor</td>
+<td style="text-align:left">openDevice(NetworkInterface interface, intsnaplen, booleanpromisc, intto_ms) <br><br>创建一个与指定设备的连接并返回该连接。注意，以上两个方法都是静态方法。<br>Interface：要打开连接的设备的实例；<br>Snaplen：这个是比较容易搞混的一个参数。其实这个参数不是限制只能捕捉多少数据包，而是限制每一次收到一个数据包，只提取该数据包中前多少字节；<br>Promisc：设置是否混杂模式。处于混杂模式将接收所有数据包，若之后又调用了包过滤函数setFilter()将不起任何作用；<br>To_ms：这个参数主要用于processPacket()方法，指定超时的时间；</td>
+<td></td>
+</tr>
+<tr>
+<td>void</td>
+<td style="text-align:left">Close()<br>关闭openDevice()的连接</td>
+<td></td>
+</tr>
+<tr>
+<td>JpcapSender</td>
+<td style="text-align:left">getJpcapSenderInstance()     <br>该返回一个JpcapSender实例，JpcapSender类是专门用于控制设备的发送数据包的功能的类。</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Packet</strong></td>
+<td style="text-align:left">getPacket() <br>    捕捉并返回一个数据包。这是JpcapCaptor实例中四种捕捉包的方法之一。</td>
+<td></td>
+</tr>
+<tr>
+<td>int</td>
+<td style="text-align:left">loopPacket(int count,PacketReceiver handler)<br>    捕捉指定数目的数据包，并交由实现了PacketReceiver接口的类的实例处理，并返回捕捉到的数据包数目。如果count参数设为－1，那么无限循环地捕捉数据。<br>这个方法不受超时的影响。还记得openDivice()中的to_ms参数么？那个参数对这个方法没有影响，如果没有捕捉到指定数目数据包，那么这个方法将一直阻塞等待。<br>PacketReceiver中只有一个抽象方法void receive(Packet p)。</td>
+<td></td>
+</tr>
+<tr>
+<td>int</td>
+<td style="text-align:left">processPacket(intcount, PacketReceiver handler) <br>    跟loopPacket()功能一样，唯一的区别是这个方法受超时的影响，超过指定时间自动返回捕捉到数据包的数目。</td>
+<td></td>
+</tr>
+<tr>
+<td>int</td>
+<td style="text-align:left">dispatchPacket(intcount, PacketReceiverhandler)<br>    跟processPacket()功能一样，区别是这个方法可以处于“non-blocking”模式工作，在这种模式下dispatchPacket()可能立即返回，即使没有捕捉到任何数据包。</td>
+<td></td>
+</tr>
+<tr>
+<td>void</td>
+<td style="text-align:left">setFilter(java.lang.Stringcondition, booleanoptimize) <br>.condition：设定要提取的包的关键字。<br><br>Optimize：这个参数在说明文档以及源代码中都没有说明，只是说这个参数如果为真，那么过滤器将处于优化模式。</td>
+<td></td>
+</tr>
+<tr>
+<td>void</td>
+<td style="text-align:left">setNonBlockingMode(booleannonblocking)<br>如果值为“true”，那么设定为“non-blocking”模式。</td>
+<td></td>
+</tr>
+<tr>
+<td>void</td>
+<td style="text-align:left">breakLoop()<br>当调用processPacket()和loopPacket()后，再调用这个方法可以强制让processPacket()和loopPacket()停止。</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="IPPacket"><a href="#IPPacket" class="headerlink" title="IPPacket"></a>IPPacket</h2><table>
+<thead>
+<tr>
+<th>类型-参数名</th>
+<th style="text-align:left">参数解释</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>boolean-d_flag</td>
+<td style="text-align:left">V4</td>
+<td></td>
+</tr>
+<tr>
+<td>IPAddress-dst_ip</td>
+<td style="text-align:left">目的IP地址</td>
+<td></td>
+</tr>
+<tr>
+<td>int-flow_label</td>
+<td style="text-align:left">流标签</td>
+<td></td>
+</tr>
+<tr>
+<td>short-hop_limit</td>
+<td style="text-align:left">生存时间</td>
+<td></td>
+</tr>
+<tr>
+<td>int-ident</td>
+<td style="text-align:left">分组标识（v4）</td>
+<td></td>
+</tr>
+<tr>
+<td>short-length</td>
+<td style="text-align:left">数据包长度</td>
+<td></td>
+</tr>
+<tr>
+<td>boolean-more_frag</td>
+<td style="text-align:left">MF标志位（v4）<br>more fragment标识还有分片</td>
+<td></td>
+</tr>
+<tr>
+<td>byte-priority</td>
+<td style="text-align:left">优先权</td>
+<td></td>
+</tr>
+<tr>
+<td>short-protocol</td>
+<td style="text-align:left">协议（v4、v6）</td>
+<td></td>
+</tr>
+<tr>
+<td>IPAddress-src_ip</td>
+<td style="text-align:left">返回源IP地址</td>
+<td></td>
+</tr>
+<tr>
+<td>String-data</td>
+<td style="text-align:left">报文内容</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="TCPPacket"><a href="#TCPPacket" class="headerlink" title="TCPPacket"></a>TCPPacket</h2><p>TCPPacket是IPPacket的子包</p>
+<table>
+<thead>
+<tr>
+<th>类型-参数名</th>
+<th style="text-align:left">参数解释</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>boolean-ack</td>
+<td style="text-align:left">ACK标识</td>
+<td></td>
+</tr>
+<tr>
+<td>boolean-fin</td>
+<td style="text-align:left">FIN标识</td>
+<td></td>
+</tr>
+<tr>
+<td>byte[]-option</td>
+<td style="text-align:left">TCP选项</td>
+<td></td>
+</tr>
+<tr>
+<td>boolean-psh</td>
+<td style="text-align:left">PSH标志</td>
+<td></td>
+</tr>
+<tr>
+<td>long-sequence</td>
+<td style="text-align:left">序号</td>
+<td></td>
+</tr>
+<tr>
+<td>int-src_port</td>
+<td style="text-align:left">源端口</td>
+<td></td>
+</tr>
+<tr>
+<td>int-dst_port</td>
+<td style="text-align:left">目的端口</td>
+<td></td>
+</tr>
+<tr>
+<td>boolean-syn</td>
+<td style="text-align:left">SYN标志</td>
+<td></td>
+</tr>
+<tr>
+<td>boolean-urg</td>
+<td style="text-align:left">URG标志</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/09/24/R-java/" rel="next" title="R语言-Java语言沟通">
+                <i class="fa fa-chevron-left"></i> R语言-Java语言沟通
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/11/25/R语言初探/" rel="prev" title="R语言">
+                R语言 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">Mark Zhang</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives">
+              
+                  <span class="site-state-item-count">32</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Java利用Jpcap抓包"><span class="nav-number">1.</span> <span class="nav-text">Java利用Jpcap抓包</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#NetworkInterfaceAddress"><span class="nav-number">1.1.</span> <span class="nav-text">NetworkInterfaceAddress[]</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#JpcapCaptor"><span class="nav-number">1.2.</span> <span class="nav-text">JpcapCaptor</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#JpcapCaptor方法"><span class="nav-number">1.2.0.1.</span> <span class="nav-text">JpcapCaptor方法</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#IPPacket"><span class="nav-number">1.3.</span> <span class="nav-text">IPPacket</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#TCPPacket"><span class="nav-number">1.4.</span> <span class="nav-text">TCPPacket</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Mark Zhang</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

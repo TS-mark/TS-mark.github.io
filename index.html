@@ -269,6 +269,1210 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/06/13/知识图谱/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Mark Zhang">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Terrorshadow">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/06/13/知识图谱/" itemprop="url">知识图谱</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-06-13T12:41:43+08:00">
+                2020-06-13
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="知识图谱"><a href="#知识图谱" class="headerlink" title="知识图谱"></a>知识图谱</h1><hr>
+<h2 id="什么是知识图谱"><a href="#什么是知识图谱" class="headerlink" title="什么是知识图谱"></a>什么是知识图谱</h2><hr>
+<p>为提高搜索效率，优化搜索质量，2012年，Google首先提出知识图谱这以概念，以知识图谱为底层技术支持的搜索引擎，用户不再需要通过不停的点击链接来获取自己想要的信息，实现智能搜索。</p>
+<hr>
+<h2 id="知识图谱定义"><a href="#知识图谱定义" class="headerlink" title="知识图谱定义"></a>知识图谱定义</h2><hr>
+<p>知识图谱，是结构化的语义知识库，用于以符号形式描述物理世界中的概念及其相互关系，其基本组成单位是“实体-关系-实体”三元素，以及实体及其相互属性-值对，实体间通过关系相互联结，构成网络的知识结构。<br>这个定义的含义：</p>
+<ul>
+<li>知识图谱本身是一个具有属性的实体通过关系链接而成的网状知识库．从图的角度来看，知识图谱在本质上是一种概念网络，其中的节点表示物理世界的实体（或概念），而实体间的各种语义关系则构成网络中的边．由此，知识图谱是对物理世界的 一种符号表达。</li>
+<li>知识图谱的研究价值在于，它是构建在当前Web基础之上的一层覆盖网络（overlay network），借助知识图谱，能够在Web网页之上建立概念间的链接关系，从而以最小的代价将互联网中积累的信息组织起来，成为可以被利用的知识．</li>
+<li>知识图谱的应用价值在于，它能够改变现有的信息检索方式，一方面通过推理实现概念检索（相对于现有的字符串模糊匹配方式而言）;另一方面以图形化方式向用户展示经过分类整理的结构化知识，从而使人们从人工过滤网页寻找答案的模式中 解脱出来。</li>
+</ul>
+<hr>
+<h2 id="知识图谱的架构"><a href="#知识图谱的架构" class="headerlink" title="知识图谱的架构"></a>知识图谱的架构</h2><hr>
+<h3 id="1-知识图谱逻辑架构"><a href="#1-知识图谱逻辑架构" class="headerlink" title="1. 知识图谱逻辑架构"></a>1. 知识图谱逻辑架构</h3><h5 id="数据层"><a href="#数据层" class="headerlink" title="数据层"></a>数据层</h5><p>在知识图谱数据层，知识以事务（fact）为单位存储在图数据库，如果以“实体-关系-实体”或者“实体-属性-性质”三元组作为事务的基本表达方式，存储在图数据库中的所有数据将构成庞大的实体关系网络，形成知识的“图谱”。</p>
+<h5 id="模式层"><a href="#模式层" class="headerlink" title="模式层"></a>模式层</h5><p>模式层是知识图谱的核心，在模式层存储的是经过提炼的知识，通常采用本体库来管理知识图谱的模式曾，借助本体库对公理、规则和约束条件的支持能力来规范实体、关系以及实体的类型和属性等对象之间的联系，本体在知识图谱中的地位相当于知识库的模具，拥有本体库的冗余知识很少。<br>知识图谱的一般构建结构，知识图谱构建过程从原始数据出发，采用一系列自动或者半自动技术手段，从原始数据中提取出知识，并将其存储到知识库的数据层和模式层的过程。这是一个迭代的过程，根据知识获取的逻辑，每一轮迭代包含三个阶段：信息抽取、知识融合以及知识加工。<br><img src="https://upload-images.jianshu.io/upload_images/8593035-2ddbc229c9a7a3a7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="知识图谱构建"></p>
+<h3 id="2-知识图谱构建"><a href="#2-知识图谱构建" class="headerlink" title="2. 知识图谱构建"></a>2. 知识图谱构建</h3><h5 id="自顶向下构建"><a href="#自顶向下构建" class="headerlink" title="自顶向下构建"></a>自顶向下构建</h5><p>所谓自顶向下构建是指借助本体和模式信息，加入到知识库中。</p>
+<h5 id="自底向上"><a href="#自底向上" class="headerlink" title="自底向上"></a>自底向上</h5><p>所谓自底向上构建，则是借助一定的技术手段，从公开采集的数据中提取出资源模式，选择其中置信度较高的新模式，经过人工审核后，加入知识库中。</p>
+<h3 id="3-知识图谱构建过程"><a href="#3-知识图谱构建过程" class="headerlink" title="3. 知识图谱构建过程"></a>3. 知识图谱构建过程</h3><h4 id="信息抽取"><a href="#信息抽取" class="headerlink" title="信息抽取"></a>信息抽取</h4><p>信息抽取是一种自动化地从半结构化和无结构数据中抽取实体、关系以及实体属性等结构化信息的技术。涉及的关键技术包括：实体抽取、关系抽取和属性抽取。</p>
+<h6 id="1-实体抽取"><a href="#1-实体抽取" class="headerlink" title="1.实体抽取"></a>1.实体抽取</h6><p>指从文本数据集中自动识别出命名实体，实体抽取质量（准确率、召回率）对整个知识获取效率影响极大，是信息抽取最为基础和关键的部分。</p>
+<h6 id="2-关系抽取"><a href="#2-关系抽取" class="headerlink" title="2.关系抽取"></a>2.关系抽取</h6><p>文本语料经过实体抽取，得到的是一系列离散的命名实体，为了得到语义信息，还需要从相关语料中提取出实体之间的关联关系，通过关系将实体联系起来，形成网状的知识结构。<br>早期相关研究主要通过人工构造语法和语义规则，这种方法有两个不足：</p>
+<ul>
+<li>要求制定规则的人对特定领域有深入理解和认知</li>
+<li>制定工作量大，并且难以扩展到其他领域</li>
+</ul>
+<p>随后出现了一系列关于实体关系的模型研究：</p>
+<ul>
+<li>机器学习方法（统计学）</li>
+<li>基于特征向量或核函数的有监督学习方法（缺点需要进行大量的人工标注来确保算法有效性）</li>
+<li>半监督、无监督学习方法</li>
+</ul>
+<h6 id="3-属性抽取"><a href="#3-属性抽取" class="headerlink" title="3.属性抽取"></a>3.属性抽取</h6><p>属性抽取的目标是从不同信息源中采集特定实体的属性信息，例如针对某个公共人物，可以从网络公开信息中得到其昵称、生日、国籍、教育背景等信息。属性抽取技术从多种数据来源中汇集这些信息，实现对实体属性的完整勾画。</p>
+<h4 id="知识融合-knowledge-fusion"><a href="#知识融合-knowledge-fusion" class="headerlink" title="知识融合(knowledge fusion)"></a>知识融合(knowledge fusion)</h4><p>目的：将知识抽取中包含的冗余和错误信息进行清理和整合<br>主要包含两个内容：实体链接和知识合并。</p>
+<h6 id="1-实体链接"><a href="#1-实体链接" class="headerlink" title="1.实体链接"></a>1.实体链接</h6><p>是指对从文本中抽取得到的实体对象，将其链接到知识库中对应的正确实体对象的操作。基本思想是根据给定的实体 <strong>指称项</strong> ，从知识库中选取一组候选实体对象，然后通过相似度计算将 <strong>指称项</strong> 链接到正确的实体对象。<br>实体链接的基本思想是首先根据给定的实体指称项，从知识库中选出一组候选实体对象，然后通过相似度计算将指称项链接到正确的实体对象。<br>实体链接的一般流程：</p>
+<ol>
+<li>从文本中通过实体抽取得到实体指称项</li>
+<li>进行实体峭岐和共指消解，判断知识库中的同名实体与之是否代表不同的含义以及知识库中是否存在其他命名实体与之表示相同的含义；</li>
+<li>在确认知识库中对应的正确实体对象后，将该实体指称项链接到知识库中对应实体。</li>
+</ol>
+<p>关于消除歧义的补充：</p>
+<ol>
+<li>实体消歧<br>消除同名实体产生的歧义问题。例如“李娜”这个名词可能指代中国顶级网球运动员，也可能指代现在在某高校就读的研究生。通过实体消岐结合当前语义环境来分辨实体的具体指代是什么。（聚类）</li>
+<li>共指消解<br>解决多个指称项对应于同一实体对象的问题。例如“母亲”和“妈妈”在汉语中是对同一个实体的不同称谓，它们的意思是相同的。</li>
+</ol>
+<h6 id="2-知识合并"><a href="#2-知识合并" class="headerlink" title="2.知识合并"></a>2.知识合并</h6><p>指将两个内容相近的知识库进行融合，形成一个更大的知识库。</p>
+<ol>
+<li>合并外部知识库<br>主要处理两方面的问题：</li>
+</ol>
+<ul>
+<li>数据层融合：包括实体的指称、属性、关系以及所属类别等<br>其主要研究问题是如何避免实例以及关系冲突等问题（冗余问题）</li>
+<li>模式层融合：将新得到的本体融入到已有的本体库中。</li>
+</ul>
+<ol start="2">
+<li>合并关系数据库<br>对两个关系型数据库求左合并，右合并，笛卡尔积等操作。（关于这个我可能解释的比较狭义但是好像就是这样的）</li>
+</ol>
+<h4 id="知识推理"><a href="#知识推理" class="headerlink" title="知识推理"></a>知识推理</h4><p>是指从知识库中已有的实体关系数据触发，经过计算机推理，建立实体的新关联，从而拓展和丰富知识网络。例如（曹操，父子，曹丕），（曹丕，兄弟，曹植），可以推导出（曹操，父子，曹植）</p>
+<hr>
+<h2 id="知识图谱相关PAAS服务"><a href="#知识图谱相关PAAS服务" class="headerlink" title="知识图谱相关PAAS服务"></a>知识图谱相关PAAS服务</h2><hr>
+<h4 id="百度AI开放平台"><a href="#百度AI开放平台" class="headerlink" title="百度AI开放平台"></a>百度AI开放平台</h4><ul>
+<li><a href="https://ai.baidu.com/ai-doc/KG/jk3h9ztgd" target="_blank" rel="noopener">实体标注</a></li>
+</ul>
+<p>输入：<br>待标注的文本字符串（utf8编码，最多64个汉字）<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">// 输入示例</span><br><span class="line">curl -X POST <span class="string">'https://aip.baidubce.com/rpc/2.0/kg/v1/cognitive/entity_annotation?access_token=【用户access_token】'</span> -H <span class="string">'content-type: application/json'</span> -d <span class="string">'&#123;"data": "刘德华的老婆"&#125;'</span></span><br></pre></td></tr></table></figure></p>
+<p>输出：（示例）<br><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">// 输出示例</span><br><span class="line">&#123;</span><br><span class="line">    <span class="attr">"log_id"</span>: <span class="number">6367018173853945311</span>,</span><br><span class="line">    <span class="attr">"entity_annotation"</span>: [</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="attr">"status"</span>: <span class="string">"LINKED"</span>,</span><br><span class="line">            <span class="attr">"confidence"</span>: <span class="string">"0.991616"</span>,</span><br><span class="line">            <span class="attr">"concept"</span>: &#123;</span><br><span class="line">                <span class="attr">"level1"</span>: <span class="string">"人物"</span>,</span><br><span class="line">                <span class="attr">"level2"</span>: <span class="string">"文化人物,娱乐人物"</span></span><br><span class="line">            &#125;,</span><br><span class="line">            <span class="attr">"_bdbkKgId"</span>: <span class="string">"114923"</span>,</span><br><span class="line">            <span class="attr">"mention"</span>: <span class="string">"刘德华"</span>,</span><br><span class="line">            <span class="attr">"_bdbkUrl"</span>: <span class="string">"http://baike.baidu.com/item/%E5%88%98%E5%BE%B7%E5%8D%8E/114923"</span>,</span><br><span class="line">            <span class="attr">"offset"</span>: <span class="string">"0"</span>,</span><br><span class="line">            <span class="attr">"desc"</span>: <span class="string">"中国香港男演员、歌手、词作人"</span></span><br><span class="line">        &#125;,</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="attr">"status"</span>: <span class="string">"LINKED"</span>,</span><br><span class="line">            <span class="attr">"confidence"</span>: <span class="string">"0.817889"</span>,</span><br><span class="line">            <span class="attr">"concept"</span>: &#123;</span><br><span class="line">                <span class="attr">"level1"</span>: <span class="string">"语言文化"</span>,</span><br><span class="line">                <span class="attr">"level2"</span>: <span class="string">"文字词汇"</span></span><br><span class="line">            &#125;,</span><br><span class="line">            <span class="attr">"_bdbkKgId"</span>: <span class="string">"827"</span>,</span><br><span class="line">            <span class="attr">"mention"</span>: <span class="string">"老婆"</span>,</span><br><span class="line">            <span class="attr">"_bdbkUrl"</span>: <span class="string">"http://baike.baidu.com/item/%E8%80%81%E5%A9%86/827"</span>,</span><br><span class="line">            <span class="attr">"offset"</span>: <span class="string">"4"</span>,</span><br><span class="line">            <span class="attr">"desc"</span>: <span class="string">"汉语词语"</span></span><br><span class="line">        &#125;</span><br><span class="line">    ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<ul>
+<li><a href="https://ai.baidu.com/ai-doc/KG/6k8dhe8b5" target="_blank" rel="noopener">知识问答</a></li>
+</ul>
+<hr>
+<h2 id="知识图谱的应用领域"><a href="#知识图谱的应用领域" class="headerlink" title="知识图谱的应用领域"></a>知识图谱的应用领域</h2><hr>
+<h4 id="智能问答"><a href="#智能问答" class="headerlink" title="智能问答"></a>智能问答</h4><p>降低了人机交互门槛，用户可以通过关键词向网页发送请求得到他们想要的答案。</p>
+<h4 id="智能推荐"><a href="#智能推荐" class="headerlink" title="智能推荐"></a>智能推荐</h4><p>例如Facebook的Graph Search,用户查询产品信息时仅需输入关键词，以知识图谱为基础的智能推荐就会向用户输出产品相关信息。</p>
+<h4 id="金融领域"><a href="#金融领域" class="headerlink" title="金融领域"></a>金融领域</h4><p>金融领域是知识图谱最早、最广泛的应用领域之一，目前最常用的主要是风险控制和智能投顾两方面。<br>例如金融知识图谱，对数据进行智能分析，当用户进行投资理财时，可以根据提取出来的信息，结合用户实际需求，为用户智能推荐理财产品。</p>
+<hr>
+<h2 id="数据获取来源"><a href="#数据获取来源" class="headerlink" title="数据获取来源"></a>数据获取来源</h2><ul>
+<li>爬虫</li>
+<li>数据库获取</li>
+</ul>
+<p>##数据预处理</p>
+<ul>
+<li>数据清洗</li>
+<li>知识抽取</li>
+</ul>
+<p>##导入数据到知识图谱</p>
+<ul>
+<li>数据筛选（决定哪些数据需要到知识图谱系统，性能，业务要求）</li>
+<li>知识图谱设计（类似数据库设计）</li>
+<li>批量导入（初次导入基础数据）</li>
+<li>增量导入</li>
+</ul>
+<hr>
+<h2 id="本体论"><a href="#本体论" class="headerlink" title="本体论"></a>本体论</h2><hr>
+<p>本体论（Ontology），是探究世界的本原或基质的哲学理论。“本体论”一词是由17世纪的德国经院学者P·戈科列尼乌斯首先使用的。<br>传统上的本体含义，是一个哲学的分支，即形而上学，本体论一般包含了有关所有的实体的存在或者一些可能会存在的问题，以及实体之间如何被归类研究对立的问题，如何在层次的体系结构中，根据相互作用和差异上进行分类的问题。本体论还有个通俗易懂的定义是，它是对事物“存在”性的定性检验。</p>
+<p>关于本体论的例子：</p>
+<h5 id="基因本体论（gene-ontology"><a href="#基因本体论（gene-ontology" class="headerlink" title="基因本体论（gene ontology)"></a>基因本体论（gene ontology)</h5><p>基因本体（Gene Ontology，GO）是一个在生物信息学领域中广泛使用的本体，它涵盖生物学的三个方面：细胞组分、分子功能、生物过程。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/8593035-0dea1625c12b9321.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="基因本体论"></p>
+<p>基因本体是一个有向无环图（DAG）型的本体。目前，GO中使用了is_a和part_of和regulates三种关系。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/8593035-ec3f0f96dfbf0f1b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="基因本体论的关系示例"></p>
+<h4 id="本体论与知识图谱的区别"><a href="#本体论与知识图谱的区别" class="headerlink" title="本体论与知识图谱的区别"></a>本体论与知识图谱的区别</h4><p>例如要对档案领域的知识库分类，这个分类本身就是本体。比如档案数据分为毕业生类和学校文件类，毕业生类又分为本科生类、研究生类；关于每个分类下又有不同的数据信息，每种信息对应着不同的实体，每个实体有其不同的属性值，可以将其抽象成为一个三元组，例如（毕业生A，毕业年份，2017），这个三元组就是知识图谱中的基本结构了。<br>由于知识图谱这个概念是由Google提出，而知识库的概念没有明确的提出，可以将其理解为是知识数据库，即所有数据的集合体，包含知识和本体，例如Wiki百科就可以理解为一个半结构化的知识库。（我的理解是知识库是广义的知识图谱，知识图谱最终构建的逻辑结构为一个图）<br>还有一个浅而易懂的例子，对于概念型的三元组（老虎，科，猫科），如果将猫科定义为一个本体，则这个三元组就反映了本体与实体之间的关系。</p>
+<p>参考：<br>(1)<a href="https://www.jianshu.com/p/ba03f8e19bcf" target="_blank" rel="noopener">知识图谱基础知识</a><br>(2)田莉霞.知识图谱研究综述[J].软件,2020,04:67-71.<br>(3)段宏. 知识图谱构建技术综述[J]. 计算机研究与发展(03).<br>(4)<a href="https://ai.baidu.com/" target="_blank" rel="noopener">百度AI开放平台</a><br>(5)<a href="https://baike.baidu.com/item/%E6%9C%AC%E4%BD%93%E8%AE%BA/1114602?fr=aladdin" target="_blank" rel="noopener">百度百科-本体论</a><br>(6)Paulheim H , Cimiano P . Knowledge graph refinement: A survey of approaches and evaluation methods[J]. Semantic Web, 2016, 8(3):489-508.</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/11/25/R语言-从入门到入土/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Mark Zhang">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Terrorshadow">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/11/25/R语言-从入门到入土/" itemprop="url">R语言</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-11-25T12:41:43+08:00">
+                2019-11-25
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="我这块主要是为java服务的"><a href="#我这块主要是为java服务的" class="headerlink" title="我这块主要是为java服务的"></a>我这块主要是为java服务的</h2><h3 id="创建向量"><a href="#创建向量" class="headerlink" title="创建向量"></a>创建向量</h3><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">v1 &lt;-c(<span class="number">1502</span>,<span class="number">5215</span>,<span class="number">5235</span>,<span class="number">6242</span>) </span><br><span class="line">print(v1)</span><br></pre></td></tr></table></figure>
+<p>输出：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[1] 1502 5215 5235 6242</span><br></pre></td></tr></table></figure></p>
+<hr>
+<h3 id="定义函数"><a href="#定义函数" class="headerlink" title="定义函数"></a>定义函数</h3><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Rtest&lt;-<span class="keyword">function</span>(v2,i)&#123;</span><br><span class="line"></span><br><span class="line">print(v2[i])</span><br><span class="line">  <span class="keyword">return</span>(v2[i]+<span class="number">55</span>)</span><br></pre></td></tr></table></figure>
+<p>函数调用：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Rtest(c(1,63,523,524),3)</span><br></pre></td></tr></table></figure></p>
+<p>输出：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[1] 523</span><br><span class="line">[1] 578</span><br></pre></td></tr></table></figure></p>
+<hr>
+<h3 id="R语言-的含义"><a href="#R语言-的含义" class="headerlink" title="R语言$的含义"></a>R语言$的含义</h3><p>网上东西挺多的（反正没一个能讲明白的），这玩意说白了就是一个dataframe中取某一个向量。</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/11/25/R语言初探/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Mark Zhang">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Terrorshadow">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/11/25/R语言初探/" itemprop="url">R语言</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-11-25T12:41:43+08:00">
+                2019-11-25
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="我这块主要是为java服务的"><a href="#我这块主要是为java服务的" class="headerlink" title="我这块主要是为java服务的"></a>我这块主要是为java服务的</h2><h3 id="创建向量"><a href="#创建向量" class="headerlink" title="创建向量"></a>创建向量</h3><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">v1 &lt;-c(<span class="number">1502</span>,<span class="number">5215</span>,<span class="number">5235</span>,<span class="number">6242</span>) </span><br><span class="line">print(v1)</span><br></pre></td></tr></table></figure>
+<p>输出：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[1] 1502 5215 5235 6242</span><br></pre></td></tr></table></figure></p>
+<hr>
+<h3 id="定义函数"><a href="#定义函数" class="headerlink" title="定义函数"></a>定义函数</h3><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Rtest&lt;-<span class="keyword">function</span>(v2,i)&#123;</span><br><span class="line"></span><br><span class="line">print(v2[i])</span><br><span class="line">  <span class="keyword">return</span>(v2[i]+<span class="number">55</span>)</span><br></pre></td></tr></table></figure>
+<p>函数调用：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Rtest(c(1,63,523,524),3)</span><br></pre></td></tr></table></figure></p>
+<p>输出：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[1] 523</span><br><span class="line">[1] 578</span><br></pre></td></tr></table></figure></p>
+<hr>
+<h3 id="R语言-的含义"><a href="#R语言-的含义" class="headerlink" title="R语言$的含义"></a>R语言$的含义</h3><p>网上东西挺多的（反正没一个能讲明白的），这玩意说白了就是一个dataframe中取某一个向量。</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/11/22/网络编程-Jpcap/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Mark Zhang">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Terrorshadow">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/11/22/网络编程-Jpcap/" itemprop="url">Jpcap</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-11-22T12:41:43+08:00">
+                2019-11-22
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="Java利用Jpcap抓包"><a href="#Java利用Jpcap抓包" class="headerlink" title="Java利用Jpcap抓包"></a>Java利用Jpcap抓包</h1><hr>
+<h2 id="NetworkInterfaceAddress"><a href="#NetworkInterfaceAddress" class="headerlink" title="NetworkInterfaceAddress[]"></a>NetworkInterfaceAddress[]</h2><table>
+<thead>
+<tr>
+<th>类型-参数名</th>
+<th style="text-align:left">参数解释</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>String-datalink_description</td>
+<td style="text-align:left">数据链路层的描述。描述所在的局域网是什么网。例如，以太网（Ethernet）、无线LAN网（wireless LAN）、令牌环网(token ring)等等。</td>
+<td></td>
+</tr>
+<tr>
+<td>String-datalink_name</td>
+<td style="text-align:left">该网络设备所对应数据链路层的名称。具体来说，例如Ethernet10M、100M、1000M等等。</td>
+<td></td>
+</tr>
+<tr>
+<td>String-decription</td>
+<td style="text-align:left">网卡信息</td>
+<td></td>
+</tr>
+<tr>
+<td>boolean_Loopback</td>
+<td style="text-align:left">是否是loopback设备</td>
+<td></td>
+</tr>
+<tr>
+<td>Byte[]-mac_address</td>
+<td style="text-align:left">网卡的MAC地址</td>
+<td></td>
+</tr>
+<tr>
+<td>String-Name</td>
+<td style="text-align:left">网卡设备名称</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="JpcapCaptor"><a href="#JpcapCaptor" class="headerlink" title="JpcapCaptor"></a>JpcapCaptor</h2><table>
+<thead>
+<tr>
+<th>类型-参数名</th>
+<th style="text-align:left">参数解释</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>int-dropped_packets</td>
+<td style="text-align:left">被抛弃包数目</td>
+<td></td>
+</tr>
+<tr>
+<td>int-ID</td>
+<td style="text-align:left">未知</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="JpcapCaptor方法"><a href="#JpcapCaptor方法" class="headerlink" title="JpcapCaptor方法"></a>JpcapCaptor方法</h4><table>
+<thead>
+<tr>
+<th>返回值类型</th>
+<th style="text-align:left">方法名-说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>static NetworkInterface[]</td>
+<td style="text-align:left">getDeviceList()<br>返回一个网络设备列表。</td>
+<td></td>
+</tr>
+<tr>
+<td>static JpcapCaptor</td>
+<td style="text-align:left">openDevice(NetworkInterface interface, intsnaplen, booleanpromisc, intto_ms) <br><br>创建一个与指定设备的连接并返回该连接。注意，以上两个方法都是静态方法。<br>Interface：要打开连接的设备的实例；<br>Snaplen：这个是比较容易搞混的一个参数。其实这个参数不是限制只能捕捉多少数据包，而是限制每一次收到一个数据包，只提取该数据包中前多少字节；<br>Promisc：设置是否混杂模式。处于混杂模式将接收所有数据包，若之后又调用了包过滤函数setFilter()将不起任何作用；<br>To_ms：这个参数主要用于processPacket()方法，指定超时的时间；</td>
+<td></td>
+</tr>
+<tr>
+<td>void</td>
+<td style="text-align:left">Close()<br>关闭openDevice()的连接</td>
+<td></td>
+</tr>
+<tr>
+<td>JpcapSender</td>
+<td style="text-align:left">getJpcapSenderInstance()     <br>该返回一个JpcapSender实例，JpcapSender类是专门用于控制设备的发送数据包的功能的类。</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Packet</strong></td>
+<td style="text-align:left">getPacket() <br>    捕捉并返回一个数据包。这是JpcapCaptor实例中四种捕捉包的方法之一。</td>
+<td></td>
+</tr>
+<tr>
+<td>int</td>
+<td style="text-align:left">loopPacket(int count,PacketReceiver handler)<br>    捕捉指定数目的数据包，并交由实现了PacketReceiver接口的类的实例处理，并返回捕捉到的数据包数目。如果count参数设为－1，那么无限循环地捕捉数据。<br>这个方法不受超时的影响。还记得openDivice()中的to_ms参数么？那个参数对这个方法没有影响，如果没有捕捉到指定数目数据包，那么这个方法将一直阻塞等待。<br>PacketReceiver中只有一个抽象方法void receive(Packet p)。</td>
+<td></td>
+</tr>
+<tr>
+<td>int</td>
+<td style="text-align:left">processPacket(intcount, PacketReceiver handler) <br>    跟loopPacket()功能一样，唯一的区别是这个方法受超时的影响，超过指定时间自动返回捕捉到数据包的数目。</td>
+<td></td>
+</tr>
+<tr>
+<td>int</td>
+<td style="text-align:left">dispatchPacket(intcount, PacketReceiverhandler)<br>    跟processPacket()功能一样，区别是这个方法可以处于“non-blocking”模式工作，在这种模式下dispatchPacket()可能立即返回，即使没有捕捉到任何数据包。</td>
+<td></td>
+</tr>
+<tr>
+<td>void</td>
+<td style="text-align:left">setFilter(java.lang.Stringcondition, booleanoptimize) <br>.condition：设定要提取的包的关键字。<br><br>Optimize：这个参数在说明文档以及源代码中都没有说明，只是说这个参数如果为真，那么过滤器将处于优化模式。</td>
+<td></td>
+</tr>
+<tr>
+<td>void</td>
+<td style="text-align:left">setNonBlockingMode(booleannonblocking)<br>如果值为“true”，那么设定为“non-blocking”模式。</td>
+<td></td>
+</tr>
+<tr>
+<td>void</td>
+<td style="text-align:left">breakLoop()<br>当调用processPacket()和loopPacket()后，再调用这个方法可以强制让processPacket()和loopPacket()停止。</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="IPPacket"><a href="#IPPacket" class="headerlink" title="IPPacket"></a>IPPacket</h2><table>
+<thead>
+<tr>
+<th>类型-参数名</th>
+<th style="text-align:left">参数解释</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>boolean-d_flag</td>
+<td style="text-align:left">V4</td>
+<td></td>
+</tr>
+<tr>
+<td>IPAddress-dst_ip</td>
+<td style="text-align:left">目的IP地址</td>
+<td></td>
+</tr>
+<tr>
+<td>int-flow_label</td>
+<td style="text-align:left">流标签</td>
+<td></td>
+</tr>
+<tr>
+<td>short-hop_limit</td>
+<td style="text-align:left">生存时间</td>
+<td></td>
+</tr>
+<tr>
+<td>int-ident</td>
+<td style="text-align:left">分组标识（v4）</td>
+<td></td>
+</tr>
+<tr>
+<td>short-length</td>
+<td style="text-align:left">数据包长度</td>
+<td></td>
+</tr>
+<tr>
+<td>boolean-more_frag</td>
+<td style="text-align:left">MF标志位（v4）<br>more fragment标识还有分片</td>
+<td></td>
+</tr>
+<tr>
+<td>byte-priority</td>
+<td style="text-align:left">优先权</td>
+<td></td>
+</tr>
+<tr>
+<td>short-protocol</td>
+<td style="text-align:left">协议（v4、v6）</td>
+<td></td>
+</tr>
+<tr>
+<td>IPAddress-src_ip</td>
+<td style="text-align:left">返回源IP地址</td>
+<td></td>
+</tr>
+<tr>
+<td>String-data</td>
+<td style="text-align:left">报文内容</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="TCPPacket"><a href="#TCPPacket" class="headerlink" title="TCPPacket"></a>TCPPacket</h2><p>TCPPacket是IPPacket的子包</p>
+<table>
+<thead>
+<tr>
+<th>类型-参数名</th>
+<th style="text-align:left">参数解释</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>boolean-ack</td>
+<td style="text-align:left">ACK标识</td>
+<td></td>
+</tr>
+<tr>
+<td>boolean-fin</td>
+<td style="text-align:left">FIN标识</td>
+<td></td>
+</tr>
+<tr>
+<td>byte[]-option</td>
+<td style="text-align:left">TCP选项</td>
+<td></td>
+</tr>
+<tr>
+<td>boolean-psh</td>
+<td style="text-align:left">PSH标志</td>
+<td></td>
+</tr>
+<tr>
+<td>long-sequence</td>
+<td style="text-align:left">序号</td>
+<td></td>
+</tr>
+<tr>
+<td>int-src_port</td>
+<td style="text-align:left">源端口</td>
+<td></td>
+</tr>
+<tr>
+<td>int-dst_port</td>
+<td style="text-align:left">目的端口</td>
+<td></td>
+</tr>
+<tr>
+<td>boolean-syn</td>
+<td style="text-align:left">SYN标志</td>
+<td></td>
+</tr>
+<tr>
+<td>boolean-urg</td>
+<td style="text-align:left">URG标志</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/09/24/R-java/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Mark Zhang">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Terrorshadow">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/09/24/R-java/" itemprop="url">R语言-Java语言沟通</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-09-24T12:41:43+08:00">
+                2019-09-24
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="R-Java语言"><a href="#R-Java语言" class="headerlink" title="R-Java语言"></a>R-Java语言</h2><p>####直接在RGui输入<br><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">install.packages(<span class="string">"包的名字"</span>,lib=<span class="string">"下载的路径"</span>)</span><br></pre></td></tr></table></figure></p>
+<p>输入<br><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">library</span>(Rserve)</span><br><span class="line">Rserve()</span><br></pre></td></tr></table></figure></p>
+<p>运行你的Rserve，然后才可以在Java中调用R语言程序<br>（我也不知道写这个干啥用，反正调试了半天真的是让人头大）</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/09/22/java：javadoc生成/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Mark Zhang">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Terrorshadow">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/09/22/java：javadoc生成/" itemprop="url">JAVADOC注释</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-09-22T12:41:43+08:00">
+                2019-09-22
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>javadoc注释</p>
+<hr>
+<h1 id="eclipse"><a href="#eclipse" class="headerlink" title="eclipse"></a>eclipse</h1><p>在写完的接口前面，输入/** 再按个回车，就自动生成嘞</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/09/22/超几何分布随机序列/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Mark Zhang">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Terrorshadow">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/09/22/超几何分布随机序列/" itemprop="url">超几何分布随机序列生成</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-09-22T12:41:43+08:00">
+                2019-09-22
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h6 id="题目：超几何分布"><a href="#题目：超几何分布" class="headerlink" title="题目：超几何分布"></a>题目：超几何分布</h6><hr>
+<h4 id="实验目的"><a href="#实验目的" class="headerlink" title="实验目的"></a>实验目的</h4><p>生成一系列的超几何分布的数</p>
+<h4 id="实验步骤"><a href="#实验步骤" class="headerlink" title="实验步骤"></a>实验步骤</h4><p>1.使用马特赛特旋转算法生成随机数<br>2.使用生成的随机数模拟多次不放回抽奖的行为，将结果记录<br>3.输出超几何分布随机数的结果</p>
+<h4 id="代码解释"><a href="#代码解释" class="headerlink" title="代码解释"></a>代码解释</h4>
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/15/AI测试/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -546,129 +1750,6 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/02/27/牛客网 邮票/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Mark Zhang">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Terrorshadow">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/02/27/牛客网 邮票/" itemprop="url">邮票</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-02-27T12:41:43+08:00">
-                2019-02-27
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>##某人有8 角的邮票5 张，1 元的邮票4 张，1 元8 角的邮票6 张，用这些邮票中的一张或若干张可以得到多少中不同的邮资？<br>枚举了，反正容量也不大……再排序，之前因为数组容量问题，数组一共是7<em>5</em>6=210，导致两次测试没通过，剩下就是排序，去重（最简单的冒泡排序居然不会写了，果然过完年就咸鱼了）<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main2</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String args[])</span></span>&#123;</span><br><span class="line">        <span class="keyword">int</span> a;</span><br><span class="line">        <span class="keyword">int</span> m[]=<span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">210</span>];</span><br><span class="line">        <span class="keyword">int</span> c=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> num=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;=<span class="number">5</span>;i++)&#123;</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">0</span>;j&lt;=<span class="number">4</span>;j++)&#123;</span><br><span class="line">                <span class="keyword">for</span>(<span class="keyword">int</span> k=<span class="number">0</span>;k&lt;=<span class="number">6</span>;k++)&#123;</span><br><span class="line">                    m[c++]=<span class="number">8</span>*i+<span class="number">10</span>*j+<span class="number">18</span>*k;</span><br><span class="line">                   <span class="comment">// System.out.println(m[c-1]);</span></span><br><span class="line">                    num++;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">//System.out.println(num);</span></span><br><span class="line">        <span class="keyword">int</span> n=<span class="number">209</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=n;i&gt;<span class="number">0</span>;i--) &#123;</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">1</span>;j&lt;i;j++) &#123;</span><br><span class="line">                <span class="keyword">if</span>(m[j]&lt;m[i]) &#123;</span><br><span class="line">                    <span class="keyword">int</span> temp=m[j];</span><br><span class="line">                    m[j]=m[i];</span><br><span class="line">                    m[i]=temp;</span><br><span class="line">                &#125;<span class="keyword">else</span> <span class="keyword">if</span>(m[i]==m[j]) &#123;</span><br><span class="line">                    m[j]=m[(n--)];</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        System.out.println(n);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>在别人的博客偷来一份C++版的，参考一下吧，他还用到了容器<br><a href="https://blog.csdn.net/u010857889/article/details/58051025" target="_blank" rel="noopener">邮票，c++版</a><br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">sort</span><span class="params">(<span class="keyword">float</span> a[],<span class="keyword">int</span> n)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">float</span> temp;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;n;++i)</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> j=i;j&lt;n;++j)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span>(a[i]&gt;=a[j])</span><br><span class="line">            &#123;</span><br><span class="line">                temp=a[i];</span><br><span class="line">                a[i]=a[j];</span><br><span class="line">                a[j]=temp;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> sum=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">float</span> s[<span class="number">1000</span>];</span><br><span class="line">    <span class="keyword">float</span> s1[<span class="number">1000</span>];</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;=<span class="number">5</span>;++i)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">0</span>;j&lt;=<span class="number">4</span>;++j)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> k=<span class="number">0</span>;k&lt;=<span class="number">6</span>;++k)</span><br><span class="line">            &#123;</span><br><span class="line">                s[sum++]=<span class="number">0.8</span>*i+j+<span class="number">1.8</span>*k;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> p=<span class="number">0</span>;p&lt;sum;++p)</span><br><span class="line">        <span class="built_in">cout</span>&lt;&lt;s[p]&lt;&lt;<span class="string">" "</span>;</span><br><span class="line">    <span class="built_in">cout</span>&lt;&lt;<span class="built_in">endl</span>&lt;&lt;<span class="string">"总数："</span>&lt;&lt;sum&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">    sort(s,sum);</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> b=<span class="number">0</span>;b&lt;sum;++b)</span><br><span class="line">        <span class="built_in">cout</span>&lt;&lt;s[b]&lt;&lt;<span class="string">" "</span>;<span class="comment">//</span></span><br><span class="line">    <span class="built_in">cout</span>&lt;&lt;<span class="built_in">endl</span>&lt;&lt;<span class="string">"排好序："</span>&lt;&lt;sum&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">    <span class="built_in">cout</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">//去除0 </span></span><br><span class="line">    <span class="keyword">int</span> u=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> d=<span class="number">0</span>;d&lt;sum;++d)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span>(s[d]!=s[d+<span class="number">1</span>]&amp;&amp;s[d]!=<span class="number">0</span>)</span><br><span class="line">            s1[u++]=s[d];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> m=<span class="number">0</span>;m&lt;u;++m)</span><br><span class="line">        <span class="built_in">cout</span>&lt;&lt;m&lt;&lt;<span class="string">" "</span>&lt;&lt;s1[m]&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">    <span class="built_in">cout</span>&lt;&lt;<span class="built_in">endl</span>&lt;&lt;<span class="string">"去除0："</span>&lt;&lt;u&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>容器版本<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;set&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">set</span>&lt;<span class="keyword">float</span>&gt; fset;<span class="comment">//double不精确</span></span><br><span class="line">    <span class="keyword">int</span> i,j,k,count;</span><br><span class="line">    <span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;=<span class="number">5</span>;++i)</span><br><span class="line">        <span class="keyword">for</span>(j=<span class="number">0</span>;j&lt;=<span class="number">4</span>;++j)</span><br><span class="line">            <span class="keyword">for</span>(k=<span class="number">0</span>;k&lt;=<span class="number">6</span>;++k)</span><br><span class="line">                fset.insert(<span class="number">0.8</span>*i+<span class="number">1</span>*j+<span class="number">1.8</span>*k);</span><br><span class="line">    <span class="built_in">cout</span>&lt;&lt;<span class="string">"总数："</span>&lt;&lt;fset.size()&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">    <span class="built_in">set</span>&lt;<span class="keyword">float</span>&gt;::iterator it;</span><br><span class="line">    <span class="built_in">cout</span>&lt;&lt;<span class="string">"去除重复和0："</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">    <span class="keyword">for</span>(count=<span class="number">1</span>,it=fset.begin();it!=fset.end();++it,++count)</span><br><span class="line">        <span class="built_in">cout</span>&lt;&lt;count&lt;&lt;<span class="string">" "</span>&lt;&lt;*it&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>居然发现我的代码还比这个短一些，不过这是人家两年前的博客，两年前的我……</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/02/27/牛客网 对称平方数/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -777,787 +1858,11 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/06/19/python：安装tensorflow/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Mark Zhang">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Terrorshadow">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/06/19/python：安装tensorflow/" itemprop="url">win10安装tensorflow</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-06-19T12:41:43+08:00">
-                2018-06-19
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="win10环境安装tensorflow"><a href="#win10环境安装tensorflow" class="headerlink" title="win10环境安装tensorflow"></a>win10环境安装tensorflow</h2><p>网上教程可以参考的很多，不过本篇文章会按照自己的方式一步步来。<br><strong>第一步</strong>，安装<a href="https://www.python.org/downloads/release/python-352/" target="_blank" rel="noopener">python3.5.2</a><br><strong>第二步</strong>，安装tensorflow，直接使用pip安装，在windows的命令提示符中，将目录切换到安装的python目录下的script文件下，不然会在接下来的提示语法错误。<br><code>cd..</code>这个指令的作用是在操作命令指示符中回退上级目录。<br>输入<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install tensorflow</span><br></pre></td></tr></table></figure></p>
-<p>自己的经验，这一步需要翻墙，不然会不停的报错。</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/06/07/日志2018-06-07/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Mark Zhang">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Terrorshadow">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/06/07/日志2018-06-07/" itemprop="url">日志</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-06-07T12:41:43+08:00">
-                2018-06-07
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="简单的日志"><a href="#简单的日志" class="headerlink" title="简单的日志"></a>简单的日志</h2><p>##感觉还不够努力吧！<br>（话说人工智能的东西真多）<br>期末要复习，还要准备考研，而且这段时间关于OJ题也不想放下，是不是只能拿出自己最好的状态来应付一波了？！？？？</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/06/07/数学：卡特兰数/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Mark Zhang">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Terrorshadow">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/06/07/数学：卡特兰数/" itemprop="url">数学：卡特兰数(Catalan)</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-06-07T12:41:43+08:00">
-                2018-06-07
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="关于卡特兰数"><a href="#关于卡特兰数" class="headerlink" title="关于卡特兰数"></a>关于卡特兰数</h2><p>公式：Cn=(n+1)*C(n,2n),及1,1,2,5,14,42,132,429,1430,4862……一系列数字<br>复习数据结构时候看到的，就是给你一个数列组合，将数列进栈，让你求有多少出栈的可能性，答案就是这个数了。<br>详细的看看下面这个好了。<br><a href="https://blog.csdn.net/duanruibupt/article/details/6869431" target="_blank" rel="noopener">卡特兰数</a></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/24/POJ 1001/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Mark Zhang">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Terrorshadow">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/05/24/POJ 1001/" itemprop="url">POJ 1001</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-24T12:41:43+08:00">
-                2018-05-24
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="poj-1001题"><a href="#poj-1001题" class="headerlink" title="poj 1001题"></a><a href="http://poj.org/problem?id=1001" target="_blank" rel="noopener">poj 1001题</a></h2><h3 id="OUTPUT："><a href="#OUTPUT：" class="headerlink" title="OUTPUT："></a>OUTPUT：</h3><p>输入值为 R n<br>输出值为 R^n的具体数值</p>
-<hr>
-<p>这个题在网上看见了一个很神奇的<a href="http://blog.163.com/boatswain%40126/blog/static/1693964122010718105425483/" target="_blank" rel="noopener">java代码</a>，很清新，而且抱着试一试的心态通过了poj的text<br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.math.*;</span><br><span class="line"><span class="keyword">import</span> java.util.*;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span>&#123;</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">        Scanner in=<span class="keyword">new</span> Scanner(System.in);</span><br><span class="line">        <span class="keyword">while</span>(in.hasNext())&#123;</span><br><span class="line">            BigDecimal val=in.nextBigDecimal();</span><br><span class="line">            <span class="keyword">int</span> n=in.nextInt();</span><br><span class="line">            BigDecimal ret=val.<span class="built_in">pow</span>(n).stripTrailingZeros();</span><br><span class="line">            System.out.println( ret.toPlainString().replaceAll(<span class="string">"^0"</span>, <span class="string">""</span>) );</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>其中<code>toPlanString()</code>,返回不带指数字段的字符串，replaceAll(“^0”,””),。这篇文章的作者有很强编程能力，现在用C语言去完成这个高精度计算。</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br></pre></td><td class="code"><pre><span class="line">  <span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line">  <span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdlib.h&gt;</span></span></span><br><span class="line">  <span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstring&gt;</span></span></span><br><span class="line">  <span class="meta">#<span class="meta-keyword">define</span> BUFSIZ 200</span></span><br><span class="line">  <span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>; </span><br><span class="line">  <span class="function"><span class="keyword">char</span> * <span class="title">bigmul</span><span class="params">(<span class="keyword">char</span> *m,<span class="keyword">int</span> lena,<span class="keyword">char</span> *f,<span class="keyword">int</span> lenb)</span></span>&#123;  <span class="comment">//乘法运算函数。</span></span><br><span class="line">     <span class="keyword">int</span> i,j,k,lensum,tmp_result,carry,num=<span class="string">'0'</span>;</span><br><span class="line">     lensum=lena+lenb;                               <span class="comment">//确定结果数组的长度。</span></span><br><span class="line">     <span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;lena;i++)&#123;                            <span class="comment">//将ASCII码转为对应的数字存储。</span></span><br><span class="line">       m[i]=m[i]-num;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;lenb;i++)&#123;</span><br><span class="line">       f[i]=f[i]-num;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">char</span> *result,final[BUFSIZ];</span><br><span class="line">    result=(<span class="keyword">char</span>*)<span class="built_in">calloc</span>(lensum,<span class="number">1</span>);</span><br><span class="line">    <span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;lenb;i++)&#123;</span><br><span class="line">       <span class="comment">//为被乘数作一趟乘法。</span></span><br><span class="line">       <span class="keyword">for</span>(j=<span class="number">0</span>;j&lt;lena;j++)&#123;</span><br><span class="line">          tmp_result=f[lenb-i<span class="number">-1</span>]*m[lena-j<span class="number">-1</span>];</span><br><span class="line">          result[j+i]+=tmp_result;</span><br><span class="line">       &#125;</span><br><span class="line">       <span class="keyword">for</span>(k=<span class="number">0</span>;k&lt;=j+i<span class="number">-1</span>;k++)&#123;</span><br><span class="line">       <span class="comment">//每作一趟乘法整理一次结果数组。</span></span><br><span class="line">          <span class="keyword">if</span>(result[k]&gt;<span class="number">9</span>)&#123;</span><br><span class="line">             carry=result[k]/<span class="number">10</span>;</span><br><span class="line">             result[k]=result[k]%<span class="number">10</span>;</span><br><span class="line">             result[k+<span class="number">1</span>] += carry;</span><br><span class="line">          &#125;</span><br><span class="line">       &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    j=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">if</span>(result[lensum<span class="number">-1</span>]!=<span class="number">0</span>)&#123;                  <span class="comment">//去除前导零将结果整理到final数组中。</span></span><br><span class="line">       final[j]=result[lensum<span class="number">-1</span>]+num;</span><br><span class="line">       j++;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span>(i=lensum<span class="number">-2</span>;i&gt;=<span class="number">0</span>;i--)&#123;</span><br><span class="line">       final[j++]=result[i]+num;</span><br><span class="line">    &#125;</span><br><span class="line">    result=final;                             <span class="comment">//将指针指向final数组并返回该指针。      </span></span><br><span class="line">    <span class="keyword">return</span> result;</span><br><span class="line"> &#125;</span><br><span class="line"> <span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;                                                 <span class="comment">//利用main测试方法，用puts打印结果。               </span></span><br><span class="line">    <span class="keyword">int</span> lena,lenb;</span><br><span class="line">    <span class="keyword">char</span> *result,r[BUFSIZ];</span><br><span class="line">    <span class="keyword">int</span> n;</span><br><span class="line">    <span class="keyword">while</span>(<span class="built_in">cin</span>&gt;&gt;r&gt;&gt;n)&#123;</span><br><span class="line">    lena=<span class="built_in">strlen</span>(r);</span><br><span class="line">    lenb=<span class="built_in">strlen</span>(r);</span><br><span class="line">    result=r;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;n;i++)&#123;</span><br><span class="line">    result=bigmul(result,lenb,r,lena);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">puts</span>(result);</span><br><span class="line">&#125;</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
-<p> 关于大数运算，某朋友给我提供了一个代码，不过在我阅读代码后没有发现有小数位的计算。<br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="built_in">string</span> <span class="title">strMultiply</span><span class="params">(<span class="built_in">string</span> str1 , <span class="built_in">string</span> str2)</span>  </span></span><br><span class="line"><span class="function"></span>&#123;  </span><br><span class="line">    <span class="built_in">string</span> strResult = <span class="string">""</span>;  </span><br><span class="line">    <span class="keyword">int</span> len1 = str1.length();   </span><br><span class="line">    <span class="keyword">int</span> len2 = str2.length();  </span><br><span class="line">    <span class="keyword">int</span> num[<span class="number">500</span>] = &#123;<span class="number">0</span>&#125;;  </span><br><span class="line">    <span class="keyword">int</span> i = <span class="number">0</span>, j = <span class="number">0</span>;     </span><br><span class="line">    <span class="keyword">for</span>(i = <span class="number">0</span>; i &lt; len1; i++)  </span><br><span class="line">    &#123;  </span><br><span class="line">        <span class="keyword">for</span>(j = <span class="number">0</span>; j &lt; len2; j++)  </span><br><span class="line">        &#123;  </span><br><span class="line">            num[len1<span class="number">-1</span> - i + len2<span class="number">-1</span> - j] += (str1[i] - <span class="string">'0'</span>)*(str2[j] - <span class="string">'0'</span>);   </span><br><span class="line">        &#125;  </span><br><span class="line">    &#125;  </span><br><span class="line">    <span class="keyword">for</span>(i = <span class="number">0</span>; i &lt; len1 + len2; i++)  </span><br><span class="line">    &#123;  </span><br><span class="line">        num[i+<span class="number">1</span>] += num[i] / <span class="number">10</span>;  </span><br><span class="line">        num[i] = num[i] % <span class="number">10</span>;  </span><br><span class="line">    &#125;  </span><br><span class="line">    <span class="keyword">for</span>(i = len1 + len2 - <span class="number">1</span>; i &gt;= <span class="number">0</span> ; i--)  </span><br><span class="line">    &#123;  </span><br><span class="line">        <span class="keyword">if</span>(<span class="number">0</span> != num[i]) <span class="keyword">break</span>;  </span><br><span class="line">    &#125;  </span><br><span class="line">    <span class="keyword">for</span>(j = i; j &gt;= <span class="number">0</span>; j--)  </span><br><span class="line">    &#123;  </span><br><span class="line">        strResult += num[j] + <span class="string">'0'</span>;  </span><br><span class="line">    &#125;  </span><br><span class="line">    <span class="keyword">return</span> strResult;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/24/CCF 201403-3/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Mark Zhang">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Terrorshadow">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/05/24/CCF 201403-3/" itemprop="url">CCF 201403-3</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-24T12:41:43+08:00">
-                2018-05-24
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="命令行选项"><a href="#命令行选项" class="headerlink" title="命令行选项"></a>命令行选项</h2><p>问题描述<br>　　请你写一个命令行分析程序,用以分析给定的命令行里包含哪些选项。每个命令行由若干个字符串组成,它们之间恰好由一个空格分隔。这些字符串中的第一个为该命令行工具的名字,由小写字母组成,你的程序不用对它进行处理。在工具名字之后可能会包含若干选项,然后可能会包含一 些不是选项的参数。<br>　　选项有两类:带参数的选项和不带参数的选项。<strong>一个合法的无参数选项的形式是一个减号后面跟单个小写字母</strong>,如”-a” 或”-b”。而带参数选项则<strong>由两个由空格分隔的字符串</strong>构成,前者的格式要求与无参数选项相同,后者则是该选项的参数,是由<strong>小写字母,数字和减号组成的非空字符串</strong>。<br>　　该命令行工具的作者提供给你一个格式字符串以指定他的命令行工具需要接受哪些选项。这个字符串由若干小写字母和冒号组成,其中的<strong>每个小写字母表示一个该程序接受的选项</strong>。如果该小写字母后面紧跟了一个冒号,它就表示一个带参数的选项,否则则为不带参数的选项。例如, “ab:m:” 表示该程序接受三种选项,即”-a”(不带参数),”-b”(带参数), 以及”-m”(带参数)。<br>　　命令行工具的作者准备了若干条命令行用以测试你的程序。对于每个命令行,你的工具应当一直向后分析。当你的工具遇到某个字符串既不是合法的选项,又不是某个合法选项的参数时,分析就停止。命令行剩余的未分析部分不构成该命令的选项,因此你的程序应当忽略它们。<br><em>输入格式</em><br>　　输入的第一行是一个格式字符串,它至少包含一个字符,且长度不超过 52。格式字符串只包含小写字母和冒号,保证每个小写字母至多出现一次,不会有两个相邻的冒号,也不会以冒号开头。<br>　　输入的第二行是一个正整数 N(1 ≤ N ≤ 20),表示你需要处理的命令行的个数。<br>　　接下来有 N 行,每行是一个待处理的命令行,它包括不超过 256 个字符。该命令行一定是若干个由单个空格分隔的字符串构成,每个字符串里只包含小写字母,数字和减号。<br><em>输出格式</em><br>　　输出有 N 行。其中第 i 行以”Case i:” 开始,然后应当有恰好一个空格,然后应当按照字母升序输出该命令行中用到的所有选项的名称,对于带参数的选项,在输出它的名称之后还要输出它的参数。如果一个选项在命令行中出现了多次,只输出一次。如果一个带参数的选项在命令行中出 现了多次,只输出最后一次出现时所带的参数。<br><em>样例输入</em><br>albw:x<br>4<br>ls -a -l -a documents -b<br>ls<br>ls -w 10 -x -w 15<br>ls -a -b -c -d -e -l<br><em>样例输出</em><br>Case 1: -a -l<br>Case 2:<br>Case 3: -w 15 -x<br>Case 4: -a -b</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/24/java：JavaLearningPath/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Mark Zhang">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Terrorshadow">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/05/24/java：JavaLearningPath/" itemprop="url">Java learning</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-24T12:41:43+08:00">
-                2018-05-24
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="Java-learning-path"><a href="#Java-learning-path" class="headerlink" title="Java learning path"></a>Java learning path</h2><h2 id="Java"><a href="#Java" class="headerlink" title="Java"></a>Java</h2><p><img src="http://upload-images.jianshu.io/upload_images/8593035-851ad9bdb6f7128e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="#da"></p>
-<h3 id="java基础"><a href="#java基础" class="headerlink" title="java基础"></a><em>java基础</em></h3><ul>
-<li>关键字</li>
-<li>标识符</li>
-<li>常量（变量）<a href="https://www.cnblogs.com/dolphin0520/p/3780005.html" target="_blank" rel="noopener">装箱&amp;拆箱</a></li>
-<li>运算符</li>
-<li>数组</li>
-<li>方法（包括方法定义、重载、参数和返回值）</li>
-<li>Java三大特性（封装、继承、多态）</li>
-<li>反射（反射原理网上文档很多，不截取了）</li>
-</ul>
-<hr>
-<h2 id="Jvm"><a href="#Jvm" class="headerlink" title="Jvm"></a><em>Jvm</em></h2><ul>
-<li><a href="http://www.cnblogs.com/lishun1005/p/6019678.html" target="_blank" rel="noopener">Java 详解 JVM 工作原理和流程</a></li>
-<li><a href="http://blog.csdn.net/witsmakemen/article/details/28600127/" target="_blank" rel="noopener">java中JVM的原理</a></li>
-<li><a href="http://blog.csdn.net/wisgood/article/details/25343845" target="_blank" rel="noopener">JVM监控工具</a></li>
-</ul>
-<hr>
-<h2 id="集合"><a href="#集合" class="headerlink" title="集合"></a><em>集合</em></h2><ul>
-<li><a href="https://github.com/pzxwhc/MineKnowContainer/issues/75" target="_blank" rel="noopener">Collection和Map系列</a></li>
-<li><a href="https://github.com/pzxwhc/MineKnowContainer/issues/18" target="_blank" rel="noopener">Java集合</a></li>
-<li><a href="https://github.com/pzxwhc/MineKnowContainer/issues/19" target="_blank" rel="noopener">HashMap</a></li>
-</ul>
-<hr>
-<h2 id="IO"><a href="#IO" class="headerlink" title="IO"></a>IO</h2><ul>
-<li><p><a href="https://github.com/pzxwhc/MineKnowContainer/issues/22" target="_blank" rel="noopener">JavaIO:操作系统的IO处理过程以及五种网络IO模型</a>(这篇文章我没怎么看懂，先罗列上来)</p>
-</li>
-<li><p><a href="https://github.com/pzxwhc/MineKnowContainer/issues/23" target="_blank" rel="noopener">java常见IO流</a></p>
-</li>
-<li><p><a href="http://blog.csdn.net/anxpp/article/details/51512200" target="_blank" rel="noopener">AIO、BIO、NIO</a></p>
-<p>​</p>
-</li>
-</ul>
-<hr>
-<h2 id="线程"><a href="#线程" class="headerlink" title="线程"></a><strong>线程</strong></h2><ul>
-<li><a href="https://github.com/pzxwhc/MineKnowContainer/issues/6" target="_blank" rel="noopener">Java多线程</a></li>
-<li><a href="https://www.cnblogs.com/luxiaoxun/p/3870265.html" target="_blank" rel="noopener">Java多线程编程实例</a></li>
-<li><p>JUC</p>
-</li>
-<li><p>并发包</p>
-</li>
-</ul>
-<hr>
-<h2 id="框架"><a href="#框架" class="headerlink" title="框架"></a>框架</h2><h4 id="Spring"><a href="#Spring" class="headerlink" title="Spring"></a>Spring</h4><ul>
-<li><a href="https://github.com/pzxwhc/MineKnowContainer/issues/28" target="_blank" rel="noopener">AOP</a>(核心)</li>
-<li><a href="https://github.com/pzxwhc/MineKnowContainer/issues/30" target="_blank" rel="noopener">依赖注入(DI)与控制反转(IOC)</a>(核心)</li>
-<li><a href="https://github.com/pzxwhc/MineKnowContainer/issues/29" target="_blank" rel="noopener">异常统一处理的三种方式与Rest接口异常的处理</a></li>
-</ul>
-<h4 id="SpringMVC"><a href="#SpringMVC" class="headerlink" title="SpringMVC"></a>SpringMVC</h4><ul>
-<li><a href="https://github.com/pzxwhc/MineKnowContainer/issues/32" target="_blank" rel="noopener">Servlet体系结构与ServletContext,ServlectConfig</a></li>
-</ul>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
   <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -1603,7 +1908,7 @@
               
                 <a href="/archives">
               
-                  <span class="site-state-item-count">24</span>
+                  <span class="site-state-item-count">32</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -1644,7 +1949,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>
